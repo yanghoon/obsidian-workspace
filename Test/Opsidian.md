@@ -1,5 +1,9 @@
 # Sync
 ## with Git
-https://curtismchale.ca/2022/05/18/sync-your-obsidian-vault-for-free-with-github/
+1. Create Git Repository
+2. Install `Opsidian Git` Plugin
+3. Configure Pull/Push Interval
+### Guides
+* https://curtismchale.ca/2022/05/18/sync-your-obsidian-vault-for-free-with-github/
 * https://publish.obsidian.md/git-doc/Installation#From+within+Obsidian
 * https://github.com/denolehov/obsidian-git
