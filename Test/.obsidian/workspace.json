@@ -4,19 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b9fcb5e0b2ce8287",
+        "id": "cb72435a1e8a0f45",
         "type": "tabs",
         "children": [
           {
-            "id": "1e59a2e8b3adc54b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "787cf72d5634e17f",
+            "id": "56a1e1824de12776",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -155,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "787cf72d5634e17f",
+  "active": "59ad6505f5cadecc",
   "lastOpenFiles": [
     "Opsidian.md",
     "Opsidian"
