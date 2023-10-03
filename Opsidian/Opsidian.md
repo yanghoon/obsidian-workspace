@@ -18,7 +18,7 @@ cd ~/obsidian
 rm -rf .obsidian
 git clone htttps://github.com/yanghoon/opsidian-workspace .
 
-# 
+# on Each Devices
 git pull
 git push
 ```
