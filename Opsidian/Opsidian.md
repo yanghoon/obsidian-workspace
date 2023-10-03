@@ -3,6 +3,8 @@
 1. Create Git Repository
 2. Install `Opsidian Git` Plugin
 3. Configure Pull/Push Interval
+### on Desktop
+1. ...
 ### on iOS
 ...
 1. https://meganesulli.com/blog/sync-obsidian-vault-iphone-ipad/
