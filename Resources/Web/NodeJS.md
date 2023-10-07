@@ -1,8 +1,6 @@
 ### Version
-* LTS : 
-* Current :
+* LTS vs Current (https://github.com/nodejs/Release)
 
 # References
 ## Versions
-### 의미
 * https://iwantadmin.tistory.com/257
