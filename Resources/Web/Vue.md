@@ -6,3 +6,7 @@
 ## Tips
 
 ### `Number.toLocaleString()`
+
+```javascript
+Number(value).toLocaleString()
+```
