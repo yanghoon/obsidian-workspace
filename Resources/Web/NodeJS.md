@@ -1,8 +1,17 @@
 ### Version
+
 * LTS vs Current (https://github.com/nodejs/Release)
-### Guides
+
+### Codes
+
 ```bash
-npm install 
+node --version
+npm  --version
+yarn --version
+```
+
+```bash
+npm install --global yarn
 ```
 # References
 ## Versions
