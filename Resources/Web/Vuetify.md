@@ -1,4 +1,5 @@
 ## [Getting Started](https://vuetifyjs.com/en/getting-started/installation/#installation)
 
-```b
+```bash
+yarn create vuetify
 ```
