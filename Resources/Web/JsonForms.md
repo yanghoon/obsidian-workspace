@@ -2,5 +2,5 @@
 ## Vuetify JsonForms
 
 ```bash
-yarn add 
+yarn add @jsonforms/core @jsonforms/vue @jsonforms/vue-vuetify
 ```
