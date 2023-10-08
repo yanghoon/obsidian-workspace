@@ -3,7 +3,12 @@
 * [with Vite](https://ko.vitejs.dev/guide/#scaffolding-your-first-vite-project)
 * [with Vuetify](https://vuetifyjs.com/en/getting-started/installation/#installation)
 
-L
+## Lifecycle Hooks
+
+```javascript
+//TODO
+```
+
 ## Tips
 
 ### `Number.toLocaleString()`
