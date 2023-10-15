@@ -1,6 +1,12 @@
 
 ```java
-
+HttpClient httpClient = HttpClient
+	.create()
+	.wiretap("reactor.netty.http.client.HttpClient", LogLevel.DEBUG, AdvancedByteBufFormat.TEXTUAL);  
+  
+return WebClient
+		.builder()
+		.clientConnector(new ReactorClientHttpConnector(httpClient));
 ```
 
 ## References
