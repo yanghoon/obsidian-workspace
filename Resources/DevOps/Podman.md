@@ -4,14 +4,15 @@
 
 ## Containerize Vue
 
+#### Dockerfile
 ```bash
 # build stage  
 FROM node:lts-alpine as build-stage  
 WORKDIR /app  
 COPY package*.json ./  
-RUN npm install  
+RUN yarn install  
 COPY . .  
-RUN npm run build  
+RUN yarn run build  
   
 # production stage  
 FROM nginx:stable-alpine as production-stage  
@@ -20,6 +21,10 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
+#### nginx.conf
+
+```bash
+```
 ## References
 * [without Docker](https://netpple.github.io/docs/make-container-without-docker/)
 * Optimizing Size
