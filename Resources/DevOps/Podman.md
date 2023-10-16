@@ -5,6 +5,14 @@
 ### Install
 
 ```bash
+#TODO
+```
+
+### Build Image
+
+```bash
+podman build
+podman 
 ```
 
 ## *Buildah*
