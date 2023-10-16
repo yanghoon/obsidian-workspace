@@ -5,7 +5,8 @@
 ### Install
 
 ```bash
-#TODO
+# Mac
+brew install podman
 ```
 
 ### Build Image
