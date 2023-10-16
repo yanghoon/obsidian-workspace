@@ -11,8 +11,9 @@
 ### Build Image
 
 ```bash
+$IMAGE=
 podman build
-podman 
+podman run $IMAGE
 ```
 
 ## *Buildah*
