@@ -1,5 +1,4 @@
 # Homebrew
 
-```bash
-
-```
+## Configure `admin` Group
+*TODO*
