@@ -9,6 +9,10 @@ plugins {
 }
 ```
 
+```bash
+./gradlew jib
+# ./gradlew jibBuildTar
+```
 ## References
 * [Jib - Project](https://github.com/GoogleContainerTools/jib)
 * [Jib - Gradle Plugin Project](https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin)
