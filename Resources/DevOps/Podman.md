@@ -19,8 +19,7 @@ CMD ["nginx", "-g", "daemon off;"]
 ```
 
 ## References
-* 
-	* [without Docker](https://netpple.github.io/docs/make-container-without-docker/)
+* [without Docker](https://netpple.github.io/docs/make-container-without-docker/)
 * Optimizing Size
 	* [Dockerize Vite+ReactJS application](https://dev.to/agustinoberg/dockerize-vitereactjs-application-6e1)
 * Best Practies
