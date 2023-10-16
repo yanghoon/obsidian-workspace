@@ -5,7 +5,8 @@
 ## Containerize Vue
 
 #### Dockerfile
-```bash
+
+```dockerfile
 # build stage  
 FROM node:lts-alpine as build-stage  
 WORKDIR /app  
@@ -25,6 +26,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ```bash
 ```
+
 ## References
 * [without Docker](https://netpple.github.io/docs/make-container-without-docker/)
 * Optimizing Size
