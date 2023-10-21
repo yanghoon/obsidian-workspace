@@ -9,8 +9,9 @@
 
 ## Packaging Patterns
 
-1. Build and Containerize Each
-2. Single
+1. Build with Each and Containerize Each
+2. Build Each and Package Single Jar File
+3. Build 
 ## Uscase
 
 Local Development
