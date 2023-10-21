@@ -17,7 +17,6 @@
 	1. Mono Repo or Multiple Repo
 2. Build with Each Tool and Package Single Jar File
 	1. Mono Repo
-3. Build 
 ## Uscase
 
 Local Development
@@ -26,5 +25,5 @@ Local Development
 * Different Developers (Frontend and Backend)
 
 Build Lifecycle
-* Only using gradle (gradle node plugin)
+* Only using gradle (node plugin)
 * 
