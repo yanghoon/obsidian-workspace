@@ -9,4 +9,6 @@
 
 # Uscase
 
-## Local Develp
+## Local Develpment
+
+* Hot Reload
