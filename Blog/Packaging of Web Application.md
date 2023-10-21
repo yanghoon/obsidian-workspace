@@ -23,8 +23,9 @@
 Local Development
 * Hot Reload
 * Test Configurations (Proxy for CORS)
-* Different Developers (Frontend and Backend)
-* Git Collaboration
+* Frontend and Backend
+	* Different Developers
+	* Git Collaboration
 
 Build Pipeline
 * Checkout
