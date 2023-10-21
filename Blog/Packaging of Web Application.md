@@ -1,6 +1,6 @@
 # Overview
 
-In this article, we think about how to package a simple web application consist of Spring Boot and SPA. SPA framework can build artifacts as some static resources and that is packaged within the Jar file
+In this article, we think about how to package a simple web application consist of Spring Boot and SPA. SPA framework can build source codes as some static resources and that is packaged within the Jar file.
 
 |Category|Frontend|Backend|Note|
 |-|-|-|-|
