@@ -1,6 +1,6 @@
 # Overview
 
-Think about simple web application using Spring Boot and some frontend framework that build as static resources.
+Think about simple web application consist of Spring Boot and some frontend framework (React, Vue, ...)
 
 |Category|Frontend|Backend|Note|
 |-|-|-|-|
