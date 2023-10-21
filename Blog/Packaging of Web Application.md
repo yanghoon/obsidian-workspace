@@ -19,5 +19,6 @@ Local Development
 * Test Configurations (Proxy for CORS)
 * Different Developers (Frontend and Backend)
 
-Build
-* Manage Build Lifecycle
+Build Lifecycle
+* Only using gradle (gradle node plugin)
+* 
