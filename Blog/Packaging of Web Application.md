@@ -8,9 +8,12 @@
 |Artifact|Web Resources(html, css, js)|Jar||
 
 ## Packaging Patterns
-1. 
+
+1. Containerizing Each Image
 ## Uscase
 
-## Local Develpment
+|
+
+### Local Development
 
 * Hot Reload
