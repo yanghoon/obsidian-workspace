@@ -9,7 +9,7 @@
 
 ## Packaging Patterns
 
-1. Build with Each and Containerize Each
+1. Build and Containerize Each Special Tool
 2. Build Each and Package Single Jar File
 3. Build 
 ## Uscase
