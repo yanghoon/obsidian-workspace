@@ -2,4 +2,6 @@
 
 |Title|Frontend|Backend|Note|
 |-|-|-|-|
-|Build Tool|Package Manager()
+
+|Framework|Vue, React|Spring Boot||
+|Build Tool|Package Manager(npm, yarn)|Gradle, Maven||
