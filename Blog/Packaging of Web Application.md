@@ -6,6 +6,7 @@
 |Framework|Vue, React|Spring Boot||
 |Build Tool|NPM, Yarn(Package Manager)<br>Vite(Build, Dev Server)|Gradle, Maven||
 |Artifact|Web Resources(html, css, js)|Jar||
+|Containerize|Dockerfile|Jib Gradle Plugin||
 
 ## Repository Patterns
 
