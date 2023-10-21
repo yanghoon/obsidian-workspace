@@ -1,6 +1,6 @@
 # Overview
 
-In this article, we imag simple web application  of Spring Boot and SPA.
+In this article, we think about how to package a simple web application consist of Spring Boot and SPA.
 
 |Category|Frontend|Backend|Note|
 |-|-|-|-|
