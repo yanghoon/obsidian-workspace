@@ -17,4 +17,4 @@
 Local Development
 * Hot Reload
 * Test Configurations (Proxy for CORS)
-* 
+* Different Developers
