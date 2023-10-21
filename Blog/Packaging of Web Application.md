@@ -27,7 +27,8 @@ Local Development
 	* Different Developers
 	* Git Collaboration
 
-Build Pipeline
+Pipeline
 * Checkout
 * Build
 * Containerize
+* Infrastructure Code
