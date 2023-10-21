@@ -9,6 +9,10 @@
 
 ## Packaging Patterns
 
-1. Containerizing Each Image
+1. Build and Containerize Each
+2. Single
 ## Uscase
-Local Development|Hot Reload||
+
+Local Development
+* Hot Reload
+* 
