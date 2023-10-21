@@ -20,15 +20,17 @@
 	1. Mono Repo
 ## Uscase
 
-Local Development
+### Local Development
+
 * Hot Reload
 * Test Configurations (Proxy for CORS)
 * Frontend and Backend
 	* Different Developers
 	* Git Collaboration
 
-Pipeline
+### Pipeline
+
 * Checkout
 * Build
 * Containerize
-* Infrastructure Code
+* Deploy (Infrastructure Code)
