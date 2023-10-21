@@ -1,6 +1,6 @@
 # Overview
 
-Think about simple web application consist of Spring Boot and some frontend framework (React, Vue, ...)
+In this article, we imag simple web application  of Spring Boot and SPA.
 
 |Category|Frontend|Backend|Note|
 |-|-|-|-|
