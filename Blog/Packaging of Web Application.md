@@ -2,7 +2,7 @@
 
 Let's think about how to package a simple web application consist of Spring Boot and SPA. SPA framework can build source codes as some static resources and that can be packaged within the Jar file. In this article, we consider best practices of this case.
 
-The baseline of our 
+The baseline of our environments are below.
 
 |Category|Frontend|Backend|Note|
 |-|-|-|-|
