@@ -13,8 +13,10 @@
 2. Multiple Repo
 ## Packaging Patterns
 
-1. Build and Containerize Each Special Tool (Mono Repo or Multiple Repo)
-2. Build with Each Tool and Package Single Jar File (Mono Repo)
+1. Build and Containerize Each Special Tool
+	1. Mono Repo or Multiple Repo
+2. Build with Each Tool and Package Single Jar File
+	1. Mono Repo
 3. Build 
 ## Uscase
 
