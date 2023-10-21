@@ -7,6 +7,9 @@
 |Build Tool|NPM, Yarn(Package Manager)<br>Vite(Build, Dev Server)|Gradle, Maven||
 |Artifact|Web Resources(html, css, js)|Jar||
 
+## Repository Patterns
+
+1. Mono
 ## Packaging Patterns
 
 1. Build and Containerize Each Special Tool
