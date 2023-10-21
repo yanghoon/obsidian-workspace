@@ -25,6 +25,6 @@ Local Development
 * Test Configurations (Proxy for CORS)
 * Different Developers (Frontend and Backend)
 
-Build Lifecycle
-*
-* 
+Build Pipeline
+* Checkout
+* Build Frontend
