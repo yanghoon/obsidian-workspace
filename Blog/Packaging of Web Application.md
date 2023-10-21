@@ -11,11 +11,4 @@
 
 1. Containerizing Each Image
 ## Uscase
-
-|Name|Features|Note|
-|-|-|-|
-|Local Development|* Hot Reload||
-
-### 
-
-* 
+Local Development|Hot Reload||
