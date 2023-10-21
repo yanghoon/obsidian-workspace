@@ -24,9 +24,9 @@
 
 * Hot Reload
 * Test Configurations (Proxy for CORS)
-* Frontend and Backend
+* Collaboration (Frontend and Backend)
 	* Different Developers
-	* Git Collaboration
+	* Git History
 
 ### Pipeline
 
