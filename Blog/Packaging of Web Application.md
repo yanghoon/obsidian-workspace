@@ -27,4 +27,5 @@ Local Development
 
 Build Pipeline
 * Checkout
-* Build Frontend
+* Build
+* Containerize
