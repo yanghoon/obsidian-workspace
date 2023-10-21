@@ -17,4 +17,7 @@
 Local Development
 * Hot Reload
 * Test Configurations (Proxy for CORS)
-* Different Developers
+* Different Developers (Frontend and Backend)
+
+Build
+* Manage Build Lifecycle
