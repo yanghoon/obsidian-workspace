@@ -1,6 +1,6 @@
 # Overview
 
-Think about simple web application using Spring
+Think about simple web application using Spring Boot and some frontend framework that build as static resources.
 
 |Category|Frontend|Backend|Note|
 |-|-|-|-|
