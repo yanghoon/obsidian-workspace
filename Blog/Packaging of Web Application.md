@@ -30,7 +30,7 @@ Before talking about packaging patterns, we can also think about use cases. Deve
 * Hot Reload
 * Test Configurations (Proxy for CORS)
 * Collaboration (Frontend and Backend)
-	* Different Developers
+	* Same or Different Developers
 	* Git History
 
 ### Pipeline
