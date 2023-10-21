@@ -4,5 +4,9 @@
 |-|-|-|-|
 |Runtime|Node(Development, Build), Browser|Java||
 |Framework|Vue, React|Spring Boot||
-|Build Tool|Package Manager(npm, yarn)<br>Vite|Gradle, Maven||
+|Build Tool|NPM, Yarn(Package Manager)<br>Vite(Build, Dev Server)|Gradle, Maven||
 |Artifact|Web Resources(html, css, js)|Jar||
+
+# Uscase
+
+## Local Develp
