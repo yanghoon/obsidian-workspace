@@ -26,5 +26,5 @@ Local Development
 * Different Developers (Frontend and Backend)
 
 Build Lifecycle
-* Only using gradle (node plugin)
+*
 * 
