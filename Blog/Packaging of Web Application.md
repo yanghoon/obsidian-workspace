@@ -24,7 +24,7 @@ The baseline of environments that we can not change are below.
 	1. Mono Repo
 ## Uscase
 
-Before talking about packaging patterns, we can also think about usecases.
+Before talking about packaging patterns, we can also think about use cases. We should not hart development experiance 
 ### Local Development
 
 * Hot Reload
