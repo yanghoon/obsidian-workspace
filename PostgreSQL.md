@@ -7,7 +7,7 @@
 version: '3.1'
 
 services:
-  db:
+  postgresql:
     image: postgres
     restart: always
     ports:
@@ -15,6 +15,8 @@ services:
     environment:
     . POSTGRES_USER: root
       POSTGRES_PASSWORD: root
+    volumes:
+      - ./data/postgres:
   adminer:
     image: adminer
     restart: always
