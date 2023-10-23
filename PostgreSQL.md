@@ -28,5 +28,4 @@ services:
 
 ### Kubernetes
 
-```bash
-```
+#todo 
