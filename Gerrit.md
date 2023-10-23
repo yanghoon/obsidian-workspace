@@ -1,4 +1,6 @@
-# Backup and Recovery
+# Migration
+
+# Target and Check
 
 * All-Users.git (accounts, groups)
 * All-Projects.git (projects)
@@ -8,6 +10,8 @@
 * changes
 * plugins
 * config
+
+# Backup and Recovery
 
 # Version Upgrade
 
