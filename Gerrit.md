@@ -3,8 +3,10 @@
 * All-Users.git (accounts, groups)
 * All-Projects.git (projects)
 * database
-* repositories
+* repositories (git)
+* projects
 * changes
 * plugins
+* config
 
 # Version Upgrade
