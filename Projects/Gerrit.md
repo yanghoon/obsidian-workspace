@@ -1,6 +1,6 @@
 # Migration
 
-# Target and Check
+## Target and Check
 
 * All-Users.git (accounts, groups)
 * All-Projects.git (projects)
@@ -11,9 +11,9 @@
 * plugins
 * config
 
-# Backup and Recovery
+## Backup and Recovery
 
-# Version Upgrade
+## Version Upgrade
 
 ```bash
 GERRIT_WAR=gerrit.war
