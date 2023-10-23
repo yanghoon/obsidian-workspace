@@ -16,7 +16,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_DB: reviewdb
-    . POSTGRES_USER: gerrit
+      POSTGRES_USER: gerrit
       POSTGRES_PASSWORD: gerrit
     volumes:
       - ./data/postgres/:/var/lib/postgresql/data
