@@ -1,9 +1,10 @@
 # Backup and Recovery
 
-* All-Users.git
-* All-Projects.git
+* All-Users.git (accounts, groups)
+* All-Projects.git (projects)
 * database
 * repositories
-* chages
+* changes
+* plugins
 
 # Version Upgrade
