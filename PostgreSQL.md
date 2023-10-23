@@ -15,8 +15,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-    . POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
+      POSTGRES_DB: reviewdb
+    . POSTGRES_USER: gerrit
+      POSTGRES_PASSWORD: gerrit
     volumes:
       - ./data/postgres/:/var/lib/postgresql/data
       - ./data/init.sql:/docker-entrypoint-initdb.d
