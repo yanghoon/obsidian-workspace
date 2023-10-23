@@ -12,5 +12,5 @@
 # Version Upgrade
 
 ```bash
-java -jar gerrit-2.15.22.war init -d site_path
+java -jar gerrit-upgrade.war init -d site_path
 ```
