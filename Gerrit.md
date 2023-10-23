@@ -12,6 +12,6 @@
 # Version Upgrade
 
 ```bash
-NEW_VERSION=
-java -jar gerrit-$NEW_VERSION.war init -d site_path
+GERRIT_WAR=gerrit.war
+java -jar $GERRIT_WAR init -d site_path
 ```
