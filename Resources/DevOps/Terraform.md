@@ -6,6 +6,8 @@ version: '3.8'
 services:
   terraform:
     image: hashicorp/terraform:1.6.3
+    command:
+      - cat /dev/null
     volumes:
       - .:/infra
     working_dir: /infra
