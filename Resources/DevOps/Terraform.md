@@ -1,4 +1,13 @@
 
+```yaml
+version: '3.8'
+
+services:
+  terraform:
+    image: hashicorp/terraform:1.6.3
+    volumes:
+      - .:/infra working_dir:/infra environment: - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
+```
 ## References
 
 * Docs
