@@ -10,7 +10,7 @@ services:
     image: hashicorp/terraform:1.6.3
     entrypoint: tail -f /dev/null
     volumes:
-      - .:/infra
+      - terraform-infra:/infra
     working_dir: /infra
     environment:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
