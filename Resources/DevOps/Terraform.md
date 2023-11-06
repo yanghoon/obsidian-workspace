@@ -2,6 +2,7 @@
 ```yaml
 version: '3.8'
 
+# https://hub.docker.com/r/hashicorp/terraform/tags?page=1&name=1.6
 services:
   terraform:
     image: hashicorp/terraform:1.6.3
