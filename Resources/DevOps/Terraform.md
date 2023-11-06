@@ -6,8 +6,7 @@ version: '3.8'
 services:
   terraform:
     image: hashicorp/terraform:1.6.3
-    command:
-      - tail -f /dev/null
+    entrypoint: tail -f /dev/null
     volumes:
       - .:/infra
     working_dir: /infra
