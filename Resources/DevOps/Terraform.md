@@ -26,7 +26,7 @@ services:
 
 ### Tools
 
-#### Pluralith
+#### [Pluralith](https://docs.pluralith.com/)
 
 
 ## References
