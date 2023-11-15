@@ -30,7 +30,7 @@ services:
 
 #### LocalStack
 * [GitHub](https://github.com/localstack/localstack/tree/master)
-* [docker-compose](https://github.com/localstack/localstack/blob/master/docker-compose.yml)
+* [docker-compose.yaml](https://github.com/localstack/localstack/blob/master/docker-compose.yml)
 ## References
 
 
