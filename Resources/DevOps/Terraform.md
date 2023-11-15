@@ -1,4 +1,4 @@
-#localstack
+#terraform #localstack
 **Docker Compose**
 
 ```yaml
@@ -31,6 +31,8 @@ services:
 #### LocalStack
 * [GitHub](https://github.com/localstack/localstack/tree/master)
 * [docker-compose.yaml](https://github.com/localstack/localstack/blob/master/docker-compose.yml)
+* links
+	* [LocalStack 을 활용한 AWS 환경 구축](https://velog.io/@csh0034/LocalStack-%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-AWS-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95)
 ## References
 
 
