@@ -28,7 +28,9 @@ services:
 
 #### [Pluralith](https://docs.pluralith.com/)
 
-
+#### LocalStack
+* [GitHub](https://github.com/localstack/localstack/tree/master)
+* [docker-compose](https://github.com/localstack/localstack/blob/master/docker-compose.yml)
 ## References
 
 
