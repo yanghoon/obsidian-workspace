@@ -1,7 +1,7 @@
 Pattern - Observer vs Listener vs Callback
 
 Callback
-caller 가 callee 의 return 잏  시점이나 return 값을 자신의 stack 에서 사용하지 않고 
+caller 가 callee 의 return 이후에 실행 될 코드를 argument 로 전달하여 
 
 Observer
 
