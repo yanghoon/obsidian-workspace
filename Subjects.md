@@ -6,6 +6,6 @@ caller 가 callee 의 return 이후에 실행 될 코드를 argument 로 전달�
 callee 가 callback 의 실행 시점을 지연시킬 수 있다
 
 Observer
-Subject 가 상태변경을 통지 받고자 하는 Observer 를
+Subject 의 변경(상태)을 통지 받고자 하는 Observer
 
 Listener
