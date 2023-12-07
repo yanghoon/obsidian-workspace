@@ -6,6 +6,6 @@ caller 가 callee 의 return 이후에 실행 될 코드를 argument 로 전달�
 callee 가 callback 의 실행 시점을 지연시킬 수 있다
 
 Observer
-Subject 의 변경(상태)을 통지 받고자 하는 Observer 가 자신의 래퍼런스를 Subject 에 전달하고 
+Subject 의 변경(상태)을 사전에 등록된 Observer 에 통지하는 패턴
 
 Listener
