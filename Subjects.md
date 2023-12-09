@@ -13,8 +13,8 @@ Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
 
 ## Reactive vs Reactor Pattern
 ### Reactor
-Event Loop with Non-Blocking I/O
-Avoid complex concurrency handling in multithreading
-Use small threads
+Event Loop with Non-Blocking I/O (Event Driven)
+- Avoid complex concurrency handling in multithreading
+- Use small threads
 ### Reactive
-Data Streams
+Handle Data Streams
