@@ -18,7 +18,7 @@ Event Loop with Non-Blocking I/O (Event Driven)
 - Avoid context switchings and memory cache unefficient
 - Use small threads
 ### Reactive
-Asyncronous Streams with Event Driven
+Asyncronous Event/Data Streams
 - Use funtional style, asyncronous, backpressure
 - Can schedule data streams handling
 - Use small threads
