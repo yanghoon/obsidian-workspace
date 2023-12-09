@@ -25,3 +25,4 @@ Asyncronous Event Streams
 - Can schedule data streams handling
 - Use small threads
 
+https://colevelup.tistory.com/37
