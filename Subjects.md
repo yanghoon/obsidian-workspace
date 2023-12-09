@@ -20,6 +20,7 @@ Event Loop with Non-Blocking I/O (Event Driven)
 ### Reactive
 Asyncronous Event Streams
 - Event driven. Streams
+- Scalable
 - More readable async codes
 - Use funtional style, asyncronous, backpressure
 - Can schedule data streams handling
