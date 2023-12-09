@@ -21,7 +21,7 @@ Event Loop with Non-Blocking I/O (Event Driven)
 Scalable Asyncronous Event Streams
 - Pub/Sub(Event Driven), Streams (not a single)
 - Use funtional style, backpressure
-- More readable async codes
+- More readable asyncronous codes
 - Use small threads
 
 https://colevelup.tistory.com/37
