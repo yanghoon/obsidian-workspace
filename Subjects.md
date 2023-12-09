@@ -19,6 +19,7 @@ Event Loop with Non-Blocking I/O (Event Driven)
 - Use small threads
 ### Reactive
 Asyncronous Event/Data Streams
+- More readable async codes
 - Use funtional style, asyncronous, backpressure
 - Can schedule data streams handling
 - Use small threads
