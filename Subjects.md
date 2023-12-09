@@ -15,7 +15,7 @@ Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
 ### Reactor
 Event Loop with Non-Blocking I/O (Event Driven)
 - Avoid complex concurrency handling in multithreading
-- Avoid context switching
+- Avoid context switchings and memory cache unefficiency
 - Use small threads
 ### Reactive
 to Handle Data Streams with Event Driven
