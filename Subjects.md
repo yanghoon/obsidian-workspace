@@ -12,4 +12,7 @@ Listener
 Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
 
 ## Reactive vs Reactor Pattern
-Reactiv
+### Reactor
+
+
+### Reactive
