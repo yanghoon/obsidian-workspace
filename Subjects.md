@@ -16,7 +16,8 @@ Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
 Event Loop with Non-Blocking I/O (Event Driven)
 - Avoid complex concurrency handling in multithreading
 - Avoid context switchings and memory cache unefficient
-- Use small threads
+- Use small threads, Pull Mode
+- 
 ### Reactive
 Scalable Asyncronous Event Streams
 - Pub/Sub(Event Driven), Streams (not a single)
