@@ -1,4 +1,4 @@
-## Pattern - Observer vs Listener vs Callback
+## Observer vs Listener vs Callback
 
 Callback
 argument 형태로 전달되는 코드 (함수)
