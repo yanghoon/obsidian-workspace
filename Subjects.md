@@ -19,8 +19,8 @@ Event Loop with Non-Blocking I/O (Event Driven)
 - Use small threads
 ### Reactive
 Scalable Asyncronous Event Streams
-- Pub/Sub. Streams (not a single event)
-- Use funtional style, asyncronous, backpressure, schadule
+- Pub/Sub. Streams (not a single)
+- Use funtional style, backpressur
 - More readable async codes
 - Use small threads
 
