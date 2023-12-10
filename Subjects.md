@@ -17,12 +17,11 @@ Event Loop with Non-Blocking I/O (Event Driven)
 - Avoid complex concurrency handling in multithreading
 - Avoid context switchings and memory cache unefficient
 - Use small threads, Pull Mode
-- 
 ### Reactive
 Scalable Asyncronous Event Streams
 - Pub/Sub(Event Driven), Streams (not a single)
 - Use funtional style, backpressure
 - More readable asyncronous codes
-- Use small threads
+- Use small threads, Push Mode
 
 https://colevelup.tistory.com/37
