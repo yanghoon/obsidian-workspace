@@ -10,6 +10,7 @@ Subject 의 변경(상태)을 사전에 등록된 Observer 에 통지하는 패�
 
 ### Listener
 Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
+- 비동기
 
 ## Reactive vs Reactor Pattern
 ### Reactor
