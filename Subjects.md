@@ -7,7 +7,6 @@ argument 형태로 전달되는 코드 (함수)
 
 ### Listener
 Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
-- 비동기
 
 ### Observer
 Subject 의 상채변경(Event)을 사전에 등록된 Observer 에 통지하는 패턴
