@@ -8,14 +8,13 @@ argument 형태로 전달되는 코드 (함수)
 
 ### Observer
 Subject 의 변경을 사전에 등록된 Observer 에 통지하는 패턴
-- Open Close
+- Open Close 원칙
 
 ### Listener
 Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
+- Callback + Observer Pattern 
 - Emitter(발생)과 Handler(처리)를 분리
 - Callback 의 Argument Type 에 대한 설계  
-
-
 
 ## Reactive vs Reactor Pattern
 ### Reactor
