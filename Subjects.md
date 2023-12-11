@@ -6,7 +6,7 @@ argument 형태로 전달되는 코드 (함수)
 - callee 가 callback 의 실행 시점을 **지연**시킬 수 있다
 
 ### Observer
-Subject 의 상채변경(상태)을 사전에 등록된 Observer 에 통지하는 패턴
+Subject 의 상채변경(Event)을 사전에 등록된 Observer 에 통지하는 패턴
 
 ### Listener
 Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
