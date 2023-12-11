@@ -9,7 +9,7 @@ argument 형태로 전달되는 코드 (함수)
 ### Listener
 Event 의 발생을 사전에 등록된 Listener 에 통지하는 패턴
 - Emitter(발생)과 Handler(처리)를 분리
-- Callback 의 Argument Type  
+- Callback 의 Argument Type 에 대한 설계  
 
 ### Observer
 Subject 의 상태변경(Event)을 사전에 등록된 Observer 에 통지하는 패턴
