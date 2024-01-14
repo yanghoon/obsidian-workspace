@@ -63,3 +63,4 @@ B-Tree
 
 primary key index : unique id
 secondary index : non-unique id
+heap file : all values. avoid data duplication in index
