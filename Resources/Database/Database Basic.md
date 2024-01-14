@@ -49,5 +49,9 @@ B-Tree
 | size |  | O |
 | fragmemtation |  | O |
 |  |  |  |
+| compaction | O |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 
