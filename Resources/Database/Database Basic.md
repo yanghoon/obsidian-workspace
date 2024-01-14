@@ -19,6 +19,6 @@ Log Segment
 * merge : combine multiple segments as one
 
 SSTable (Sorted-String Table)
-* Segment file that have sorted entries by key. and also include offset index in it.
+* A segment file that have entries sorted by key and also include offset index of those.
 
 LSM Tree (Log-Structured Merge-Tree)
