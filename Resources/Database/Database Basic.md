@@ -25,3 +25,5 @@ SSTable (Sorted-String Table)
 * data compression (smapl diskspace and bandwith)
 
 LSM Tree (Log-Structured Merge-Tree)
+* memtable(sorted in-memory data structure) + sstable(disk)
+* 
