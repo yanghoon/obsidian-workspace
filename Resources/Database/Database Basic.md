@@ -66,5 +66,5 @@ secondary index : non-unique id
 clustered index : key with actual data
 non-clustered index : heap file(have all values). fast update and avoid data duplication in index
 covering index : indexed key + other colums
-concatenated index : 
+concatenated index : ordered and combined colums
 
