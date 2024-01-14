@@ -10,7 +10,7 @@
 
 Hash
 * in memory data structure. read/write O(1)
-* keep 
+* keep key and value represent byte offset in file
 
 Log Segment
 * fragments of logs divided by specific conditions (size, time, ...)
