@@ -1,5 +1,7 @@
 # Storage
 
+## Log Structured
+
 * Log
 	* data format. append only. duplicated data
 * Primary Data
@@ -29,3 +31,9 @@ LSM Tree (Log-Structured Merge-Tree)
 * handle random write operation as sorted data set
 * memtrable is flushed when fixed size is over
 * bloom filter ()
+
+
+## Page Oriented
+
+
+
