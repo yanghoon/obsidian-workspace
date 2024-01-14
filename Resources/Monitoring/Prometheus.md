@@ -10,3 +10,5 @@
 * Time Series Identifier : Metfic + Label[]
 
 ![[Pasted image 20240114172855.png | white]]
+![[Pasted image 20240114173027.png]]
+* Instant Vector : the metrics values of an instant in time
