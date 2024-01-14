@@ -39,7 +39,7 @@ B-Tree
 * internal page(), leaf page(actual key and values)
 * branching factor : count of references in a single page
 * balanced tree ()
-
+## Comparation
 |  | Log Structured | Page Orignted |
 | ---- | ---- | ---- |
 | write amplification |  | O |
@@ -56,4 +56,8 @@ B-Tree
 | trasaction |  | O |
 |  |  |  |
 
+
+
+
+## Other Index Types
 
