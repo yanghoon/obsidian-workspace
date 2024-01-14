@@ -43,6 +43,6 @@ B-Tree
 |  | Log Structured | Page Orignted |
 | ---- | ---- | ---- |
 | write amplification |  | O |
-|  |  |  |
+| write spee |  |  |
 
 
