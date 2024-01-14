@@ -61,5 +61,5 @@ B-Tree
 
 ## Other Index Types
 
-primary key index
-secondary 
+primary key index : unique id
+secondary index : non-unique id
