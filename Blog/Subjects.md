@@ -2,7 +2,7 @@
 
 ### Callback
 ~~argument 형태로 전달되는 코드 (함수)~~
-
+Spring의 InitializingBean
 - caller 가 callee 의 return 이후에 실행 될 코드를 argument 로 전달하는 패턴
 - callee 가 callback 의 실행 시점을 **지연**시킬 수 있다
 - 동기 (Comparator), 비동기 (Runnalble)
