@@ -9,7 +9,8 @@
 	* or extra data file for that purpose
 
 Hash
-* in memory. read/write O(1)
+* in memory data structure. read/write O(1)
+* keep 
 
 Log Segment
 * fragments of logs divided by specific conditions (size, time, ...)
