@@ -63,7 +63,8 @@ B-Tree
 
 primary key index : unique id
 secondary index : non-unique id
-non-clustered index : heap file have all values. fast update and avoid data duplication in index
 clustered index : key with actual data
+non-clustered index : heap file(have all values). fast update and avoid data duplication in index
 covering index : indexed key + other colums
+concatenated index : 
 
