@@ -61,4 +61,4 @@ B-Tree
 
 ## Other Index Types
 
-primary-key index
+primary key index
