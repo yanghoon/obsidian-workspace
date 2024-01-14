@@ -69,4 +69,5 @@ covering index : indexed key + other colums
 concatenated index : ordered and combined colums
 full-text index : reversed index
 fuzzy index : edit distance automata
+in-memory database : 
 
