@@ -11,5 +11,6 @@
 Hash
 * in memory. read/write O(1)
 
-Segment
-* dividied log by condition (size, time, ...)
+Log Segment
+* fragments of logs divided by specific conditions (size, time, ...)
+* compaction
