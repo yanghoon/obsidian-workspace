@@ -35,6 +35,6 @@ LSM Tree (Log-Structured Merge-Tree)
 
 B-Tree
 * fixed size page(block)
-* each pagesorted by 
+* each page sorted by key and references of other pages
 
 
