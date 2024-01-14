@@ -36,5 +36,7 @@ LSM Tree (Log-Structured Merge-Tree)
 B-Tree
 * read/write with fixed size page(block)
 * each page have range of keys (sorted) and references of other pages
+* node page : 
+* leaf page : actual key and values
 
 
