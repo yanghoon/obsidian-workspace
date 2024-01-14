@@ -38,6 +38,6 @@ B-Tree
 * each page have range of keys (sorted) and references of other pages
 * node page(), leaf page(actual key and values)
 * branching factor : count of references in a single page
-* 
+* balanced tree ()
 
 
