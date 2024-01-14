@@ -1,6 +1,6 @@
 # Instant Vector vs Range Vector
 
-div[src$='Pasted image 20240114171848.png'{} 
+![[Pasted image 20240114171848.png|white]] 
 https://medium.com/@ahmed.s.farag96/decoding-promql-unraveling-range-vectors-and-instant-vectors-in-prometheus-c1390f650e5c
 
 * Metric : 
