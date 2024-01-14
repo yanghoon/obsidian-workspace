@@ -20,6 +20,6 @@ Log Segment
 
 SSTable (Sorted-String Table)
 * A segment file that have entries sorted by key and also include offset index of those.
-* handle large amount of data. sparse index
+* handle large amount of data. sparse index use small memory. data compression
 
 LSM Tree (Log-Structured Merge-Tree)
