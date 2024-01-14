@@ -13,4 +13,5 @@ Hash
 
 Log Segment
 * fragments of logs divided by specific conditions (size, time, ...)
-* compaction
+* compaction : leave only the most recent data
+* merge : 
