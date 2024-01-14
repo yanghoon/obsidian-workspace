@@ -45,6 +45,9 @@ B-Tree
 | write amplification |  | O |
 | write speed | O |  |
 | write throughput | O |  |
+| compression rate | O |  |
+| size |  | O |
+| fragmemtation |  | O |
 |  |  |  |
 
 
