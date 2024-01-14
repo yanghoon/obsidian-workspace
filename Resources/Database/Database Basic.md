@@ -43,6 +43,8 @@ B-Tree
 |  | Log Structured | Page Orignted |
 | ---- | ---- | ---- |
 | write amplification |  | O |
-| write spee |  |  |
+| write speed | O |  |
+| write throughput | O |  |
+|  |  |  |
 
 
