@@ -7,6 +7,9 @@
 * Index
 	* data structure for speed up to retrieval
 	* or extra data file for that purpose
-* Index Types
-	* Hash : in memory. read/write O(1)
-	*
+
+Hash
+* in memory. read/write O(1)
+
+Segment
+* 
