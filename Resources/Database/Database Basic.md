@@ -28,3 +28,4 @@ LSM Tree (Log-Structured Merge-Tree)
 * memtable(sorted in-memory data structure) + sstable(disk)
 * handle random write operation as sorted data set
 * memtrable is flushed when fixed size is over
+* bloom filter ()
