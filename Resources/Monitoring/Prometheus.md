@@ -11,5 +11,5 @@
 
 ![[Pasted image 20240114172855.png | white]]
 ![[Pasted image 20240114173027.png | white]]
-* Instant Vector : metrics values within an instant time (one sample for each time series)
-* Range Vector : metrics values within the specified time range (multiple sample for each time series)
+* Instant Vector : metrics values within ***the instant time*** (one sample for each time series)
+* Range Vector : metrics values within the ***time range*** (multiple sample for each time series)
