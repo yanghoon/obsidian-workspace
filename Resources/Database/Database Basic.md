@@ -32,6 +32,9 @@ LSM Tree (Log-Structured Merge-Tree)
 * memtrable is flushed when fixed size is over
 * bloom filter ()
 ## Page Oriented
-### B-Tree
+
+B-Tree
+* fixed size page(block)
+* each pagesorted by 
 
 
