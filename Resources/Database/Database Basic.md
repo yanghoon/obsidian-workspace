@@ -1,6 +1,3 @@
 # Storage
 
-* *
-| Name | Definition |
-| --- | --- |
-| Log | Append Only |
+* Log : file format. append only. 
