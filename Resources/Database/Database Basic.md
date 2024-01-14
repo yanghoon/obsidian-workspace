@@ -31,9 +31,7 @@ LSM Tree (Log-Structured Merge-Tree)
 * handle random write operation as sorted data set
 * memtrable is flushed when fixed size is over
 * bloom filter ()
-
-
 ## Page Oriented
-
+### B-Tree
 
 
