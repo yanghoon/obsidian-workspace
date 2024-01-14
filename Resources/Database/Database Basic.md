@@ -12,4 +12,4 @@ Hash
 * in memory. read/write O(1)
 
 Segment
-* 
+* dividied log by condition (size, time, ...)
