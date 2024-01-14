@@ -40,9 +40,9 @@ B-Tree
 * branching factor : count of references in a single page
 * balanced tree ()
 
-|  |  |  |
+|  | Log Structured | Page Orignted |
 | ---- | ---- | ---- |
-| write amplification |  |  |
+| write amplification |  | O |
 |  |  |  |
 
 
