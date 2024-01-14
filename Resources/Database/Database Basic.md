@@ -50,7 +50,8 @@ B-Tree
 | fragmemtation |  | O |
 |  |  |  |
 | compaction (background) | O |  |
-| predictable |  | O |
+| disk usage - predictable |  | O |
+| disk usage - max | O |  |
 |  |  |  |
 | trasaction |  | O |
 |  |  |  |
