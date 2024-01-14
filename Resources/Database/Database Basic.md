@@ -49,8 +49,8 @@ B-Tree
 | size |  | O |
 | fragmemtation |  | O |
 |  |  |  |
-| compaction | O |  |
-|  |  |  |
+| compaction (background) | O |  |
+| predictable |  | O |
 |  |  |  |
 |  |  |  |
 
