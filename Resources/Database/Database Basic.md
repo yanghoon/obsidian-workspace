@@ -11,6 +11,7 @@
 Hash
 * in memory data structure. read/write O(1)
 * keep the key and value that represent byte offset in the log file
+* only have keys
 
 Log Segment
 * fragments of logs divided by specific conditions (size, time, ...)
