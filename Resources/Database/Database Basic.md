@@ -64,3 +64,6 @@ B-Tree
 primary key index : unique id
 secondary index : non-unique id
 heap file : all values. fast update and avoid data duplication in index
+
+clustered index : 
+covering index : key and 
