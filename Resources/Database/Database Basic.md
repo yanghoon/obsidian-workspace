@@ -19,6 +19,6 @@ Log Segment
 * merge : combine multiple segments as one
 
 SSTable (Sorted-String Table)
-* Segment file that sorte
+* Segment file that have sorted entries by key and 
 
 LSM Tree (Log-Structured Merge-Tree)
