@@ -67,4 +67,6 @@ clustered index : key with actual data
 non-clustered index : heap file(have all values). fast update and avoid data duplication in index
 covering index : indexed key + other colums
 concatenated index : ordered and combined colums
+full-text index : reversed index
+fuzzy index : edit distance automata
 
