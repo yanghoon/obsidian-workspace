@@ -52,6 +52,7 @@ B-Tree
 | compaction (background) | O |  |
 | predictable |  | O |
 |  |  |  |
+| trasaction |  | O |
 |  |  |  |
 
 
