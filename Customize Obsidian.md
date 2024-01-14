@@ -5,5 +5,5 @@
 ```
 
 ```markdown
-![[3D.png|white]]
+![[my_image.png|white]]
 ```
