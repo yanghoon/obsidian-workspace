@@ -23,7 +23,10 @@ version: '3'
 
 services:
   redis:
+    # name: my-redis
     image: redis:latest
     ports:
-    
+      - 6379:6379
+    volumes:
+      - ./data/
 ```
