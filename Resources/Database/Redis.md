@@ -64,3 +64,5 @@ OK
 
 ### String
 * binary-safe (null char, file, ...)
+* Max 512MB
+* 
