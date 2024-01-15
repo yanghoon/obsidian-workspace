@@ -9,3 +9,5 @@
 * Key-value data-model
 	* hash(fast), partitioning
 	* poor range query, no duplication
+* Data Type
+	* String, Hash, Set, List
