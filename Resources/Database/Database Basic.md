@@ -1,3 +1,8 @@
+# Trend
+
+* multi-core, multi-processor
+* cheap storages
+
 # Storage
 
 ## Log Structured
