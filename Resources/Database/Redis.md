@@ -12,7 +12,7 @@
 * Data Type
 	* String, Hash, Set, List
 
-# Management
+# Getting Started
 
 ```bash
 docker run -d --name my-redis -p 6379:6379 redis
@@ -29,4 +29,8 @@ services:
       - 6379:6379
     # volumes:
     #  - ./data/redis:/etc/redis
+```
+
+```bash
+redis-cli 
 ```
