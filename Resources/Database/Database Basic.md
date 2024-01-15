@@ -1,7 +1,7 @@
 # Trend
 
 * multi-core, multi-processor
-* scale (mobile)
+* scale (mobile), elastic
 * cheap storages
 
 # Storage
