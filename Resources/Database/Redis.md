@@ -35,5 +35,9 @@ services:
 # docker exec -it my-redis sh
 # docker-compose exec redis sh
 
-redis-cli # 
+redis-cli # 127.0.0.1:6379
+127.0.0.1:6379> set key1 banana
+OK
+127.0.0.1:6379> set key1 banana
+127.0.0.1:6379> set key1 banana
 ```
