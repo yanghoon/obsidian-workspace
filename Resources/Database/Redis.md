@@ -2,4 +2,4 @@
 
 * In-memory storage ~~database~~
 * Fast than SSD/HDD
-* Used cache, pub/sub()
+* Used distributed cache, lock, pub/sub(message queue), stream
