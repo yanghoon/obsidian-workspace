@@ -6,4 +6,4 @@
 * Used distributed cache, lock, pub/sub(message queue), stream
 * Key-value data-model
 	* hash(fast), partitioning
-	* poor range query, no duplication
+	* poor range query, not duplication
