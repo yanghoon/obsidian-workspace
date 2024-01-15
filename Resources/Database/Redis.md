@@ -3,7 +3,9 @@
 * Remote Dictionary Server
 * In-memory storage ~~database~~
 * Fast than SSD/HDD
-* Used distributed cache, lock, pub/sub(message queue), stream
+* Used to
+	* distributed cache, lock, pub/sub(message queue), stream
+	* session store
 * Key-value data-model
 	* hash(fast), partitioning
-	* poor range query, not duplication
+	* poor range query, no duplication
