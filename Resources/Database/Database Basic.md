@@ -1,6 +1,7 @@
 # Trend
 
 * multi-core, multi-processor
+* scale (mobile)
 * cheap storages
 
 # Storage
