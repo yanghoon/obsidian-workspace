@@ -11,3 +11,9 @@
 	* poor range query, no duplication
 * Data Type
 	* String, Hash, Set, List
+
+# Management
+
+```bash
+docker run -d -p 6379:6379 redis
+```
