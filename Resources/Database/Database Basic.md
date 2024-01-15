@@ -77,6 +77,8 @@ in-memory database :
 
 ## Relational Model
 
+
+* data = table = row + column
 * tables (relations, entity type)
-* columns (attributes, entity field)
+* columns (attributes, values)
 * rows (tuples, instances)
