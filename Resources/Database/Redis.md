@@ -2,7 +2,7 @@
 
 * Remote Dictionary Server
 * In-memory storage ~~database~~
-* Fast than SSD/HDD
+* Faster than SSD/HDD
 * Used to
 	* distributed cache, lock, pub/sub(message queue), stream
 	* eg. session store, limit rater, job queue
