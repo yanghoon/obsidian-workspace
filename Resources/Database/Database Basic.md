@@ -82,3 +82,4 @@ in-memory database :
 * tables (relations, entity type)
 * columns (attributes, values)
 * rows (tuples, instances)
+* data
