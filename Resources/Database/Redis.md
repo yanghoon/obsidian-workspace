@@ -4,7 +4,7 @@
 * In-memory storage ~~database~~
 * Faster than SSD/HDD
 * Used to
-	* distributed cache, lock, pub/sub(message queue), stream
+	* distributed heap, cache, lock, pub/sub(message queue), stream
 	* eg. session store, limit rater, job queue
 * Key-value data-model
 	* hash(fast), partitioning
