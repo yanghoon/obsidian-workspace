@@ -71,9 +71,10 @@ OK
 set key1 val1
 get key1
 
-incr int_v
-decr myint
+incr key_int
+decr key_int
 
-	* `mset key1 val1 key2 val2`, `mget key1 key2`
+mset key1 val1 key2 val2
+mget key1 key2 # throughput
 
 ```
