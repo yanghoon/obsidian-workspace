@@ -65,4 +65,7 @@ OK
 ### String
 * binary-safe (null char, file, ...)
 * Max 512MB
-* 
+* Commands
+	* `set key1 string-value`
+	* `get key1`
+	* `incr myint`, 
