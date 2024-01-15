@@ -1,8 +1,8 @@
 # Trend
 
-* multi-core, multi-processor
-* scale (mobile), elastic
-* cheap storages
+* multi-core, multi-processor, cheap storages
+* scale(mobile)
+* elastic, distributed, reactive
 
 # Storage
 
@@ -75,9 +75,7 @@ covering index : indexed key + other colums
 concatenated index : ordered and combined colums
 full-text index : reversed index
 fuzzy index : edit distance automata
-in-memory database : 
-
-
+in-memory database :
 
 # Data Model
 
