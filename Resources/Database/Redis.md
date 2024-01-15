@@ -44,5 +44,17 @@ OK
 (nil)
 127.0.0.1:6379> keys *
 1) "key1"
-127.0.0.1:6379> set key1 banana
+127.0.0.1:6379> set key2 apple
+OK
+127.0.0.1:6379> dbsize
+(integer) 2
+
+127.0.0.1:6379> flushall
+OK
+127.0.0.1:6379> dbsize
+(integer) 0
+127.0.0.1:6379> get key1
+"banana"
+127.0.0.1:6379> get key2
+(nil)
 ```
