@@ -15,5 +15,15 @@
 # Management
 
 ```bash
-docker run -d -p 6379:6379 redis
+docker run -d --name my-redis -p 6379:6379 redis
+```
+
+```yaml
+version: '3'
+
+services:
+  redis:
+    image: redis:latest
+    ports:
+    
 ```
