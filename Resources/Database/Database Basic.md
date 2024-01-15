@@ -71,3 +71,11 @@ full-text index : reversed index
 fuzzy index : edit distance automata
 in-memory database : 
 
+
+
+# Data Model
+
+## Relational Model
+
+* 
+* tables (relations)
