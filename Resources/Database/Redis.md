@@ -65,7 +65,7 @@ OK
 ### String
 * binary-safe (null char, file, ...)
 * Max 512MB
-* Commands
+#### Commands
 
 ```bash
 set key1 val1
