@@ -66,6 +66,14 @@ OK
 * binary-safe (null char, file, ...)
 * Max 512MB
 * Commands
-	* `set key1 val1`, `get key1`
-	* `incr myint`, `decr myint`
+
+```bash
+set key1 val1
+get key1
+
+incr int_v
+decr myint
+
 	* `mset key1 val1 key2 val2`, `mget key1 key2`
+
+```
