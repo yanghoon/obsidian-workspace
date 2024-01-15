@@ -27,6 +27,6 @@ services:
     image: redis:latest
     ports:
       - 6379:6379
-    volumes:
-      - ./data/
+    # volumes:
+    #  - ./data/redis:/etc/redis
 ```
