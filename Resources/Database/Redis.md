@@ -1,4 +1,5 @@
 # Concept
 
 * In-memory storage ~~database~~
-* Use case : cache, message queue(pub/sub)
+* Fast than SSD/HDD
+* Used cache, pub/sub()
