@@ -63,4 +63,4 @@ OK
 # Data Type
 
 ### String
-* 
+* binary-safe (null char, file, ...)
