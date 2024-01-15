@@ -83,3 +83,4 @@ in-memory database :
 * columns (attributes, values)
 * rows (tuples, instances)
 * join : data consistency, normalize(no duplication)
+* fixed, hard to scale-out
