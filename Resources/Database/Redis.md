@@ -71,7 +71,7 @@ OK
 set key1 val1
 get key1
 
-incr key_int
+incr key_int # (error) ERR value is not an integer or out of range
 decr key_int
 
 mset key1 val1 key2 val2
