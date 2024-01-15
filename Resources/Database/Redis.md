@@ -32,5 +32,7 @@ services:
 ```
 
 ```bash
+# docker exec -it my-redis sh
+# docker-compose exec redis sh
 redis-cli 
 ```
