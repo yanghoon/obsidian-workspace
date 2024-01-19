@@ -241,9 +241,9 @@ public String getData(String key) {
 private String getDataFromSource(String key) { ... }
 ```
 ## Spring Cache
-* @Cacheable : Cache-Aside Pattern
-* @CachePut : 
-* @CacheEvict : 
+* @Cacheable
+* @CachePut
+* @CacheEvict
 
 ```java
 /* build.gradle */
@@ -258,9 +258,6 @@ spring:
     port: 6379
 
 /* Service.java */
-final int TIMEOUT = 5;
-final StringRestTemplate restTemplate;
-
 public String getData(String key) {
 	return getDataFromSource(key);
 }
