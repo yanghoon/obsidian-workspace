@@ -204,7 +204,7 @@ spring:
 @GetMapping
 public void api(HttpSession session) { ... }
 ```
-## Cache with RedisTemplate
+## RedisTemplate
 
 ```java
 /* build.gradle */
@@ -240,4 +240,42 @@ public String getData(String key) {
 
 private String getDataFromSource(String key) { ... }
 ```
-## Cache with Spring Cache
+## Spring Cache
+* @Cacheable : 
+* @CachePut : 
+* @CacheEvict : 
+
+```java
+/* build.gradle */
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-data-redis'
+}
+
+/* application.yaml */
+spring:
+  redis:
+    host: localhost
+    port: 6379
+
+/* Controller.java */
+final int TIMEOUT = 5;
+final StringRestTemplate restTemplate;
+
+public String getData(String key) {
+	// Cache-Aside
+	// 1. Lookup Cache
+	ValueOperations<String, String> ops = redisTemplate.opsForValue();
+	String val = ops.get(key);
+	
+	// 2. Update Cache
+	if (val == null) {
+		val = getDataFromSource(key);
+		ops.set("data:" + key, val, TIMEOUT, TimeUnit.SECONDS);
+	}
+	
+	// 3. 
+	return val;
+}
+
+private String getDataFromSource(String key) { ... }
+```
