@@ -122,5 +122,9 @@ HMGET key1 k1 k2
 HINCRBY key1 k1 1 # default: 1
 ```
 ### Sorted Set
-* with Score, sorted unique values
-* 
+* with Score, sorted unique values by asc
+* Rank
+
+```bash
+ZADD key1 score v1
+```
