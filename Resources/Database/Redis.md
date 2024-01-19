@@ -147,11 +147,12 @@ BITCOUNT key1
 BITOP [AND|OR|XOR] key_result key1 key2
 ```
 ### HyperLogLog
-* probabilistic unique count set
+* cardinality, probabilistic unique count
 * not store actual data. just count
 * handle 2^64, max 12 KB, 0.81% error rate
 
 ```bash
 PFADD key1 val1 val2 val3
 PFCOUNT key1
+PFMERGE key_result key1 key2
 ```
