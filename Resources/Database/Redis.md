@@ -94,6 +94,7 @@ RPOP key1 1 # default: 1
 ```
 
 ### Set
+* Unordered unique values
 * Support set operations
 * Exactly once flag
 * read/add/remove: O(1)
