@@ -185,8 +185,6 @@ PFMERGE key_result key1 key2
 ```
 # Use Case
 ## Spring Session
-* `org.springframrowkr.session:spring-session-data-redis`
-* HttSession
 
 ```java
 /* build.gradle */
@@ -200,5 +198,7 @@ spring:
   session:
     storage-type: redis
 
-/* C
+/* Controller.java */
+@GetMapping
+public void api(HttpSession session) { ... }
 ```
