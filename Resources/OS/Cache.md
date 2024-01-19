@@ -11,7 +11,7 @@
 	* Cache Miss
 	* Cache Strategies
 		* Cache-Aside (lazy loading, cache first)
-		* Read-Through
+		* Read-Through (no sql)
 		* Write-Through (fresh, higher latency, infrequent)
 		* Write-Back (lazy write, data loss, infrequent)
 		* Write-Around
