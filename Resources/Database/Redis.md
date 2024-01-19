@@ -121,4 +121,6 @@ HMGET key1 k1 k2
 
 HINCRBY key1 k1 1 # default: 1
 ```
-### Sou
+### Sorted Set
+* with Score, sorted unique values
+* 
