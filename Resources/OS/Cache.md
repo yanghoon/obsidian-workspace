@@ -14,6 +14,7 @@
 		* Read-Through
 		* Write-Through (fresh, latency up)
 		* Write-Back (lazy write, data loss)
+		* Write-Around
 	* Eviction Policy
 		* TTL(Time-to-Live)
 		* LRU(Least Recently Used) : Oldest
