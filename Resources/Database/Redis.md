@@ -224,6 +224,10 @@ StringRestTemplate restTemplate;
 public String getData(String key) {
 	ValueOperations<String, String> ops = redisTemplate.opsForValue();
 	String val = ops.get(key);
-	return Optional.ofNullable(val).orElse("");
+	if (val != null) {
+		return val;
+	} else {
+		get
+	}
 }
 ```
