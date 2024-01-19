@@ -185,7 +185,7 @@ PFMERGE key_result key1 key2
 ```
 # Use Case
 ## Spring Session
-* `org.springframrowkr.session`
+* `org.springframrowkr.session:spring-session`
 * HttSession
 
 ```java
