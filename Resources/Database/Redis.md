@@ -14,6 +14,8 @@
 
 # Getting Started
 
+## Docker
+
 ```bash
 docker run -d --name my-redis -p 6379:6379 redis
 ```
@@ -60,6 +62,12 @@ OK
 (nil)
 127.0.0.1:6379> exit
 ```
+## Java
+
+```gradle
+depende
+```
+
 # Data Type
 
 ### String
