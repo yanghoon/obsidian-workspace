@@ -147,9 +147,9 @@ BITCOUNT key1
 BITOP [AND|OR|XOR] key_result key1 key2
 ```
 ### HyperLogLog
-* Unique count
-* MAX 12 KB, 0.81%
+* probabilistic unique count
+* max 12 KB, 0.81% error rate
 
 ```bash
-PFADD
+PFADD key 
 ```
