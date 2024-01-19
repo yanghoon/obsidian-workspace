@@ -94,7 +94,7 @@ RPOP key1 1 # default: 1
 ```
 
 ### Set
-* Set operations
+* Support set operations
 * read/add/remove: O(1)
 
 ```bash
