@@ -241,7 +241,7 @@ public String getData(String key) {
 private String getDataFromSource(String key) { ... }
 ```
 ## Spring Cache
-* @Cacheable : 
+* @Cacheable : Cache-Aside Pattern
 * @CachePut : 
 * @CacheEvict : 
 
@@ -262,18 +262,7 @@ final int TIMEOUT = 5;
 final StringRestTemplate restTemplate;
 
 public String getData(String key) {
-	// Cache-Aside
-	// 1. Lookup Cache
-	ValueOperations<String, String> ops = redisTemplate.opsForValue();
-	String val = ops.get(key);
-	
-	// 2. Update Cache
-	if (val == null) {
-		val = getDataFromSource(key);
-		ops.set("data:" + key, val, TIMEOUT, TimeUnit.SECONDS);
-	}
-	
-	return val;
+	return getDataFromSource(key);
 }
 
 /* CachedService.java */
