@@ -221,8 +221,9 @@ spring:
 /* Controller.java */
 StringRestTemplate restTemplate;
 
-public Data getData(String key) {
+public String getData(String key) {
 	ValueOperations<String, String> ops = redisTemplate.opsForValue();
-	String val = ops.get()
+	String val = ops.get(key);
+	return Optional.ofNullable(val).orElse("");
 }
 ```
