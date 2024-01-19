@@ -66,7 +66,7 @@ OK
 
 Spring Data Redis
 * Redis client: Lettuce
-* StringRedisTemplate
+* StringRedisTemplate, ValueOperations<?, ?>
 
 ```java
 /* buidl.gradle */
@@ -76,6 +76,10 @@ dependencies {
 }
 
 /* application.yaml */
+spring:
+  redis:
+    host: localhost
+    port: 6379
 
 /* Java Code */
 ValueOperations<String, String> ops = StringRestTemplate.opsForValue();
