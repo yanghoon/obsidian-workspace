@@ -253,10 +253,13 @@ dependencies {
 
 /* application.yaml */
 spring:
+  cache:
+    type: redis
   redis:
     host: localhost
     port: 6379
 
+/* CacheConfig.java **
 /* Service.java */
 public String getData(String key) {
 	return getDataFromSource(key);
