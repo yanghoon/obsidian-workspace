@@ -94,5 +94,14 @@ RPOP key1 1 # default: 1
 ```
 
 ### Set
-* Set Operations
+* Set operations
 * read/add/remove: O(1)
+
+```bash
+SADD key1 val1
+SREM
+
+SCARD
+SISMEMBER key1 val1
+
+```
