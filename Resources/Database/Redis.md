@@ -148,6 +148,7 @@ BITOP [AND|OR|XOR] key_result key1 key2
 ```
 ### HyperLogLog
 * probabilistic unique count set
+* not store actual data. just count
 * handle 2^64, max 12 KB, 0.81% error rate
 
 ```bash
