@@ -273,10 +273,10 @@ public String getData(String key) {
 		ops.set("data:" + key, val, TIMEOUT, TimeUnit.SECONDS);
 	}
 	
-	// 3. 
 	return val;
 }
 
-/* Service.java */
+/* CachedService.java */
+@Cacheable
 private String getDataFromSource(String key) { ... }
 ```
