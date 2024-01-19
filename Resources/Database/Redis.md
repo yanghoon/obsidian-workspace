@@ -204,7 +204,7 @@ spring:
 @GetMapping
 public void api(HttpSession session) { ... }
 ```
-## Cache
+## Cache with RedisTemplate
 
 ```java
 /* build.gradle */
@@ -227,15 +227,17 @@ public String getData(String key) {
 	// 1. Lookup Cache
 	ValueOperations<String, String> ops = redisTemplate.opsForValue();
 	String val = ops.get(key);
-
+	
 	// 2. Update Cache
 	if (val == null) {
 		val = getDataFromSource(key);
 		ops.set("data:" + key, val, TIMEOUT, TimeUnit.SECONDS);
 	}
-
+	
+	// 3. 
 	return val;
 }
 
 private String getDataFromSource(String key) { ... }
 ```
+## Cache with Spring Cache
