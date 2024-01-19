@@ -90,5 +90,9 @@ LLEN key1
 LRANGE key1 0 -1 # LLEN -1
 
 LPOP key1 1 # default: 1
-RPOP key1 1
+RPOP key1 1 # default: 1
 ```
+
+### Set
+* Set Operations
+* read/add/remove: O(1)
