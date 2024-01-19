@@ -11,10 +11,11 @@
 	* Cache Miss
 	* Cache Strategies
 		* Cache-Aside (lazy loading, cache first)
+		* Read-Through
 		* Write-Through (fresh, latency up)
 		* Write-Back (lazy write, data loss)
 	* Eviction Policy
 		* TTL(Time-to-Live)
 		* LRU(Least Recently Used) : Oldest
-		* LFU(Least Frequently Used) : Cache 
+		* LFU(Least Frequently Used) : Most hits
 		* FIFO(First in First out) : Queue
