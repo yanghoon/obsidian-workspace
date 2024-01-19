@@ -227,7 +227,10 @@ public String getData(String key) {
 	if (val != null) {
 		return val;
 	} else {
-		get
+		val = getDataFromSource(key);
+		ops.set(key, val)
 	}
 }
+
+private String getDataFromSource(String key) { ... }
 ```
