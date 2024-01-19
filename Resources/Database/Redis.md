@@ -147,7 +147,7 @@ BITCOUNT key1
 BITOP [AND|OR|XOR] key_result key1 key2
 ```
 ### HyperLogLog
-* probabilistic unique count
+* probabilistic unique count set
 * handle 2^64, max 12 KB, 0.81% error rate
 
 ```bash
