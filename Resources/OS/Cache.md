@@ -9,8 +9,10 @@
 * Terms
 	* Cache Hit
 	* Cache Miss
+	* Cache Strategies
+		* Cache-Aside (lazy loading, cache first)
+		* Write-Through (fresh, latency up)
+		* Write-Back (lazy write, data loss)
 	* Eviction Policy
-* Cache Strategies
-	* Cache-Aside (lazy loading, cache first)
-	* Write-Through (fresh, latency)
-	* Write-Back (lazy write, data loss)
+		* TTL(Time-to-Live)
+		* L
