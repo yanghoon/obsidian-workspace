@@ -203,3 +203,20 @@ spring:
 @GetMapping
 public void api(HttpSession session) { ... }
 ```
+## Cache
+
+```java
+/* build.gradle */
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-data-redis'
+}
+
+/* application.yaml */
+spring:
+  session:
+    storage-type: redis
+
+/* Controller.java */
+@GetMapping
+public void api(HttpSession session) { ... }
+```
