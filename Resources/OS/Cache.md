@@ -13,7 +13,7 @@
 		* Cache-Aside (lazy loading, cache first)
 		* Read-Through
 		* Write-Through (fresh, higher latency, infrequent)
-		* Write-Back (lazy write, data loss, lower hit rates)
+		* Write-Back (lazy write, data loss, infrequent)
 		* Write-Around
 	* Eviction Policy
 		* TTL(Time-to-Live)
