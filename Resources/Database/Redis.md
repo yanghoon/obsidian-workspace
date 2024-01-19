@@ -136,7 +136,9 @@ ZRANK key1 val1    # asc
 ZREVRANG key1 val1 # desc
 ```
 ### Bitmap
-* Bit Array
+* Bit array
+* 4,294,967,295 (2^32-1)
 
 ```bash
+SET
 ```
