@@ -109,12 +109,14 @@ SEMEMBERS key1
 ```
 ### Hashe
 * Like object or map
-* vs string type with JSON (no need to parse and throughput)
-* 
+* Counter
+* Used for vs string type with JSON (no need to parse and throughput)
 
 ```bash
 HSET key1 k1 v1
 HGET key1 k1
 
-HMGET
+HINCRBY key1 k1
+
+HMGET key1 k1 k2
 ```
