@@ -191,8 +191,14 @@ PFMERGE key_result key1 key2
 ```java
 /* build.gradle */
 dependencies {
-  implementation 'org.springframework.boot:spring'
+  implementation 'org.springframework.boot:spring-boot-data-redis'
+  implementation 'org.springframework.session:spring-session-data-redis'
 }
 
-HttpSession
+/* application.yaml */
+spring:
+  session:
+    storage-type: redis
+
+/* C
 ```
