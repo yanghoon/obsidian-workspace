@@ -2,5 +2,6 @@
 * Temporary storage to reduce latency between devices latencies
 * Consistency problems
 * Examples
-	* CPU Cach
+	* CPU Cache : L1, L2, L3
+	* Web Browser Cache : ETag
 * Pattern
