@@ -126,5 +126,9 @@ HINCRBY key1 k1 1 # default: 1
 * Rank
 
 ```bash
-ZADD key1 score v1
+ZADD key1 score1 val1 score2 val2
+
+ZRANGE key1 0 1 # 
+
+ZRANK key1 val1
 ```
