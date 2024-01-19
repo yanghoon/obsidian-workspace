@@ -69,14 +69,15 @@ Spring Data Redis
 * StringRedisTemplate
 
 ```java
+/* buidl.gradle */
 dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter-web'
   implementation 'org.springframework.boot:spring-boot-starter-data-redis'
   implementation 'org.springframework.session:spring-session-data-redis'
-  
-  testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+/* application.yaml */
+
+/* Java Code */
 ValueOperations<String, String> ops = StringRestTemplate.opsForValue();
 ops.set("key", "val");
 ops.get("key"); // val
