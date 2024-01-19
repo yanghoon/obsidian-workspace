@@ -225,12 +225,14 @@ final StringRestTemplate restTemplate;
 public String getData(String key) {
 	ValueOperations<String, String> ops = redisTemplate.opsForValue();
 	String val = ops.get(key);
-	if (val != null) {
-		return val;
-	} else {
+	
+	// Cache-Aside
+	if (val == null) {
 		val = getDataFromSource(key);
 		ops.set("data:" + key, val, TIMEOUT, TimeUnit.SECONDS);
 	}
+
+	return val;
 }
 
 private String getDataFromSource(String key) { ... }
