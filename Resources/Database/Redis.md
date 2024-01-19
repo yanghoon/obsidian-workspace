@@ -259,10 +259,15 @@ spring:
     host: localhost
     port: 6379
 
-/* CacheConfig.java **
+/* CacheConfig.java */
+@EnableCaching
+public class CacheConfig {}
+
 /* Service.java */
+private CacheService service;
+
 public String getData(String key) {
-	return getDataFromSource(key);
+	return service.getDataFromSource(key);
 }
 
 /* CachedService.java */
