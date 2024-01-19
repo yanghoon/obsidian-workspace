@@ -108,5 +108,12 @@ SEMEMBERS key1
 
 ```
 ### Hashe
-* Like map or object
+* Like object or map (vs string with )
 * 
+
+```bash
+HSET key1 k1 v1
+HGET key1 k1
+
+HMGET
+```
