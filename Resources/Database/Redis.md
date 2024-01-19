@@ -65,6 +65,9 @@ OK
 ### String
 * binary-safe (null char, file, ...)
 * Max 512MB
+### List
+* Linked-list
+* Queue, Stack
 #### Commands
 
 ```bash
