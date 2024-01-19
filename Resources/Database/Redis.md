@@ -99,9 +99,10 @@ RPOP key1 1 # default: 1
 
 ```bash
 SADD key1 val1
-SREM
-
-SCARD
+SREM key1 val1
 SISMEMBER key1 val1
+
+SCARD key1
+SEMEMBERS key1
 
 ```
