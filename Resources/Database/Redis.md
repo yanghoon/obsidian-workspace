@@ -226,7 +226,6 @@ public String getData(String key) {
 	ValueOperations<String, String> ops = redisTemplate.opsForValue();
 	String val = ops.get(key);
 	
-	// Cache-Aside
 	if (val == null) {
 		val = getDataFromSource(key);
 		ops.set("data:" + key, val, TIMEOUT, TimeUnit.SECONDS);
