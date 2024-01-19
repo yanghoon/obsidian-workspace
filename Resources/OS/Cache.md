@@ -11,5 +11,5 @@
 	* Cache Miss
 	* Eviction Policy
 * Cache Strategies
-	* Cache-Aside (lazy oading, Cache First, Read)
-	* 
+	* Cache-Aside (lazy loading, cache first)
+	* Write-Through (latency, )
