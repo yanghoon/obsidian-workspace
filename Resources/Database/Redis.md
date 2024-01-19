@@ -65,7 +65,9 @@ OK
 ## Java
 
 ```gradle
-depende
+dependencies {
+  
+}
 ```
 
 # Data Type
