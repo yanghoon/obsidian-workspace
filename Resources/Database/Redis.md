@@ -66,7 +66,7 @@ OK
 
 Spring Data Redis
 * Redis client: Lettuce
-* RedisTemplate
+* StringRedisTemplate
 
 ```java
 dependencies {
