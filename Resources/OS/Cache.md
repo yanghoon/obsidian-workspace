@@ -8,6 +8,8 @@
 	* Database : query results
 * Terms
 	* Cache Hit
-	* Cache Miss, Eviction Policy
+	* Cache Miss
+	* Eviction Policy
 * Cache Strategies
-	* Cache-Aside (Lazy Loading, Read)
+	* Cache-Aside (lazy oading, Cache First, Read)
+	* 
