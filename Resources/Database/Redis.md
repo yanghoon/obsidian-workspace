@@ -101,13 +101,12 @@ RPOP key1 1 # default: 1
 ```bash
 SADD key1 val1
 SREM key1 val1
-SISMEMBER key1 val1
 
 SCARD key1
 SEMEMBERS key1
-
+SISMEMBER key1 val1
 ```
-### Hashe
+### Hash
 * Like object or map
 * Counter
 * Used for throughput of object style (vs string type with JSON)
@@ -115,10 +114,11 @@ SEMEMBERS key1
 ```bash
 HSET key1 k1 v1 k2 v2
 HGET key1 k1
-
-HMGET key1 k1 k2
-
 HDEL key1 k1 k2
+
+HKEYS key1
+HMGET key1 k1 k2
 
 HINCRBY key1 k1 1 # default: 1
 ```
+### Sou
