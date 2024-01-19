@@ -189,5 +189,10 @@ PFMERGE key_result key1 key2
 * HttSession
 
 ```java
+/* build.gradle */
+dependencies {
+  implementation 'org.springframework.boot:spring'
+}
+
 HttpSession
 ```
