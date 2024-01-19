@@ -12,4 +12,5 @@
 	* Eviction Policy
 * Cache Strategies
 	* Cache-Aside (lazy loading, cache first)
-	* Write-Through (latency, )
+	* Write-Through (fresh, latency)
+	* Write-Back (lazy write, data loss)
