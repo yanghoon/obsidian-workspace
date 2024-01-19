@@ -213,10 +213,14 @@ dependencies {
 
 /* application.yaml */
 spring:
-  session:
-    storage-type: redis
+  redis:
+    host: localhost
+    port: 6379
 
 /* Controller.java */
-@GetMapping
-public void api(HttpSession session) { ... }
+StringRestTemplate restTemplate;
+
+public void getData(String keyword) {
+
+}
 ```
