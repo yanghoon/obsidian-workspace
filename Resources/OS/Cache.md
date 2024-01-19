@@ -12,8 +12,8 @@
 	* Cache Strategies
 		* Cache-Aside (lazy loading, cache first)
 		* Read-Through
-		* Write-Through (fresh, latency up)
-		* Write-Back (lazy write, data loss, low hit rates)
+		* Write-Through (fresh, higher latency, infrelower hit rates)
+		* Write-Back (lazy write, data loss, lower hit rates)
 		* Write-Around
 	* Eviction Policy
 		* TTL(Time-to-Live)
