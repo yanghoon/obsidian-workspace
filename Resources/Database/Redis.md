@@ -222,6 +222,7 @@ spring:
 StringRestTemplate restTemplate;
 
 public Data getData(String key) {
-	
+	ValueOperations<String, String> ops = redisTemplate.opsForValue();
+	String val = ops.get()
 }
 ```
