@@ -144,5 +144,5 @@ SETBIT key1 index [0 | 1]
 GETBIT key1 index
 
 BITCOUNT key1
-BITOP [AND|OR] key_result key1 key2
+BITOP [AND|OR|XOR] key_result key1 key2
 ```
