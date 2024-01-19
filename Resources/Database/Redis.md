@@ -63,9 +63,7 @@ OK
 127.0.0.1:6379> exit
 ```
 ## Java
-
-Redis Clients
-* Let
+* Lettuce: redis client (in spring data redis)
 
 ```java
 dependencies {
