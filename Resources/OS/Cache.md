@@ -15,4 +15,6 @@
 		* Write-Back (lazy write, data loss)
 	* Eviction Policy
 		* TTL(Time-to-Live)
-		* LRU(Lea)
+		* LRU(Least Recently Used) : Oldest
+		* LFU(Least Frequently Used) : Cache 
+		* FIFO(First in First out) : Queue
