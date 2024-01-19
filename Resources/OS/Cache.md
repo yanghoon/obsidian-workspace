@@ -1,6 +1,6 @@
 # Concept
 * Temporary storage to reduce latency between devices latencies
-* Reduce latencies, usage, 
+* Reduce latencies, usage, bottleneck
 * Consistency problems (Invalidation)
 * Examples
 	* CPU : L1, L2, L3
