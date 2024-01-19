@@ -228,7 +228,7 @@ public String getData(String key) {
 		return val;
 	} else {
 		val = getDataFromSource(key);
-		ops.set(key, val)
+		ops.set("data:" + key, val);
 	}
 }
 
