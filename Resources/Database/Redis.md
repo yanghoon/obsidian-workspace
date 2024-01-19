@@ -135,3 +135,8 @@ ZRANGE key1 0 1 #
 ZRANK key1 val1    # asc
 ZREVRANG key1 val1 # desc
 ```
+### Bitmap
+* Bit Array
+
+```bash
+```
