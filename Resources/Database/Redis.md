@@ -115,9 +115,8 @@ SEMEMBERS key1
 ```bash
 HSET key1 k1 v1 k2 v2
 HGET key1 k1
-HDEL key1 k2
-
-HINCRBY key1 k1
-
 HMGET key1 k1 k2
+HDEL key1 k1 k2
+
+HINCRBY key1 k1 1 # default: 1
 ```
