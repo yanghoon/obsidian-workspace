@@ -66,7 +66,7 @@ OK
 * binary-safe (null char, file, ...)
 * Max 512MB
 ### List
-* Linked-list, write: O(1), 
+* Linked-list, search: ()read: O(n), write: O(1)
 * Queue, Stack
 #### Commands
 
