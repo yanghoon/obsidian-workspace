@@ -1,3 +1,4 @@
+#cache
 # Concept
 * Temporary storage to reduce latency between devices latencies
 	* Reduce latencies, usage, bottleneck

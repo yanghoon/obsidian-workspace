@@ -1,3 +1,4 @@
+#cache
 # Concept
 
 * Remote Dictionary Server
