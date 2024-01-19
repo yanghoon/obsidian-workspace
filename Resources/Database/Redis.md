@@ -83,6 +83,9 @@ mget key1 key2 # throughput
 
 ```
 
-```bash
+```redis
 LPUSH key1 val1
+LPUSH key1 val2
+LLEN key1
+RPOP key1
 ```
