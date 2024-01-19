@@ -219,7 +219,8 @@ spring:
     port: 6379
 
 /* Controller.java */
-StringRestTemplate restTemplate;
+final int TIMEOUT = 5;
+final StringRestTemplate restTemplate;
 
 public String getData(String key) {
 	ValueOperations<String, String> ops = redisTemplate.opsForValue();
@@ -228,7 +229,7 @@ public String getData(String key) {
 		return val;
 	} else {
 		val = getDataFromSource(key);
-		ops.set("data:" + key, val);
+		ops.set("data:" + key, val, TIMEOUT, TimeUnit.SECONDS);
 	}
 }
 
