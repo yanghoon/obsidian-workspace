@@ -65,11 +65,6 @@ OK
 ### String
 * binary-safe (null char, file, ...)
 * Max 512MB
-### List
-* Linked-list
-* Queue, Stack
-* read: O(n), add/remove: O(1)
-#### Commands
 
 ```bash
 set key1 val1
@@ -82,10 +77,14 @@ mset key1 val1 key2 val2
 mget key1 key2 # throughput
 
 ```
+### List
+* Linked-list
+* Queue, Stack
+* read: O(n), add/remove: O(1)
 
 ```bash
-LPUSH key1 val1
-RPUSH key1 val2
+LPUSH key1 val1 val2
+RPUSH key1 val3
 
 LLEN key1
 LRANGE key1 0 -1 # LLEN -1
