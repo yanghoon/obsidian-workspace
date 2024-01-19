@@ -146,4 +146,4 @@ GETBIT key1 index
 BITCOUNT key1
 BITOP [AND|OR|XOR] key_result key1 key2
 ```
-### HyperLo
+### HyperLogLog
