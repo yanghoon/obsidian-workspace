@@ -15,4 +15,4 @@
 		* Write-Back (lazy write, data loss)
 	* Eviction Policy
 		* TTL(Time-to-Live)
-		* L
+		* LRU(Lea)
