@@ -108,7 +108,8 @@ SEMEMBERS key1
 
 ```
 ### Hashe
-* Like object or map (vs string with )
+* Like object or map
+* vs string type with JSON (no need to parse and throughput)
 * 
 
 ```bash
