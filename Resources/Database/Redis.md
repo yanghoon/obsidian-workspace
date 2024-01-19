@@ -220,7 +220,7 @@ spring:
 
 /* Service.java */
 final int TIMEOUT = 5;
-final StringRestTemplate restTemplate;
+final StringRedisTemplate redisTemplate;
 
 public String getData(String key) {
 	// Cache-Aside
