@@ -66,8 +66,9 @@ OK
 * binary-safe (null char, file, ...)
 * Max 512MB
 ### List
-* Linked-list, read: O(n), add/remove: O(1)
+* Linked-list
 * Queue, Stack
+* read: O(n), add/remove: O(1)
 #### Commands
 
 ```bash
@@ -80,4 +81,8 @@ decr key_int
 mset key1 val1 key2 val2
 mget key1 key2 # throughput
 
+```
+
+```bash
+LPUSH key1 val1
 ```
