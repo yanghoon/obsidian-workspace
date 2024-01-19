@@ -1,2 +1,2 @@
 # Concept
-* Temparory Storage for Speed
+* Temporary storage to reduce speed differences between devices with different latencies
