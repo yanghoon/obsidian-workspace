@@ -88,10 +88,8 @@ LPUSH key1 val1
 RPUSH key1 val2
 
 LLEN key1
-LRANGE key1 
+LRANGE key1 0 -1 # LLEN -1
 
+LPOP key1
 RPOP key1
-RPOP key1
-
-# LPUSH/RPUSH
 ```
