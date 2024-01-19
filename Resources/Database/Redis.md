@@ -110,11 +110,12 @@ SEMEMBERS key1
 ### Hashe
 * Like object or map
 * Counter
-* Used for vs string type with JSON (no need to parse and throughput)
+* Used for throughput of object style (vs string type with JSON)
 
 ```bash
-HSET key1 k1 v1
+HSET key1 k1 v1 k2 v2
 HGET key1 k1
+HDEL key1 k2
 
 HINCRBY key1 k1
 
