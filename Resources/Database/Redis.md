@@ -107,3 +107,6 @@ SCARD key1
 SEMEMBERS key1
 
 ```
+### Hashe
+* Like map or object
+* 
