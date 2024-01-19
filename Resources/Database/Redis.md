@@ -218,7 +218,7 @@ spring:
     host: localhost
     port: 6379
 
-/* Controller.java */
+/* Service.java */
 final int TIMEOUT = 5;
 final StringRestTemplate restTemplate;
 
@@ -257,7 +257,7 @@ spring:
     host: localhost
     port: 6379
 
-/* Controller.java */
+/* Service.java */
 final int TIMEOUT = 5;
 final StringRestTemplate restTemplate;
 
@@ -277,5 +277,6 @@ public String getData(String key) {
 	return val;
 }
 
+/* Service.java */
 private String getDataFromSource(String key) { ... }
 ```
