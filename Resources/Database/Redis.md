@@ -64,7 +64,7 @@ OK
 ```
 ## Java
 
-```gradle
+```java
 dependencies {
     // implemetation 'org.springfrmaework.boot:spring-boot-starter'
     implemetation 'org.springfrmaework.boot:spring-boot-starter-data-redis'
