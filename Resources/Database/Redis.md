@@ -220,7 +220,7 @@ spring:
 /* Controller.java */
 StringRestTemplate restTemplate;
 
-public void getData(String keyword) {
-
+public Data getData(String key) {
+	
 }
 ```
