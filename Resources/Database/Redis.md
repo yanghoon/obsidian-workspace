@@ -77,8 +77,9 @@ dependencies {
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-ValueOperations<String, String> ops = StringRestTemplate.opsForValue()
-ops
+ValueOperations<String, String> ops = StringRestTemplate.opsForValue();
+ops.set("key", "val");
+ops.get("key"); // val
 ```
 
 # Data Type
