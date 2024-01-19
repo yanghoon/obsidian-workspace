@@ -264,7 +264,7 @@ spring:
 public class CacheConfig {}
 
 /* Service.java */
-private CacheService service;
+final CacheService service;
 
 public String getData(String key) {
 	return service.getDataFromSource(key);
