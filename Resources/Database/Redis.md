@@ -265,11 +265,13 @@ spring:
 public class CacheConfig {
 	@Bean
 	public CacheManager cacheManager(RedisConnectionFactory factory) {
+		RedisSerializationContext.SerializationPair
+			.fromSerializer(new StringRedisSerializer())
 		RedisCacheConfiguration.defaultConfig()
 			.disabledCachingNullValues()
 			.entryTtl(Duration.ofSeconds(10)) // default
 			.computePrefixWith(CacheKeyPrefix.simple())
-			.serializeKeyWith(RedisSerializationContext.SerializationPair.fromSerializer)
+			.serializeKeyWith()
 	}
 }
 
