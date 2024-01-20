@@ -349,9 +349,11 @@ public class RedisConfig {
 
 @Service
 public class Service implements MessageListener {
-	finsl RedisMessageListnerContainer container;
-
-public void subscribe(String topic) {
+	final RedisMessageListnerContainer container;
+	
+	public void subscribe(String topic) {
+		container.addMessageListener(this, new ChannelTopic(topic));
+		
 		Scanner in = new Scanner(System.in);
 		while(in.hasNextLine()) {
 			String line = in.nextLine();
