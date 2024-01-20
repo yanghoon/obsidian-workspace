@@ -189,9 +189,10 @@ PFMERGE key_result key1 key2
 
 # Persistence
 ## RDB (Redis Database)
-* Snapshot Backup
-* Schedule or Menual
-* dump.rdb
+* Snapshot Backup (eg. dump.rdb)
+* Schedule or Manual
+* Ba
+* Small size
 ## AOF
 
 # Use Case
