@@ -186,7 +186,12 @@ PFCOUNT key1
 PFMERGE key_result key1 key2
 ```
 # Pub/Sub
-* Message loss, push, to all online, at-most-once
+* Message loss, push to all online, at-most-once
+
+# Persistence
+## RDBMS
+## AOF
+
 # Use Case
 ## Spring Session
 
