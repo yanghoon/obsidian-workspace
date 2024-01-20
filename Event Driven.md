@@ -1,4 +1,5 @@
 Messaging
 * Message Queue
-	* P
+	* Producer/Consumer
 * Pub/Sub
+	* Publisher/Subscriber
