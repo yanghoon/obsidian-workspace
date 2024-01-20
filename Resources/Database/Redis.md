@@ -265,6 +265,9 @@ spring:
 public class CacheConfig {
 	@Bean
 	public CacheManager cacheManager(RedisConnectionFactory factory) {
+		var stringSerializer = RedisSerializationContext
+					.SerializationPair
+					.fromSerializer(new StringRedisSerializer())
 		var defaultConfig = RedisCacheConfiguration.defaultConfig()
 			.disabledCachingNullValues()
 			.entryTtl(Duration.ofSeconds(10)) // default
@@ -275,7 +278,7 @@ public class CacheConfig {
 					.fromSerializer(new StringRedisSerializer())
 			);
 		
-		HashMap<String, RedisCacheConfiguration> configMap = new HashMap<>();
+		var configMap = new HashMap<String, RedisCacheConfiguration>();
 		configMap.put("data", RedisCacheConfiguration
 			.defaultConfig()
 			.entryTtl(Duration.ofSeconds(10))); // specific ttl
@@ -284,7 +287,8 @@ public class CacheConfig {
 				.RedisCacheManagerBuilder
 				.fromConnectionFactory(factory)
 				.cacheDefaults(defaultConfig)
-				.
+				.withInitialCacheConfigurations(configMap)
+				.build();
 	}
 }
 
