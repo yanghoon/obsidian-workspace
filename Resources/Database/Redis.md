@@ -350,6 +350,7 @@ public class RedisConfig {
 @Service
 public class Service implements MessageListener {
 	final RedisMessageListnerContainer container;
+	final RedisTemplate>
 	
 	public void subscribe(String topic) {
 		container.addMessageListener(this, new ChannelTopic(topic));
@@ -359,6 +360,7 @@ public class Service implements MessageListener {
 			String line = in.nextLine();
 			switch(line) {
 				// redis> PUBLISH topic_key message
+				case "q" -> break;
 			}
 		}
 	}
