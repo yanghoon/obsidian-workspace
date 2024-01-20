@@ -327,6 +327,6 @@ public Set<String> getTopRank(int length) {
 
 public Long getRanking(String id) {
 	ZSetOperations zops = redisTempalte.opsForZSet();
-	return zops.reverseRank(KEY, id); // des
+	return zops.reverseRank(KEY, id); // desc
 }
 ```
