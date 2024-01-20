@@ -310,10 +310,13 @@ dependencies {
 }
 
 /* Service.java */
+final String KEY = "key";
 final RedisTemplate redisTemplate;
 
-public boolean setScore(String id, in socore) {
+public void setScore(String id, in socore) {
 	ZSetOperations zops = redisTempalte.opsForZSet();
-	zops.add("board", id, score);
+	zops.add(KEY, id, score);
 }
+
+public Long getRanking(String id)
 ```
