@@ -185,7 +185,8 @@ PFADD key1 val1 val2 val3
 PFCOUNT key1
 PFMERGE key_result key1 key2
 ```
-## Pub/Sub
+# Pub/Sub
+* No memorized, push to all, at-most-once
 # Use Case
 ## Spring Session
 
