@@ -322,11 +322,11 @@ public Set<String> getTopRank(int length) {
 	ZSetOperations zops = redisTempalte.opsForZSet();
 	// Set<String> rank = zops.reverseRange(KEY, 0, end - 1);
 	// return new ArrayList<String>(rank);
-	return zops.reverseRange(KEY, 0, length - 1); // [start, end]
+	return zops.reverseRange(KEY, 0, length - 1); // desc, [start, end]
 }
 
 public Long getRanking(String id) {
 	ZSetOperations zops = redisTempalte.opsForZSet();
-	return zops.rank(KEY, id);
+	return zops.reverseRank(KEY, id); // des
 }
 ```
