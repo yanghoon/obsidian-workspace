@@ -310,5 +310,10 @@ dependencies {
 }
 
 /* Service.java */
-public boolean setScore(String id, in socore)
+final RedisTemplate redisTemplate;
+
+public boolean setScore(String id, in socore) {
+	ZSetOperations zops = redisTempalte.opsForZSet();
+	zops.add("board", id, score);
+}
 ```
