@@ -338,8 +338,9 @@ public Long getRanking(String id) {
 ```java
 @Configuration
 public class RedisConfig {
-	@MessageListenerAdapter
-	public
+	// @MessageListenerAdapter
+	@Bean
+	RedisMessageListenerC
 }
 
 @SpringBootApplication
