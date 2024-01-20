@@ -186,7 +186,7 @@ PFCOUNT key1
 PFMERGE key_result key1 key2
 ```
 # Pub/Sub
-* No memorized, push to all, at-most-once
+* No , push to all/online, at-most-once
 # Use Case
 ## Spring Session
 
