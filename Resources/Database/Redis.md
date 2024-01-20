@@ -358,7 +358,7 @@ public class Service implements MessageListener {
 		while(in.hasNextLine()) {
 			String line = in.nextLine();
 			switch(line) {
-				
+				// redis> PUBLISH topic_key message
 			}
 		}
 	}
@@ -378,7 +378,7 @@ public class App implements CommandLineRunner {
 	}
 	
 	public void run(String... args) {
-		service.subscribe("chat");
+		service.subscribe("topic");
 	}
 }
 ```
