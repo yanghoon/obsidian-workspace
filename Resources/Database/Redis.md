@@ -374,7 +374,6 @@ public class Service implements MessageListener {
 		// SUBSCRIBE topic_key
 		System.out.println("Message: " + message.toString());
 	}
-	
 }
 
 @SpringBootApplication
