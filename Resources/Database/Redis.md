@@ -303,6 +303,12 @@ private String getDataFromSource(String key) { ... }
 
 ## ZSetOperations
 
-```bash
-/* 
+```java
+/* build.gradle */
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-data-redis'
+}
+
+/* Service.java */
+public boolean setScore(String id, in socore)
 ```
