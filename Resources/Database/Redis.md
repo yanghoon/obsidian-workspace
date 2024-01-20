@@ -336,5 +336,9 @@ public Long getRanking(String id) {
 ## Pub/Sub
 
 ```java
+@SpringBootApplication
+public class Application implements CommandLineRunner {
 
+	public void run(S)
+}
 ```
