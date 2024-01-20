@@ -371,6 +371,7 @@ public class Service implements MessageListener {
 	}
 	
 	public void onMessage(Message message, byte[] pattern) {
+		// SUBSCRIBE topic_key
 		System.out.println("Message: " + message.toString());
 	}
 	
