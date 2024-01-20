@@ -265,9 +265,6 @@ spring:
 public class CacheConfig {
 	@Bean
 	public CacheManager cacheManager(RedisConnectionFactory factory) {
-		var stringSerializer = RedisSerializationContext
-					.SerializationPair
-					.fromSerializer(new StringRedisSerializer())
 		var defaultConfig = RedisCacheConfiguration.defaultConfig()
 			.disabledCachingNullValues()
 			.entryTtl(Duration.ofSeconds(10)) // default
