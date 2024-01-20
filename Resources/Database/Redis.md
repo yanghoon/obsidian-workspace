@@ -366,6 +366,8 @@ public class Service implements MessageListener {
 				}
 			}
 		}
+		
+		container.removeMessageListener(this);
 	}
 	
 	public void onMessage(Message message, byte[] pattern) {
