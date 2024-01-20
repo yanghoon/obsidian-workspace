@@ -267,7 +267,9 @@ public class CacheConfig {
 	public CacheManager cacheManager(RedisConnectionFactory factory) {
 		RedisCacheConfiguration.defaultConfig()
 			.disabledCachingNullValues()
-			.entryTtl(Duration.ofSecond)
+			.entryTtl(Duration.ofSeconds(10)) // default
+			.computePrefixWith(CacheKeyPrefix.simple())
+			.serializeKeyWith(RedisSerializationContext.SerializationPair.fromSerializer)
 	}
 }
 
