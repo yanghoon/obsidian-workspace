@@ -158,7 +158,7 @@ HINCRBY key1 k1 1 # default: 1
 ZADD key1 score1 val1 score2 val2
 ZREM key1 val1
 
-ZCOUNT key1 0 100 # score_from score_to
+ZCOUNT key1 0 100 # score_min  score_max
 ZRANGE key1 0 100 # index_from index_to
 
 ZRANK key1 val1    # asc
