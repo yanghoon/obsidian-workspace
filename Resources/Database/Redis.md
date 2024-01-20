@@ -159,7 +159,7 @@ ZADD key1 score1 val1 score2 val2
 ZREM key1 val1
 
 ZCOUNT key1 0 100 # score_from score_to
-ZRANGE key1 0 100 # 
+ZRANGE key1 0 100 # index_from index_to
 
 ZRANK key1 val1    # asc
 ZREVRANG key1 val1 # desc
