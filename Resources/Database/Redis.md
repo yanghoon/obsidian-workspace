@@ -337,8 +337,14 @@ public Long getRanking(String id) {
 
 ```java
 @SpringBootApplication
-public class Application implements CommandLineRunner {
+public class App implements CommandLineRunner {
 
-	public void run(S)
+	public static vodi main(String[] args) {
+		SpringApplication.run(App.class, args);
+	}
+	
+	public void run(String... args) {
+	
+	}
 }
 ```
