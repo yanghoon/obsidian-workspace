@@ -301,7 +301,7 @@ public String getData(String key) {
 private String getDataFromSource(String key) { ... }
 ```
 
-## ZSetOperations (Sorted)
+## ZSetOperations (Sorted Set)
 
 ```java
 /* build.gradle */
