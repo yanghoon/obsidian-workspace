@@ -264,7 +264,11 @@ spring:
 @Configuration
 public class CacheConfig {
 	@Bean
-	public CacheManager cacheMana
+	public CacheManager cacheManager(RedisConnectionFactory factory) {
+		RedisCacheConfiguration.defaultConfig()
+			.disabledCachingNullValues()
+			.entryTtl(Duration.ofSecond)
+	}
 }
 
 /* Service.java */
