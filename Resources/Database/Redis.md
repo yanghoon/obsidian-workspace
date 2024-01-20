@@ -261,7 +261,11 @@ spring:
 
 /* CacheConfig.java */
 @EnableCaching
-public class CacheConfig {}
+@Configuration
+public class CacheConfig {
+	@Bean
+	public CacheManager cacheMana
+}
 
 /* Service.java */
 final CacheService service;
