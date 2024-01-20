@@ -336,6 +336,12 @@ public Long getRanking(String id) {
 ## Pub/Sub
 
 ```java
+@Configuration
+public class RedisConfig {
+	@MessageListenerAdapter
+	public
+}
+
 @SpringBootApplication
 public class App implements CommandLineRunner {
 
