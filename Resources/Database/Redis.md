@@ -341,8 +341,14 @@ public class RedisConfig {
 	// @MessageListenerAdapter
 	@Bean
 	RedisMessageListenerContainer redisContainer(RedisConnectionFactory factory) {
-		var container = RedisMessageListenerContainer();
+		var container = new RedisMessageListenerContainer();
+		container.setConnectionFactory(factory);
+		return container
 	}
+}
+
+@Service
+public class Service implements MessageList{
 }
 
 @SpringBootApplication
