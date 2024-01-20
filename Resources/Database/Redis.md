@@ -275,7 +275,11 @@ public class CacheConfig {
 					.fromSerializer(new StringRedisSerializer())
 			);
 		HashMap<String, RedisCacheConfiguration> configMap = new HashMap<>();
-		configMap.put
+		configMap.put("data", RedisCacheConfiguration
+			.defaultConfig()
+			.entryTtl(Duration.ofSeconds(10))); // specific ttl
+		return RedisCacheManager
+				.RedisCacheManager
 	}
 }
 
