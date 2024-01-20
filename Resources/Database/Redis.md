@@ -318,7 +318,10 @@ public void setScore(String id, in socore) {
 	zops.add(KEY, id, score);
 }
 
-public Set<String> getTopRank
+public Set<String> getTopRank(int limit) {
+	ZSetOperations zops = redisTempalte.opsForZSet();
+	return zops.reverseRange(KEY, 0, limit - 1);
+}
 
 public Long getRanking(String id) {
 	ZSetOperations zops = redisTempalte.opsForZSet();
