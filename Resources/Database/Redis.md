@@ -158,8 +158,8 @@ HINCRBY key1 k1 1 # default: 1
 ZADD key1 score1 val1 score2 val2
 ZREM key1 val1
 
-ZCOUNT key1
-ZRANGE key1 0 1 # 
+ZCOUNT key1 0 100 # score_from score_to
+ZRANGE key1 0 100 # 
 
 ZRANK key1 val1    # asc
 ZREVRANG key1 val1 # desc
