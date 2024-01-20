@@ -186,7 +186,7 @@ PFCOUNT key1
 PFMERGE key_result key1 key2
 ```
 # Pub/Sub
-* No , push to all/online, at-most-once
+* Message loss, push, to all online, at-most-once
 # Use Case
 ## Spring Session
 
@@ -333,3 +333,4 @@ public Long getRanking(String id) {
 	return zops.reverseRank(KEY, id); // desc
 }
 ```
+## Pub/S
