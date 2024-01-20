@@ -1,5 +1,3 @@
 Patterns
-* Message Queue
-	* Producer/Consumer
-* Pub/Sub
-	* Publisher/Subscriber
+* Message Queue : Producer/Consumer, Shared
+* Pub/Sub : Publisher/Subscriber
