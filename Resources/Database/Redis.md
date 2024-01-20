@@ -353,8 +353,9 @@ public class Service implements MessageListener {
 	public void subscribe(String topic) {
 		Scanner in = new Scanner(System.in);
 		while(in.hasNextLine()) {
-			switch(in.nextLine()) {
-			
+			String line = in.nextLine();
+			switch(line) {
+				
 			}
 		}
 	}
@@ -367,13 +368,14 @@ public class Service implements MessageListener {
 
 @SpringBootApplication
 public class App implements CommandLineRunner {
+	final Service service;
 	
 	public static vodi main(String[] args) {
 		SpringApplication.run(App.class, args);
 	}
 	
 	public void run(String... args) {
-	
+		service.subscribe("chat");
 	}
 }
 ```
