@@ -300,3 +300,9 @@ public String getData(String key) {
 @Cacheable(cacheNames = "data", key = "#key") // data::{key}
 private String getDataFromSource(String key) { ... }
 ```
+
+## ZSetOperations
+
+```bash
+/* 
+```
