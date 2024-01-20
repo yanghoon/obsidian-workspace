@@ -348,7 +348,12 @@ public class RedisConfig {
 }
 
 @Service
-public class Service implements MessageList{
+public class Service implements MessageListener {
+	
+	public void onMessage(Message message, byte[] pattern) {
+		System.out.println("Message: " + message.toString());
+	}
+	
 }
 
 @SpringBootApplication
