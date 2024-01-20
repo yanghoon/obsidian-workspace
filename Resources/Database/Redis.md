@@ -301,7 +301,7 @@ public String getData(String key) {
 private String getDataFromSource(String key) { ... }
 ```
 
-## ZSetOperations
+## ZSetOperations (Sorted)
 
 ```java
 /* build.gradle */
@@ -318,10 +318,11 @@ public void setScore(String id, in socore) {
 	zops.add(KEY, id, score);
 }
 
-public Set<String> getTopRank(int end) {
+public List<String> getTopRank(int end) {
 	ZSetOperations zops = redisTempalte.opsForZSet();
-	return zops.reverseRange(KEY, 0, end - 1); // [start, end]
-	return zops.reverseRange(KEY, 0, end - 1); // [start, end]
+	Set<String> rank = zops.reverseRange(KEY, 0, end - 1);
+	return new ArrayList<String>(rank);
+	// return zops.reverseRange(KEY, 0, end - 1); // [start, end]
 }
 
 public Long getRanking(String id) {
