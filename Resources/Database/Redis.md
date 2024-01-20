@@ -191,8 +191,8 @@ PFMERGE key_result key1 key2
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
 * Schedule or Manual
-* Ba
-* Small size
+* Backup at child process (fork), small size and fast recovery
+* Data loss, long snapshot time
 ## AOF
 
 # Use Case
