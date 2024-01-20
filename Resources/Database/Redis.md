@@ -340,7 +340,9 @@ public Long getRanking(String id) {
 public class RedisConfig {
 	// @MessageListenerAdapter
 	@Bean
-	RedisMessageListenerC
+	RedisMessageListenerContainer redisContainer(RedisConnectionFactory factory) {
+		var container = RedisMessageListenerContainer();
+	}
 }
 
 @SpringBootApplication
