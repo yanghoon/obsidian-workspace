@@ -349,6 +349,10 @@ public class RedisConfig {
 
 @Service
 public class Service implements MessageListener {
+
+	public void subscribe() {
+		
+	}
 	
 	public void onMessage(Message message, byte[] pattern) {
 		System.out.println("Message: " + message.toString());
@@ -358,7 +362,7 @@ public class Service implements MessageListener {
 
 @SpringBootApplication
 public class App implements CommandLineRunner {
-
+	
 	public static vodi main(String[] args) {
 		SpringApplication.run(App.class, args);
 	}
