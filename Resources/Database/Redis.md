@@ -271,6 +271,6 @@ public String getData(String key) {
 }
 
 /* CachedService.java */
-@Cacheable(cacheNames = "data")
+@Cacheable(cacheNames = "data", key)
 private String getDataFromSource(String key) { ... }
 ```
