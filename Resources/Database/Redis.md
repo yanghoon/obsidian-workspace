@@ -89,7 +89,6 @@ ops.get("key"); // val
 ```
 
 # Data Type
-
 ### String
 * binary-safe (null char, file, ...)
 * Max 512MB
@@ -189,7 +188,8 @@ PFMERGE key_result key1 key2
 * Message loss, push to all online, at-most-once
 
 # Persistence
-## RDBMS
+## RDB (Redis Database)
+* Snapshot by S
 ## AOF
 
 # Use Case
