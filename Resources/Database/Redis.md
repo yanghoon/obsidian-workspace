@@ -350,8 +350,13 @@ public class RedisConfig {
 @Service
 public class Service implements MessageListener {
 
-	public void subscribe() {
-		
+	public void subscribe(String topic) {
+		Scanner in = new Scanner(System.in);
+		while(in.hasNextLine()) {
+			switch(in.nextLine()) {
+			
+			}
+		}
 	}
 	
 	public void onMessage(Message message, byte[] pattern) {
