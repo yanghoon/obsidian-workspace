@@ -213,7 +213,7 @@ Background saving started
 ## AOF (Append Only File)
 * Log, replay to recovery, human readable(not matched memory)
 * Large size(duplication, not only latest), lower speed backup/recovery
-* OS fsync flag
+* fsync flag (OS)
 	* always : safe, slow
 	* everysec : like rdb
 	* no : by OS, fast, not safe
