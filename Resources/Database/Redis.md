@@ -424,6 +424,10 @@ redis-cli \
 		localhost:7000 localhost:7001 localhost:7002 \
 		localhost:7003 localhost:7004 localhost:7005 \
 	--cluster-replicas 1
+# >>> Performing hash slots allocation on 6 nodes...
+# Master[0] -> Slots 0 - 5460
+# Master[1] -> Slots 5461 - 5460
+# Master[2] -> Slots 0 - 5460
 ```
 # Use Case
 ## Spring Session
