@@ -304,7 +304,7 @@ PFMERGE key_result key1 key2
 	* `stream = (key, [entry])`
 	* `entry = (id, [field: value, field: value, ...])`
 * Consumer group
-	* same group read distinct entries
+	* consumers in the same group read distinct entries
 
 ```bash
 # XADD [key] [id] [field-value]
