@@ -198,8 +198,9 @@ PFMERGE key_result key1 key2
 # Config Template (https://redis.io/docs/management/config/)
 # redis.conf
 
-# Redis Database (Backdup)
-save 60 10 # every 60s or 10 items changed
+# Redis Database (Snapshotting)
+# every 60s or 10 items changed
+save 60 10
 
 dbfilename dump.rdb
 ```
