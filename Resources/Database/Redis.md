@@ -467,6 +467,11 @@ dd
 redis-cli \
   --cluster add-node \
 	  localhost:7006 localhost:7001
+
+redis-cli \
+  --cluster add-node \
+	  localhost:7007 localhost:7006
+  
 ```
 ### Cluster with Spring
 # Use Case
