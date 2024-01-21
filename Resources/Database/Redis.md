@@ -387,9 +387,10 @@ spring:
 	* hash slot (partition key)
 	* DB0
 	* limited multi key operations
-	* no request redirect
+	* request redirect (no proxy)
 		* client should know/connect all servers
 		* `MOVED <hash-slot> <ip>:<port>`
+	* async replication
 * vs Sentinel
 	* no partitioning
 	* no monitoring node
