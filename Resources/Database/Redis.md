@@ -403,9 +403,12 @@ spring:
 * pseudo code (TODO)
 
 ## Config
-* cluster-enabled yes/no>
-* cluster-config-file filename
-* cluster-node-timeout milliseconds
+```bash
+cluster-enabled yes/no
+cluster-config-file filename
+cluster-node-timeout milliseconds
+cluster-replica-validity-factor factor # 
+```
 
 # Use Case
 ## Spring Session
