@@ -92,6 +92,8 @@ services:
 ```
 ### Docker Compose (Sentinel)
 
+```
+
 ```yaml
 version: '3'
 
@@ -347,6 +349,10 @@ replicaof 127.0.0.1 6379
 	* ODOWN(Objective down) : by quorum sentinel nodes
 
 ![[Pasted image 20240121121509.png]]
+
+```bash
+# redis-cli -p 26379
+redis> info sentinel
 # Use Case
 ## Spring Session
 
