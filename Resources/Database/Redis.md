@@ -295,6 +295,7 @@ PFMERGE key_result key1 key2
 	* Distribution problems
 		* consistency (transaction)
 		* complexity (testing, monitoring)
+* Low coupling, high cohesion (only message broker)
 * 
 # Persistence
 ## RDB (Redis Database)
