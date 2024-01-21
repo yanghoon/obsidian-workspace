@@ -217,6 +217,9 @@ Background saving started
 	* always : safe, slow
 	* everysec : like rdb (recommand)
 	* no : by OS, fast, not safe
+* Tuning
+	* Log rewriting(compaction)
+	* Multi Part AOF
 
 # Use Case
 ## Spring Session
