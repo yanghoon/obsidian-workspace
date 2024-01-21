@@ -286,8 +286,8 @@ PFMERGE key_result key1 key2
 
 # Redis Streams
 ## Event-Driven
-* Service : Same database, 
-* Micsoservice : 
+* Service : Each application, same database
+* Micsoservice : Each application, each database
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
