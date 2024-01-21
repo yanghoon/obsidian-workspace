@@ -383,7 +383,9 @@ spring:
 	* Characteristic
 		* full-mesh, cluster-bus(port)
 		* gossip protocol (broadcast)
-		* hash slot, DB0, limited multi key
+		* hash slot (partition key)
+		* DB0
+		* limited multi key operatio
 
 # Use Case
 ## Spring Session
