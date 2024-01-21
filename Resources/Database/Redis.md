@@ -485,7 +485,9 @@ spring:
 * for Cache
 
 ```bash
-maxmemory 100mb # (default: 32bit_OS3GB)
+maxmemory 100mb  # (default: 3GB - 32bit, 0 - 64bit)
+maxmemory-policy noeviction
+  # 
 ```
 # Use Case
 ## Spring Session
