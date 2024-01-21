@@ -341,9 +341,8 @@ redis> XREAD BLOCK 0 STREAMS user-notifications $
 ```
 
 ```bash
-# XGROUP CREATE [key] [group-name] [id]
+# XGROUP CREATE [key] [group-name] [id] ["MKSTREAM"]
 redis> XGROUP CREATE user-notifications group1 $
-redis> XGROUP CREATE user-notifications group1 $ MKSTRE
 
 # XREADGROUP GROUP [group-name] [consumer-anme] COUNT [count] STREAMS [key] [id]
 # (>: not yet read by another consumer)
