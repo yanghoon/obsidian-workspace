@@ -265,8 +265,9 @@ replicaof 127.0.0.1 6379
 ```
 ## Redis Sentinel
 * Auto-failover daemon
-* Monitoring, alerts, auto-failover, redis proxy(configuration manager?)
+* Monitoring, alerts, auto-failover, redis proxy
 * Quorum (over 3 nodes)
+![[Pasted image 20240121121509.png]]
 # Use Case
 ## Spring Session
 
