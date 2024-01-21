@@ -267,6 +267,9 @@ replicaof 127.0.0.1 6379
 * Auto-failover daemon
 * Monitoring, alerts, auto-failover, redis proxy
 * Quorum (over 3 nodes)
+	* SDOWN(Subject down) : by 1 sentinel node
+	* ODOWN(Objective down) : by Quorum sentinel nodes
+
 ![[Pasted image 20240121121509.png]]
 # Use Case
 ## Spring Session
