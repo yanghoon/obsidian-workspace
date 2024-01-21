@@ -208,6 +208,7 @@ dbfilename dump.rdb
 ```bash
 # redis-cli
 redis> bgsave
+Background saving started
 ```
 ## AOF
 
