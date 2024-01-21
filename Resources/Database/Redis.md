@@ -340,7 +340,10 @@ redis> XREAD BLOCK 0 STREAMS user-notifications $
 
 ```bash
 # XGROUP CREATE [key] [group-name] [id]
-redis> XGRIOP CREATE user-notifications
+redis> XGROUP CREATE user-notifications group1 $
+
+# S
+redis> XREADGROUP GROUP group1 consumer1 COUNT 1 STREAMS user-notifications
 ```
 # Persistence
 ## RDB (Redis Database)
