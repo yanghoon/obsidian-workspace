@@ -393,7 +393,7 @@ spring:
 		* do multi key operations
 		* for small scale
 * ss
-	* Modulo node counts : changed new or remove node
+	* node counts (key  % n) : changed new or remove node
 
 # Use Case
 ## Spring Session
