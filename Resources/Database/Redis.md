@@ -403,7 +403,9 @@ spring:
 * pseudo code (TODO)
 
 ## Config
-* cluster-enabled yes/no
+* cluster-enabled yes/no>
+* cluster-config-file filename
+* cluster-node-timeout milliseconds
 
 # Use Case
 ## Spring Session
