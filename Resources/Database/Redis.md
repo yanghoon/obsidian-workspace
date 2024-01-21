@@ -447,6 +447,10 @@ redis> set aaa dd
 # redis-cli -p 7001
 redis> set aaa dd
 OK
+
+# redis-cli -p 7003
+redis> get aaa
+OK
 ```
 # Use Case
 ## Spring Session
