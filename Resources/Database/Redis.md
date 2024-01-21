@@ -295,6 +295,7 @@ PFMERGE key_result key1 key2
 	* Distribution problems
 		* consistency (transaction)
 		* complexity (testing, monitoring)
+* 
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
