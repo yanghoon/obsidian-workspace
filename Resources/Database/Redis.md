@@ -485,13 +485,13 @@ spring:
 * Redis for cache
 * allkeys-lru : basic for cache (recommend)
 * allkeys-random : equal distribution
-* volatile* (by application)
+* volatile* : handle by application
 
 ```bash
 maxmemory 100mb  # (default: 3GB - 32bit, 0 - 64bit)
 maxmemory-policy noeviction
   # noeviction:   read(success), write(error)
-  # allkeys-lru:  least recently used (oldest used, recommended)
+  # allkeys-lru:  least recently used (oldest)
   # allkeys-lfu:  least frequently used (infrequently)
   # volatile-lru: LRU only set TTL
   # volatile-lfu: LFU only set TTL
