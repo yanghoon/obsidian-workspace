@@ -70,6 +70,8 @@ version: '3'
 services:
   redis-master:
     image: bitnami/redis:latest
+    environments
+      - REDIS_REPLICATION_MODE=master
     ports:
       - 6379:6379
     # volumes:
@@ -80,7 +82,9 @@ services:
       - 
     ports:
       - 6380:6379
+```
 
+```yaml
 ```
 ## Java
 
@@ -268,7 +272,7 @@ replicaof 127.0.0.1 6379
 * Monitoring, alerts, auto-failover, redis proxy
 * Quorum (over 3 nodes)
 	* SDOWN(Subject down) : by 1 sentinel node
-	* ODOWN(Objective down) : by Quorum sentinel nodes
+	* ODOWN(Objective down) : by quorum sentinel nodes
 
 ![[Pasted image 20240121121509.png]]
 # Use Case
