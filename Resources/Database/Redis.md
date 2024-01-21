@@ -215,7 +215,7 @@ Background saving started
 * Large size(duplication, not only latest), lower speed backup/recovery
 * fsync flag (OS)
 	* always : safe, slow
-	* everysec : like rdb
+	* everysec : like rdb (recommand)
 	* no : by OS, fast, not safe
 
 # Use Case
