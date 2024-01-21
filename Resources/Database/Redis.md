@@ -345,6 +345,7 @@ redis> XREAD BLOCK 0 STREAMS user-notifications $
 redis> XGROUP CREATE user-notifications group1 $
 
 # XREADGROUP GROUP [group-name] [consumer-anme] COUNT [count] STREAMS [key] [id]
+# (>: not read another consumer)
 redis> XREADGROUP GROUP group1 consumer1 COUNT 1 STREAMS user-notifications >
 ```
 # Persistence
