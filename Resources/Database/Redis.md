@@ -480,6 +480,9 @@ spring:
       nodes:
 		redis:7000,redis:7001,redis:7002,redis:7003,redis:7004,redis:7005
 ```
+# Performance
+## Eviction
+* for Cache
 # Use Case
 ## Spring Session
 
