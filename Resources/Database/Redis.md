@@ -390,6 +390,8 @@ spring:
 	* vs Sentinel
 		* no partitioning
 		* no monitoring node
+		* do multi key operations
+		* for small scale
 
 # Use Case
 ## Spring Session
