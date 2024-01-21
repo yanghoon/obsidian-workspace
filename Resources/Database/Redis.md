@@ -401,6 +401,9 @@ spring:
 * node counts (key  % n) : changed new or remove node
 * hash slot : fixed hash lengh (16384)
 * pseudo code (TODO)
+## Auto-Failover
+* Quonum master group + Has replica of failure master
+* Another replica is migrated
 ## Config
 
 ```bash
@@ -415,9 +418,9 @@ cluster-all-reads-when-down   <yes/no>   # (default: no)
                                         # allow read when all hash slot is not healthy 
 ```
 
-## Auto-Failover
-* Quonum master group + Has replica of failure master
-* Another replica is migrated
+```bash
+redis-cli --cluster create localhost:7000 localhost:7001 localhost:7002
+```
 # Use Case
 ## Spring Session
 
