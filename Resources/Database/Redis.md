@@ -302,6 +302,10 @@ PFMERGE key_result key1 key2
 * append-only (log)
 * `stream = (key, [entry])`
 * `entry = (id, [field: value, field: value, ...])`
+
+```bash
+XADD [key] [id] [field-value]
+```
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
