@@ -265,7 +265,7 @@ replicaof 127.0.0.1 6379
 ```
 ## Redis Sentinel
 * Auto-failover daemon
-* Monitoring, alerts, 
+* Monitoring, alerts, auto-failover, configuration manager
 # Use Case
 ## Spring Session
 
