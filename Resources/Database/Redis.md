@@ -284,6 +284,8 @@ PFMERGE key_result key1 key2
 # Pub/Sub
 * Message loss, push to all online, at-most-once
 
+# Redis Streams
+## Event 
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
@@ -531,7 +533,7 @@ redis> SLOWLOG LEN
 redis> SLOWLOG GET <index>
 index) 1) (integer) <slowlog_sequence>
        2) (integer) <timestamp>
-       3) (integer) 5
+       3) (integer) <elapsed>
        4) 1) "COMMAND"
           2) "ARG1"
           3) "ARG2"
