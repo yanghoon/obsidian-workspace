@@ -379,7 +379,7 @@ spring:
 > 	* multiple node, distributed system
 > 	* partial failure(network), eventual consistency, load balancing(discovery), complexity
 ## Concept
-* Replication, auto-failover, scale-out
+* Replication(async), auto-failover(quonum master group, scale-out
 * Availability/partition tolerance > consistency
 * Characteristic
 	* full-mesh, cluster-bus (port)
@@ -390,7 +390,6 @@ spring:
 	* request redirect (no proxy)
 		* client should know/connect all servers
 		* `MOVED <hash-slot> <ip>:<port>`
-	* async replication
 * vs Sentinel
 	* no partitioning
 	* no monitoring node
