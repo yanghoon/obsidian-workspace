@@ -70,6 +70,7 @@ version: '3'
 services:
   redis-master:
     image: bitnami/redis:latest
+    container_name: redis-master
     environments
       - REDIS_REPLICATION_MODE=master
       # - ALLOW_EMPTY_PASSWORD=yes
@@ -77,9 +78,9 @@ services:
       - 6379:6379
     # volumes:
     #  - ./data/redis:/etc/redis
-  redis-replica-01:
+  redis-replica-1:
     image: bitnami/redis:latest
-    container_name: 
+    container_name: redis-replica-1
     environments
       - REDIS_REPLICATION_MODE=slave
       - REDIS_MASTER_HOST=redis-master
@@ -89,6 +90,30 @@ services:
 ```
 
 ```yaml
+version: '3'
+
+services:
+  redis-master:
+    image: bitnami/redis:latest
+    container_name: redis-master
+    environments
+      - REDIS_REPLICATION_MODE=master
+      # - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 6379:6379
+    # volumes:
+    #  - ./data/redis:/etc/redis
+  redis-replica-1:
+    image: bitnami/redis:latest
+    container_name: redis-replica-1
+    environments
+      - REDIS_REPLICATION_MODE=slave
+      - REDIS_MASTER_HOST=redis-master
+      # - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 6380:6379
+  redis-sentinel-1:
+    image: bitnami/redis-sentinel:latest
 ```
 ## Java
 
