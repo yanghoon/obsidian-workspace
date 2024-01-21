@@ -381,8 +381,8 @@ spring:
 	* Replication, auto-failover, scale-out
 	* Availability/partition tolerance > consistency(low)
 	* Characteristic
-		* full-mesh, cluster-bus(port)
-		* gossip protocol (broadcast)
+		* full-mesh, cluster-bus (port)
+		* gossip protocol (broadcast optimize)
 		* hash slot (partition key)
 		* DB0
 		* limited multi key operations
