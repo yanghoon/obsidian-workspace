@@ -234,6 +234,7 @@ appendonly yes
 * Scalability, Read Throughput, Availability
 * Single leader replication
 * Configure at replica node
+* MUST enable persistence of msater node (replicate empty data)
 
 ```bash
 replicaof 127.0.0.1 6379
