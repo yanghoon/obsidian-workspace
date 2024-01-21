@@ -507,10 +507,15 @@ maxmemory-policy noeviction
 		* avg, min, p50, p95, p99, max
 	* run benchmark at remote client (for network)
 * sdf
-	* bandwidth & latency
-	* cpu clock & cpu cache
+	* Network bandwidth & latency
+	* Cpu clock & cpu cache
 	* RAM speed & bandwidth (over 10 KB data)
 	* Network disks, IOPS, hypervisor versions
+
+```bash
+rdbcompression <yes/no> # (default: yes)
+rdbcompression <yes/no> # (default: yes)
+```
 # Use Case
 ## Spring Session
 
