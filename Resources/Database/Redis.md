@@ -513,8 +513,9 @@ maxmemory-policy noeviction
 	* Network disks, IOPS, hypervisor versions
 
 ```bash
-rdbcompression <yes/no> # (default: yes)
-rdbcompression <yes/no> # (default: yes)
+rdbcompression <yes/no> # (default: yes) save disk usage. more cpu usage
+rdbchecksum    <yes/no> # (default: yes) validation. 10% overhead
+save
 ```
 # Use Case
 ## Spring Session
