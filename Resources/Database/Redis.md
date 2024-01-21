@@ -380,7 +380,7 @@ spring:
 > 	* partial failure(network), eventual consistency, load balancing(discovery), complexity
 ## Concept
 * Replication, auto-failover, scale-out
-* Availability/partition tolerance > consistency(async replication)
+* Availability/partition tolerance > consistency
 * Characteristic
 	* full-mesh, cluster-bus (port)
 	* gossip protocol (broadcast optimize)
