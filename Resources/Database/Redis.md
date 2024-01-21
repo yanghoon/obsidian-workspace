@@ -231,7 +231,8 @@ appendonly yes
 ```
 
 ## Replication
-* Scailability
+* Single leader replication
+* Scalability, Read Throughput, Availa
 # Use Case
 ## Spring Session
 
