@@ -122,7 +122,38 @@ services:
       - REDIS_SENTINEL_QUORUM=2
       - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=3000
     ports:
-      - 2
+      - 26379:26379
+    depends_on:
+      - redis-master
+      - redis-replica-1
+  redis-sentinel-2:
+    image: bitnami/redis-sentinel:latest
+    container_name: sentinel2
+    environment:
+      - REDIS_MASTER_HOST=redis-master
+      - REDIS_MASTER_PORT=6379
+      - REDIS_MASTER_SET=mymaster
+      - REDIS_SENTINEL_QUORUM=2
+      - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=3000
+    ports:
+      - 26379:26379
+    depends_on:
+      - redis-master
+      - redis-replica-1
+  redis-sentinel-1:
+    image: bitnami/redis-sentinel:latest
+    container_name: sentinel1
+    environment:
+      - REDIS_MASTER_HOST=redis-master
+      - REDIS_MASTER_PORT=6379
+      - REDIS_MASTER_SET=mymaster
+      - REDIS_SENTINEL_QUORUM=2
+      - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=3000
+    ports:
+      - 26379:26379
+    depends_on:
+      - redis-master
+      - redis-replica-1
 ```
 ## Java
 
