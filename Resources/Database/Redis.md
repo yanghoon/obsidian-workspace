@@ -386,7 +386,7 @@ spring:
 		* hash slot (partition key)
 		* DB0
 		* limited multi key operations
-		* client should know all servers
+		* no redirect (client should know all servers, MOVED <hash-slot> )
 	* vs Sentinel
 		* no partitioning
 		* no monitoring node
@@ -395,7 +395,7 @@ spring:
 * Consistent Hashing
 	* node counts (key  % n) : changed new or remove node
 	* hash slot : fixed hash lengh (16384)
-	* sudo code
+	* pseudo code
 		* 
 
 # Use Case
