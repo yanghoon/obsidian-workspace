@@ -374,8 +374,9 @@ spring:
 # Cluster
 * Scalability
 	* Ability to handle more loads with more resources
-	* Scale-Out : multiple node, distributed system
-		* 
+	* Scale-Out
+		* multiple node, distributed system
+		* partial failure, network, consistency, load balancing, discovery
 
 # Use Case
 ## Spring Session
