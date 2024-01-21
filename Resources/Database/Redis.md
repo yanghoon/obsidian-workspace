@@ -483,6 +483,10 @@ spring:
 # Performance
 ## Eviction
 * for Cache
+
+```bash
+maxmemory 100mb # (default: 32bit_OS3GB)
+```
 # Use Case
 ## Spring Session
 
