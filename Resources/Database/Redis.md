@@ -211,8 +211,9 @@ redis> bgsave
 Background saving started
 ```
 ## AOF (Append Only File)
-* Log, replay to recovery, human readable
-* Large size(duplication, not only latest), lower 
+* Log, replay to recovery, human readable(not matched memory)
+* Large size(duplication, not only latest), lower speed backup/recovery
+* fsync
 
 # Use Case
 ## Spring Session
