@@ -483,7 +483,9 @@ spring:
 # Performance
 ## Eviction
 * for Cache
-* Recommand : allkeys-lru (basic), allkeys-random (), volatile-ttl (by application)
+* allkeys-lru : basic, recommend
+* allkeys-random : 
+* volatile* (by application)
 
 ```bash
 maxmemory 100mb  # (default: 3GB - 32bit, 0 - 64bit)
