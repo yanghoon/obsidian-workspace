@@ -437,7 +437,9 @@ redis-cli \
 # [OK] All nodes agree about slots configurations.
 # ...
 # [OK] all 16384 slots covered.
+```
 
+```bash
 # redis-cli -p 7000
 redis> cluster nodes
 # hash-key-of-node, ip-port-of-node
