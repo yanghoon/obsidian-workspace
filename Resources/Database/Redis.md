@@ -393,7 +393,7 @@ spring:
 		* do multi key operations
 		* for small scale
 * ss
-	* 
+	* Mod Simple hashing : changed new or remove node
 
 # Use Case
 ## Spring Session
