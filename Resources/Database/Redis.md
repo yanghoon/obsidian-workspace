@@ -300,8 +300,11 @@ PFMERGE key_result key1 key2
 
 ## Concept
 * append-only (log)
-* `stream = (key, [entry])`
-* `entry = (id, [field: value, field: value, ...])`
+* data layout
+	* `stream = (key, [entry])`
+	* `entry = (id, [field: value, field: value, ...])`
+* Consumer group
+	* same group read distingusihed entries
 
 ```bash
 # XADD [key] [id] [field-value]
