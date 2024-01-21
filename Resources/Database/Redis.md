@@ -239,7 +239,7 @@ appendonly yes
 ```bash
 replicaof 127.0.0.1 6379
 
-# Logs
+# ** Redis Logs **
 # Master  - Synchronization with replica <ip>:<port> succeeded
 # Replica - MASTER <-> REPLICA sync started
 # Replica - MASTER <-> REPLICA sync: Finished with success
