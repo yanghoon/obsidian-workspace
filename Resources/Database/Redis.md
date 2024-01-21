@@ -192,7 +192,7 @@ PFMERGE key_result key1 key2
 * Snapshot Backup (eg. dump.rdb)
 * Schedule or Manual
 * At child process (fork), small size, fast recovery
-* Data loss, Durability(crash during backup), high cpu usage() long execution time)
+* Data loss, Durability(crash during backup), Unpredictability(high cpu usage, long execution time)
 
 ```bash
 # Config Template (https://redis.io/docs/management/config/)
@@ -210,7 +210,8 @@ dbfilename dump.rdb
 redis> bgsave
 Background saving started
 ```
-## AOF
+## AOF (Append Only File)
+* Log format
 
 # Use Case
 ## Spring Session
