@@ -220,7 +220,7 @@ Background saving started
 * Tuning
 	* Log rewriting(compaction)
 	* Multi Part AOF
-		* base (latest rewrite)
+		* base (latest rewrite, rdb)
 		* incremental(changed from base)
 		* manifest(files metadata)
 
