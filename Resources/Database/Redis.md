@@ -116,9 +116,13 @@ services:
     image: bitnami/redis-sentinel:latest
     container_name: sentinel1
     environment:
+      - REDIS_MASTER_HOST=redis-master
+      - REDIS_MASTER_PORT=6379
+      - REDIS_MASTER_SET=mymaster
+      - REDIS_SENTINEL_QUORUM=2
       - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=3000
-      - REDIS_MASTER_HOST=redis-masterZ
-      - REDIS
+    ports:
+      - 2
 ```
 ## Java
 
