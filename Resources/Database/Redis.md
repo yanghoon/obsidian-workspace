@@ -378,7 +378,8 @@ spring:
 		* multiple node, distributed system
 		* partial failure(network), eventual consistency, load balancing(discovery), complexity
 * Redis Cluster
-	* Availability, partition tolerance, consistency (low)
+	* Replication, auto-failover, scale-out
+	* Availability/partition tolerance > consistency(low)
 
 # Use Case
 ## Spring Session
