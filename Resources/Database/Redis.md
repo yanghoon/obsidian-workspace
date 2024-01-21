@@ -287,9 +287,9 @@ PFMERGE key_result key1 key2
 # Redis Streams
 ## Event-Driven
 * Service
-	* Each application, own release, same database
+	* Each application, own release, **same database**
 * Micsoservice
-	* Each application, own release, each database
+	* Each application, own release, **each database**
 	* Database (join) -> API (gateway, rpc)
 # Persistence
 ## RDB (Redis Database)
