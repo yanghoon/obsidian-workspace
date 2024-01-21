@@ -511,13 +511,16 @@ maxmemory-policy noeviction
 	* Cpu clock & cpu cache
 	* RAM speed & bandwidth (over 10 KB data)
 	* Network disks, IOPS, hypervisor versions
+* Slowlog
+	* without I/O time
 
 ```bash
 rdbcompression <yes/no> # (default: yes) save disk usage. more cpu usage
 rdbchecksum    <yes/no> # (default: yes) validation. 10% overhead
 save <time> <change-counts> # Schedule of RBD
 
-slowlog-log-slower-than 10000 # us
+slowlog-log-slower-than 10000 # 10000 us = 10 ms
+slowlog-max-len 128
 ```
 
 ```bash
