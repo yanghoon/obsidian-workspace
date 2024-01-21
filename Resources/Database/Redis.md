@@ -290,7 +290,7 @@ PFMERGE key_result key1 key2
 	* Each application, own release, same database
 * Micsoservice
 	* Each application, own release, each database
-	* Database queryAPI
+	* Database (join) -> API (gateway, rpc)
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
