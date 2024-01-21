@@ -356,7 +356,11 @@ redis> info sentinel
 # Sentinel
 sentinel_master:1
 sentinel_tilt:0
-sentinel_tilt_since:0
+sentinel_tilt_since_seconds:-1
+sentinel_running_scripts:0
+sentinel_scripts_queue_length:0
+sentinel_simulate_failure_flags:0
+master0:name=mymaster,status=ok,adderess=<ip>
 ```
 # Use Case
 ## Spring Session
