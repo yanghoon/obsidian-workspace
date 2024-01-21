@@ -449,8 +449,12 @@ redis> set aaa dd
 OK
 
 # redis-cli -p 7003
+redis> set aaa dd
+(error) MODED 10439 loclahost:7001
+redis> set aaa dd
+(error) MODED 10439 loclahost:7001
 redis> get aaa
-OK
+dd
 ```
 # Use Case
 ## Spring Session
