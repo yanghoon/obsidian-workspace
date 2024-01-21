@@ -384,7 +384,7 @@ spring:
 * Characteristic
 	* full-mesh, cluster-bus (port)
 	* gossip protocol (broadcast optimize)
-	* hash slot (partition key, 16k entries)
+	* hash slot (partition key, 16k entries, 14 bits)
 	* DB0 (vs 16 database)
 	* limited multi key operations
 		* hash tags
