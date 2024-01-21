@@ -64,6 +64,8 @@ OK
 127.0.0.1:6379> exit
 ```
 
+### Docker Compose (Replication)
+
 ```yaml
 version: '3'
 
@@ -88,7 +90,7 @@ services:
     ports:
       - 6380:6379
 ```
-
+### Docker Compose (Sentinel)
 ```yaml
 version: '3'
 
@@ -136,13 +138,13 @@ services:
       - REDIS_SENTINEL_QUORUM=2
       - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=3000
     ports:
-      - 26379:26379
+      - 26380:26379
     depends_on:
       - redis-master
       - redis-replica-1
-  redis-sentinel-1:
+  redis-sentinel-3:
     image: bitnami/redis-sentinel:latest
-    container_name: sentinel1
+    container_name: sentinel3
     environment:
       - REDIS_MASTER_HOST=redis-master
       - REDIS_MASTER_PORT=6379
@@ -150,7 +152,7 @@ services:
       - REDIS_SENTINEL_QUORUM=2
       - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=3000
     ports:
-      - 26379:26379
+      - 26381:26379
     depends_on:
       - redis-master
       - redis-replica-1
