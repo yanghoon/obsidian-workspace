@@ -9,4 +9,4 @@
 ```
 
 ### [Obsidian uses Prism for syntax highlighting](https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Code+blocks)
-* [Supported languages](https://prismjs.com/#supported-languages)
+* [Prismjs - Supported languages](https://prismjs.com/#supported-languages)
