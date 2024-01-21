@@ -487,7 +487,12 @@ spring:
 ```bash
 maxmemory 100mb  # (default: 3GB - 32bit, 0 - 64bit)
 maxmemory-policy noeviction
-  # 
+  # noeviction:  write error new data
+  # allkeys-lru: 
+  # allkeys-lru: 
+  # allkeys-lru: 
+  # allkeys-lru: 
+  # allkeys-lru: 
 ```
 # Use Case
 ## Spring Session
