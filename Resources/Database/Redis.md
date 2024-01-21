@@ -530,6 +530,10 @@ redis> SLOWLOG LEN
 (integer) 8
 redis> SLOWLOG RESET
 redis> SLOWLOG GET <index>
+index) 1) (integer) 10
+       2) (integer) <timestamp>
+       3) (integer) 5
+       4) 
 ```
 # Use Case
 ## Spring Session
