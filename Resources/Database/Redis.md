@@ -72,14 +72,18 @@ services:
     image: bitnami/redis:latest
     environments
       - REDIS_REPLICATION_MODE=master
+      # - ALLOW_EMPTY_PASSWORD=yes
     ports:
       - 6379:6379
     # volumes:
     #  - ./data/redis:/etc/redis
   redis-replica-01:
     image: bitnami/redis:latest
+    container_name: 
     environments
-      - 
+      - REDIS_REPLICATION_MODE=slave
+      - REDIS_MASTER_HOST=redis-master
+      # - ALLOW_EMPTY_PASSWORD=yes
     ports:
       - 6380:6379
 ```
