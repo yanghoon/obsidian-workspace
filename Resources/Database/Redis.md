@@ -353,6 +353,11 @@ replicaof 127.0.0.1 6379
 ```bash
 # redis-cli -p 26379
 redis> info sentinel
+# Sentinel
+sentinel_master:1
+sentinel_tilt:0
+sentinel_tilt_since:0
+```
 # Use Case
 ## Spring Session
 
