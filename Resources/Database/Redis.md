@@ -371,13 +371,14 @@ spring:
       master: mymaster
       nodes: 127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381
 ```
-# Cluster
-* Scalability
-	* Ability to handle incresed loads (with more resources)
-	* Scale-Out
-		* multiple node, distributed system
-		* partial failure(network), eventual consistency, load balancing(discovery), complexity
-* Redis Cluster
+# Redis Cluster
+Scalability
+* Ability to handle incresed loads (with more resources)
+* Scale-Out
+	* multiple node, distributed system
+	* partial failure(network), eventual consistency, load balancing(discovery), complexity
+
+Redis Cluster
 	* Replication, auto-failover, scale-out
 	* Availability/partition tolerance > consistency(low)
 	* Characteristic
@@ -387,7 +388,7 @@ spring:
 		* DB0
 		* limited multi key operations
 		* no request redirect
-			* client should know all servers
+			* client should know/connect all servers
 			* `MOVED <hash-slot> <ip>:<port>`
 	* vs Sentinel
 		* no partitioning
@@ -397,8 +398,7 @@ spring:
 * Consistent Hashing
 	* node counts (key  % n) : changed new or remove node
 	* hash slot : fixed hash lengh (16384)
-	* pseudo code
-		* 
+	* pseudo code (TODO)
 
 # Use Case
 ## Spring Session
