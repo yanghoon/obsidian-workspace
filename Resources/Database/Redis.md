@@ -404,7 +404,7 @@ spring:
 ## Config
 
 ```bash
-cluster-enabled      <yes/no>
+cluster-enabled      <yes/no>           # (
 cluster-config-file  <filename>
 cluster-node-timeout <milliseconds>
 cluster-replica-validity-factor <factor> # cluster-node-timeout * factor
@@ -416,7 +416,8 @@ cluster-all-reads-when-down   <yes/no> # allow read
 ```
 
 ## Auto-Failover
-* Quonum master group, replica of failure master, replica migration)
+* Quonum master group + Has replica of failure master
+* Another replica is migrated
 # Use Case
 ## Spring Session
 
