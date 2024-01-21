@@ -296,7 +296,7 @@ PFMERGE key_result key1 key2
 		* consistency (transaction)
 		* complexity (testing, monitoring)
 * Low coupling/high cohesion (only message broker), scalable, elastic
-* Hard to trace, test
+* Hard to trace, test, debug
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
