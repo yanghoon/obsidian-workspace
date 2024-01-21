@@ -408,7 +408,8 @@ cluster-enabled      <yes/no>
 cluster-config-file  <filename>
 cluster-node-timeout <milliseconds>
 cluster-replica-validity-factor <factor> # cluster-node-timeout * factor
-cluster-migration-barrier <count>
+cluster-migration-barrier  <count> # minimum replica count of each master
+cluster-require-full-coverage <yes/no>
 ```
 
 # Use Case
