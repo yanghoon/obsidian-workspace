@@ -306,7 +306,11 @@ PFMERGE key_result key1 key2
 ```bash
 # XADD [key] [id] [field-value]
 redis> XADD user-notifications * user-a hi user-b hello
-"<timestamp-version-count>"
+"<timestamp>-<version-count>" # entry id
+
+# XRANGE [key] [start] [end]
+redis> XRANGE user-notifications - + # find all
+
 ```
 # Persistence
 ## RDB (Redis Database)
