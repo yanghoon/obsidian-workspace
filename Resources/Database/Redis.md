@@ -529,7 +529,7 @@ slowlog-max-len         128
 redis> SLOWLOG LEN
 (integer) 1
 redis> SLOWLOG GET <index>
-index) 1) (integer) 10
+index) 1) (integer) <slowlog_sequence>
        2) (integer) <timestamp>
        3) (integer) 5
        4) 1) "COMMAND"
