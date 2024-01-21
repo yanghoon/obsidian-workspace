@@ -385,7 +385,11 @@ spring:
 		* gossip protocol (broadcast)
 		* hash slot (partition key)
 		* DB0
-		* limited multi key operatio
+		* limited multi key operations
+		* client should know all servers
+	* vs Sentinel
+		* no partitioning
+		* no monitoring node
 
 # Use Case
 ## Spring Session
