@@ -224,7 +224,7 @@ Background saving started
 		* incremental(changed from base)
 		* manifest(files metadata)
 
-```apacheconf
+```systemd
 save "" # disable rdb
 
 appendonly yes
