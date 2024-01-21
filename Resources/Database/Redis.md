@@ -319,7 +319,8 @@ redis> XRANGE user-notifications - + # find all
    2) 1) "user-c" # values, field
       2) "nice"   # value
 
-# XREAD BLOCK [mi]
+# XREAD BLOCK [milliseconds] STREAMS [key] [id]
+redis> XREAD BLOCK 0 STREAMS user-notifications 0
 1) 1) "user-notifications" # stream key
    2) 1) 1) "<timestamp>-version-count>" # stream, entry, entry id
          2) 1) "user-a" # values, field
