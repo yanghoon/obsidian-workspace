@@ -404,10 +404,11 @@ spring:
 
 ## Config
 ```bash
-cluster-enabled yes/no
-cluster-config-file filename
-cluster-node-timeout milliseconds
-cluster-replica-validity-factor factor # 
+cluster-enabled      <yes/no>
+cluster-config-file  <filename>
+cluster-node-timeout <milliseconds>
+cluster-replica-validity-factor <factor> # cluster-node-timeout * factor
+cluster-migration-barrier <count>
 ```
 
 # Use Case
