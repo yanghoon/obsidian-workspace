@@ -91,6 +91,7 @@ services:
       - 6380:6379
 ```
 ### Docker Compose (Sentinel)
+
 ```yaml
 version: '3'
 
