@@ -460,6 +460,7 @@ OK
 redis> get aaa
 dd
 ```
+### Cluster with Spring
 # Use Case
 ## Spring Session
 
