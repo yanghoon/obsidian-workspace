@@ -419,7 +419,11 @@ cluster-all-reads-when-down   <yes/no>   # (default: no)
 ```
 
 ```bash
-redis-cli --cluster create localhost:7000 localhost:7001 localhost:7002
+redis-cli \
+	--cluster create \
+		localhost:7000 localhost:7001 localhost:7002 \
+		localhost:7003 localhost:7004 localhost:7005 \
+	--cluster-replicas 1
 ```
 # Use Case
 ## Spring Session
