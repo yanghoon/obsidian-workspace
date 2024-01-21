@@ -205,6 +205,7 @@ dbfilename dump.rdb
 ```
 
 ```bash
+# redis-cli
 redis> bgsave
 ```
 ## AOF
