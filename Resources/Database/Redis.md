@@ -487,9 +487,9 @@ spring:
 ```bash
 maxmemory 100mb  # (default: 3GB - 32bit, 0 - 64bit)
 maxmemory-policy noeviction
-  # noeviction:  write error new data
-  # allkeys-lru: 
-  # allkeys-lru: 
+  # noeviction:  read(success), write(error)
+  # allkeys-lru: least recently used
+  # allkeys-lfu: leas
   # allkeys-lru: 
   # allkeys-lru: 
   # allkeys-lru: 
