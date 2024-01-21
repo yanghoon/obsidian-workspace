@@ -500,9 +500,12 @@ maxmemory-policy noeviction
   # volatile-ttl: Remain short TTL with only TTL
 ```
 ## Tuning
-* `redis-benchmark [-h host] [-p port] [-c clients] [-n requests] [-t command]`
-* metrics : avg, min, p50, p95, p99, max
-* run benchmark remote client
+* Testing
+	* `redis-benchmark [-h host] [-p port] [-c clients] [-n requests] [-t command]`
+	* metrics : avg, min, p50, p95, p99, max
+	* run benchmark at remote client (for network)
+* sdf
+	* bandwidth & latency
 # Use Case
 ## Spring Session
 
