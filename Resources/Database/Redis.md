@@ -192,7 +192,7 @@ PFMERGE key_result key1 key2
 * Snapshot Backup (eg. dump.rdb)
 * Schedule or Manual
 * At child process (fork), small size, fast recovery
-* Data loss, crash during backup, high cpu usage, long execution time
+* Data loss, Unexceptable, durability(crash during backup), high cpu usage() long execution time)
 
 ```bash
 # Config Template (https://redis.io/docs/management/config/)
