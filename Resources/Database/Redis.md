@@ -305,6 +305,7 @@ PFMERGE key_result key1 key2
 
 ```bash
 XADD [key] [id] [field-value]
+# XADD user-notifications * user-a hi user-b hello
 ```
 # Persistence
 ## RDB (Redis Database)
