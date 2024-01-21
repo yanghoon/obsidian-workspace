@@ -310,7 +310,10 @@ redis> XADD user-notifications * user-a hi user-b hello
 
 # XRANGE [key] [start] [end]
 redis> XRANGE user-notifications - + # find all
-
+1) 1) "user-notifications" # stream key
+   2) 1) 1) "<timestamp>-version-count>" # entry id
+         2) 1) "user-a"
+            2) "hi"
 ```
 # Persistence
 ## RDB (Redis Database)
