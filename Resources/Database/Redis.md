@@ -213,7 +213,10 @@ Background saving started
 ## AOF (Append Only File)
 * Log, replay to recovery, human readable(not matched memory)
 * Large size(duplication, not only latest), lower speed backup/recovery
-* fsync
+* OS fsync flag
+	* always : safe, slow
+	* everysec : like rdb
+	* no : by OS, fast, not safe
 
 # Use Case
 ## Spring Session
