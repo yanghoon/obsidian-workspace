@@ -509,7 +509,8 @@ maxmemory-policy noeviction
 * sdf
 	* bandwidth & latency
 	* cpu clock & cpu cache
-	* RAM speed & ban
+	* RAM speed & bandwidth (over 10 KB data)
+	* Network disks, IOPS, hypervisor versions
 # Use Case
 ## Spring Session
 
