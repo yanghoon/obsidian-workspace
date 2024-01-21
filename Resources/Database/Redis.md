@@ -516,6 +516,13 @@ maxmemory-policy noeviction
 rdbcompression <yes/no> # (default: yes) save disk usage. more cpu usage
 rdbchecksum    <yes/no> # (default: yes) validation. 10% overhead
 save <time> <change-counts> # Schedule of RBD
+
+slowlog-log-slower-than 10000 # us
+```
+
+```bash
+# SHOWLOG
+
 ```
 # Use Case
 ## Spring Session
