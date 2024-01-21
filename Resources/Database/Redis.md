@@ -334,7 +334,7 @@ redis> XREAD BLOCK 0 STREAMS user-notifications 0
          2) 1) "user-c" # values, field
             2) "nice"   # value
 
-# Subscribe new entries
+# Subscribe new entries ($: from now on)
 redis> XREAD BLOCK 0 STREAMS user-notifications $
 ```
 
