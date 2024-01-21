@@ -193,10 +193,17 @@ PFMERGE key_result key1 key2
 * Schedule or Manual
 * At child process (fork), small size, fast recovery
 * Data loss, crash during backup, high cpu usage, long execution time
-* Config Template (https://redis.io/docs/management/config/)
 
 ```bash
-case 60 10 # every 60s
+# Config Template (https://redis.io/docs/management/config/)
+# redis.conf
+
+# Redis Dabas
+save 60 10 # every 60s or 10 items changed
+
+dbfilename dump.rdb
+
+bgsave
 ```
 ## AOF
 
