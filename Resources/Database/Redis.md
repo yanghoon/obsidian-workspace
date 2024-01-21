@@ -63,6 +63,12 @@ OK
 (nil)
 127.0.0.1:6379> exit
 ```
+
+```yaml
+version: '3'
+
+
+```
 ## Java
 
 Spring Data Redis
