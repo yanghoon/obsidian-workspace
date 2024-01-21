@@ -372,33 +372,33 @@ spring:
       nodes: 127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381
 ```
 # Redis Cluster
-Scalability
-* Ability to handle incresed loads (with more resources)
-* Scale-Out
-	* multiple node, distributed system
-	* partial failure(network), eventual consistency, load balancing(discovery), complexity
+
+> Scalability
+> * Ability to handle incresed loads (with more resources)
+>* Scale-Out
+>	* multiple node, distributed system	* partial failure(network), eventual consistency, load balancing(discovery), complexity
 
 Redis Cluster
-	* Replication, auto-failover, scale-out
-	* Availability/partition tolerance > consistency(low)
-	* Characteristic
-		* full-mesh, cluster-bus (port)
-		* gossip protocol (broadcast optimize)
-		* hash slot (partition key)
-		* DB0
-		* limited multi key operations
-		* no request redirect
-			* client should know/connect all servers
-			* `MOVED <hash-slot> <ip>:<port>`
-	* vs Sentinel
-		* no partitioning
-		* no monitoring node
-		* do multi key operations
-		* for small scale
+* Replication, auto-failover, scale-out
+* Availability/partition tolerance > consistency(low)
+* Characteristic
+	* full-mesh, cluster-bus (port)
+	* gossip protocol (broadcast optimize)
+	* hash slot (partition key)
+	* DB0
+	* limited multi key operations
+	* no request redirect
+		* client should know/connect all servers
+		* `MOVED <hash-slot> <ip>:<port>`
+* vs Sentinel
+	* no partitioning
+	* no monitoring node
+	* do multi key operations
+	* for small scale
 * Consistent Hashing
-	* node counts (key  % n) : changed new or remove node
-	* hash slot : fixed hash lengh (16384)
-	* pseudo code (TODO)
+* node counts (key  % n) : changed new or remove node
+* hash slot : fixed hash lengh (16384)
+* pseudo code (TODO)
 
 # Use Case
 ## Spring Session
