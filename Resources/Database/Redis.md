@@ -501,7 +501,8 @@ maxmemory-policy noeviction
 ```
 ## Tuning
 * `redis-benchmark [-h host] [-p port] [-c clients] [-n requests] [-t command]`
-* 
+* metrics : avg, min, p50, p95, p99, max
+* run benchmark remote client
 # Use Case
 ## Spring Session
 
