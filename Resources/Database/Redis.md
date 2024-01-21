@@ -231,8 +231,13 @@ appendonly yes
 ```
 
 ## Replication
+* Scalability, Read Throughput, Availability
 * Single leader replication
-* Scalability, Read Throughput, Availa
+* Configure at replica node
+
+```bash
+replicaof 127.0.0.1 6379
+```
 # Use Case
 ## Spring Session
 
