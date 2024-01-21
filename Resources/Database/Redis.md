@@ -375,7 +375,8 @@ spring:
 * Scalability
 	* Ability to handle more loads with more resources
 	* Scale-Out
-		* Dis
+		* Distributed system
+		* 
 
 # Use Case
 ## Spring Session
