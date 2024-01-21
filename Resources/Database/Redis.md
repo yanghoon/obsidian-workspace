@@ -520,12 +520,16 @@ rdbchecksum    <yes/no> # (default: yes) validation. 10% overhead
 save <time> <change-counts> # Schedule of RBD
 
 slowlog-log-slower-than 10000 # 10000 us = 10 ms
-slowlog-max-len 128
+slowlog-max-len         128
 ```
 
 ```bash
 # SHOWLOG
-
+# redis-cli
+redis> SLOWLOG LEN
+(integer) 8
+redis> SLOWLOG RESET
+redis> SLOWLOG GET <index>
 ```
 # Use Case
 ## Spring Session
