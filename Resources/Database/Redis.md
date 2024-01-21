@@ -527,13 +527,17 @@ slowlog-max-len         128
 # SHOWLOG
 # redis-cli
 redis> SLOWLOG LEN
-(integer) 8
-redis> SLOWLOG RESET
+(integer) 1
 redis> SLOWLOG GET <index>
 index) 1) (integer) 10
        2) (integer) <timestamp>
        3) (integer) 5
-       4) 
+       4) 1) "COMMAND"
+          2) "ARG1"
+          3) "ARG2"
+	   5) "client_ip:port"
+	   6) "client_name"
+redis> SLOWLOG RESET
 ```
 # Use Case
 ## Spring Session
