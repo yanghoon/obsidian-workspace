@@ -506,7 +506,7 @@ maxmemory-policy noeviction
 		* throughput
 		* avg, min, p50, p95, p99, max
 	* run benchmark at remote client (for network)
-* sdf
+* Parameters
 	* Network bandwidth & latency
 	* Cpu clock & cpu cache
 	* RAM speed & bandwidth (over 10 KB data)
@@ -515,7 +515,7 @@ maxmemory-policy noeviction
 ```bash
 rdbcompression <yes/no> # (default: yes) save disk usage. more cpu usage
 rdbchecksum    <yes/no> # (default: yes) validation. 10% overhead
-save
+save <time> <change-counts> # Schedule of RBD
 ```
 # Use Case
 ## Spring Session
