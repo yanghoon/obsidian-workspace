@@ -67,6 +67,18 @@ OK
 ```yaml
 version: '3'
 
+services:
+  redis-master:
+    image: bitnami/redis:latest
+    ports:
+      - 6379:6379
+    # volumes:
+    #  - ./data/redis:/etc/redis
+  redis-replica-01:
+    image: bitnami/redis:latest
+    envi
+    ports:
+      - 6380:6379
 
 ```
 ## Java
