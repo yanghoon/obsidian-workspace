@@ -114,6 +114,11 @@ services:
       - 6380:6379
   redis-sentinel-1:
     image: bitnami/redis-sentinel:latest
+    container_name: sentinel1
+    environment:
+      - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=3000
+      - REDIS_MASTER_HOST=redis-masterZ
+      - REDIS
 ```
 ## Java
 
