@@ -238,6 +238,9 @@ appendonly yes
 
 ```bash
 replicaof 127.0.0.1 6379
+
+# Master  - Synchronization with replica <ip>:<port> succeeded
+# Replica - MASTER <-> REPLICA sync: Finishe
 ```
 # Use Case
 ## Spring Session
