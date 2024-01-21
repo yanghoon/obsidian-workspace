@@ -482,9 +482,9 @@ spring:
 ```
 # Performance
 ## Eviction
-* for Cache
-* allkeys-lru : basic, recommend
-* allkeys-random : 
+* Redis for cache
+* allkeys-lru : basic for cache (recommend)
+* allkeys-random : equal distribution
 * volatile* (by application)
 
 ```bash
