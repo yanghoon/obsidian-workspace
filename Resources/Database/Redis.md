@@ -490,11 +490,11 @@ maxmemory-policy noeviction
   # noeviction:   read(success), write(error)
   # allkeys-lru:  least recently used (oldest used)
   # allkeys-lfu:  least frequently used (infrequently)
-  # volatile-lru: LRU only TTL
-  # volatile-lfu: LFU only TTL
+  # volatile-lru: LRU only set TTL
+  # volatile-lfu: LFU only set TTL
   # allkeys-random: 
   # volatile-random: 
-  # volatile-ttl: 
+  # volatile-ttl: Remain short TTL only set TTL
 ```
 # Use Case
 ## Spring Session
