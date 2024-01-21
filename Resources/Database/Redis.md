@@ -409,10 +409,10 @@ cluster-config-file  <filename>
 cluster-node-timeout <milliseconds>
 cluster-replica-validity-factor <factor> # cluster-node-timeout * factor
 cluster-migration-barrier     <count>    # minimum replica count of each master
-cluster-require-full-coverage <yes/no>   # allow write when all hash slot
-                                        # is not healthy (default: yes)
-cluster-all-reads-when-down   <yes/no>   # allow read when all hash slot
-                                        # is not healthy (default: no)
+cluster-require-full-coverage <yes/no>   # (default: yes)
+                                        # allow write when all hash slot is not healthy
+cluster-all-reads-when-down   <yes/no>   # (default: no)
+                                        # allow read when all hash slot is not healthy 
 ```
 
 ## Auto-Failover
