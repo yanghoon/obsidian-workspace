@@ -402,6 +402,9 @@ spring:
 * hash slot : fixed hash lengh (16384)
 * pseudo code (TODO)
 
+## Config
+* cluster-enabled yes/no
+
 # Use Case
 ## Spring Session
 
