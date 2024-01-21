@@ -431,6 +431,10 @@ redis-cli \
 # Adding replica localhost:7004 to localhost:7000
 # Adding replica localhost:7005 to localhost:7001
 # Adding replica localhost:7003 to localhost:7002
+# ...
+# [OK] All nodes agree about slots configurations.
+# ...
+# [OK] all 16384 slots covered.
 ```
 # Use Case
 ## Spring Session
