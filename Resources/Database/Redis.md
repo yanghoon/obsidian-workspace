@@ -387,6 +387,7 @@ spring:
 	* hash slot (partition key)
 	* DB0 (vs 16 database)
 	* limited multi key operations
+		* 
 	* request redirect (no proxy)
 		* client should know/connect all servers
 		* `MOVED <hash-slot> <ip>:<port>`
