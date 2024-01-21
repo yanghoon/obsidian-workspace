@@ -487,11 +487,11 @@ spring:
 ```bash
 maxmemory 100mb  # (default: 3GB - 32bit, 0 - 64bit)
 maxmemory-policy noeviction
-  # noeviction:  read(success), write(error)
-  # allkeys-lru: least recently used
-  # allkeys-lfu: leas
-  # allkeys-lru: 
-  # allkeys-lru: 
+  # noeviction:   read(success), write(error)
+  # allkeys-lru:  least recently used (oldest, time)
+  # allkeys-lfu:  least frequently used (infrequently)
+  # volatile-lru: LRU
+  # volatile-lru: 
   # allkeys-lru: 
 ```
 # Use Case
