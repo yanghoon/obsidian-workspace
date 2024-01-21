@@ -372,7 +372,7 @@ spring:
       nodes: 127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381
 ```
 # Cluster
-* Scalability
+* Scalability : Ability of handle loads
 
 # Use Case
 ## Spring Session
