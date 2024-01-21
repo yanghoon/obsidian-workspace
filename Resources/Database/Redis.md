@@ -288,9 +288,10 @@ PFMERGE key_result key1 key2
 ## Event-Driven
 * Service
 	* Each application, own release, **same database**
+	* Database (join)
 * Micsoservice
 	* Each application, own release, **each database**
-	* Database (join) -> API (gateway, rpc)
+	* API (gateway, rpc)
 	* Distribution problems
 		* consistency (transaction)
 		* complexity (testing, monitoring)
