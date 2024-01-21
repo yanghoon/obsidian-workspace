@@ -380,6 +380,7 @@ spring:
 * Redis Cluster
 	* Replication, auto-failover, scale-out
 	* Availability/partition tolerance > consistency(low)
+	* Chfull-mesh, cluster-bus(port), gossip protocol, hash slot, DB0, limited multi key
 
 # Use Case
 ## Spring Session
