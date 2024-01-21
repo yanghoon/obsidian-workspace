@@ -436,9 +436,17 @@ redis-cli \
 # ...
 # [OK] all 16384 slots covered.
 
-redis-cli -p 7000
+# redis-cli -p 7000
 redis> cluster nodes
 # hash-key-of-node, ip-port-of-node
+redis> set aa bb
+OK
+redis> set aaa dd
+(error) MODED 10439 loclahost:7001
+
+# redis-cli -p 7001
+redis> set aaa dd
+OK
 ```
 # Use Case
 ## Spring Session
