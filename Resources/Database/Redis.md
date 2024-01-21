@@ -376,7 +376,7 @@ spring:
 	* Ability to handle more loads with more resources
 	* Scale-Out
 		* multiple node, distributed system
-		* partial failure, network, consistency, load balancing, discovery
+		* partial failure, network, consistency, load balancing, discovery, complexity
 
 # Use Case
 ## Spring Session
