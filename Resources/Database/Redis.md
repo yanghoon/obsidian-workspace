@@ -285,7 +285,8 @@ PFMERGE key_result key1 key2
 * Message loss, push to all online, at-most-once
 
 # Redis Streams
-## Event 
+## Event-Driven
+* Mics
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
