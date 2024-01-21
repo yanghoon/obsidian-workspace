@@ -219,7 +219,7 @@ Background saving started
 	* no : by OS, fast, not safe
 * Tuning
 	* Log rewriting(compaction)
-	* Multi Part AOF
+	* Multi Part AOF : base (latest rewrite), incremental(changed from base), manifest(aof filemetadata)
 
 # Use Case
 ## Spring Session
