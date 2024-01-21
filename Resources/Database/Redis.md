@@ -379,7 +379,7 @@ spring:
 > 	* multiple node, distributed system
 > 	* partial failure(network), eventual consistency, load balancing(discovery), complexity
 ## Concept
-* Replication(async), auto-failover(quonum master group, scale-out
+* Replication(async), scale-out, auto-failover(quonum master group, replica of failure master, replica migration)
 * Availability/partition tolerance > consistency
 * Characteristic
 	* full-mesh, cluster-bus (port)
