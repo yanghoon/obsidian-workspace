@@ -374,9 +374,10 @@ spring:
 # Redis Cluster
 
 > Scalability
-> * Ability to handle incresed loads (with more resources)
->* Scale-Out
->	* multiple node, distributed system	* partial failure(network), eventual consistency, load balancing(discovery), complexity
+> Ability to handle incresed loads (with more resources)
+ * Scale-Out
+> 	* multiple node, distributed system
+> 	* partial failure(network), eventual consistency, load balancing(discovery), complexity
 
 Redis Cluster
 * Replication, auto-failover, scale-out
