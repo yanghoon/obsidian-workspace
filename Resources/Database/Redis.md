@@ -304,7 +304,7 @@ PFMERGE key_result key1 key2
 	* `stream = (key, [entry])`
 	* `entry = (id, [field: value, field: value, ...])`
 * Consumer group
-	* same group read distingusihed entries
+	* same group read distinct entries
 
 ```bash
 # XADD [key] [id] [field-value]
@@ -336,6 +336,11 @@ redis> XREAD BLOCK 0 STREAMS user-notifications 0
 
 # Subscribe new entries
 redis> XREAD BLOCK 0 STREAMS user-notifications $
+```
+
+```bash
+# XGROUP CREATE [key] [group-name] [id]
+redis> XGRIOP CREATE user-notifications
 ```
 # Persistence
 ## RDB (Redis Database)
