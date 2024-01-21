@@ -76,7 +76,8 @@ services:
     #  - ./data/redis:/etc/redis
   redis-replica-01:
     image: bitnami/redis:latest
-    envi
+    environments
+      - 
     ports:
       - 6380:6379
 
@@ -262,6 +263,9 @@ replicaof 127.0.0.1 6379
 # Replica - MASTER <-> REPLICA sync started
 # Replica - MASTER <-> REPLICA sync: Finished with success
 ```
+## Redis Sentinel
+* Auto-failover daemon
+* Monitoring, alerts, 
 # Use Case
 ## Spring Session
 
