@@ -198,12 +198,14 @@ PFMERGE key_result key1 key2
 # Config Template (https://redis.io/docs/management/config/)
 # redis.conf
 
-# Redis Dabas
+# Redis Database (Backdup)
 save 60 10 # every 60s or 10 items changed
 
 dbfilename dump.rdb
+```
 
-bgsave
+```bash
+redis> bgsave
 ```
 ## AOF
 
