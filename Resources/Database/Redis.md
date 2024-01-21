@@ -211,8 +211,7 @@ redis> bgsave
 Background saving started
 ```
 ## AOF (Append Only File)
-* Log format
-* Replay log
+* Log, replay to recovery, human readable
 
 # Use Case
 ## Spring Session
