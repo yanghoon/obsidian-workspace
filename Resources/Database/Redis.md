@@ -385,7 +385,7 @@ spring:
 	* full-mesh, cluster-bus (port)
 	* gossip protocol (broadcast optimize)
 	* hash slot (partition key)
-	* DB0
+	* DB0 (vs 16 database)
 	* limited multi key operations
 	* request redirect (no proxy)
 		* client should know/connect all servers
