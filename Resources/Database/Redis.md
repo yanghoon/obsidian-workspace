@@ -299,8 +299,8 @@ PFMERGE key_result key1 key2
 * Hard to trace, test, debug
 
 ## Concept
-* log style (append-only)
-* `stream = (key, [e`
+* append-only (log)
+* `stream = (key, [entry])`
 * `entry = (id, [field: value, field: value, ...])`
 # Persistence
 ## RDB (Redis Database)
