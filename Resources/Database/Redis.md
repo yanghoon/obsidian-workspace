@@ -377,6 +377,8 @@ spring:
 	* Scale-Out
 		* multiple node, distributed system
 		* partial failure(network), eventual consistency, load balancing(discovery), complexity
+* Redis Cluster
+	* 
 
 # Use Case
 ## Spring Session
