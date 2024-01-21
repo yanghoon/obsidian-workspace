@@ -395,7 +395,6 @@ spring:
 	* no monitoring node
 	* do multi key operations
 	* for small scale
-
 ## Consistent Hashing
 * node counts (key  % n) : changed new or remove node
 * hash slot : fixed hash lengh (16384)
