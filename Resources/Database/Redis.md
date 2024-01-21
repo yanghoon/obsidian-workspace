@@ -462,6 +462,12 @@ OK
 redis> get aaa
 dd
 ```
+
+```bash
+redis-cli \
+  --cluster add-node \
+	  localhost:7006 localhost:7001
+```
 ### Cluster with Spring
 # Use Case
 ## Spring Session
