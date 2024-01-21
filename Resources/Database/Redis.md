@@ -330,6 +330,9 @@ redis> XREAD BLOCK 0 STREAMS user-notifications 0
       2) 1) "<timestamp>-version-count>" # entry, entry id
          2) 1) "user-c" # values, field
             2) "nice"   # value
+
+# Subscribe new entries
+redis> XREAD BLOCK 0 STREAMS user-notifications $
 ```
 # Persistence
 ## RDB (Redis Database)
