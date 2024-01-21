@@ -300,7 +300,7 @@ PFMERGE key_result key1 key2
 
 ## Concept
 * log style
-* 
+* `entry = (id, [key : value, key : value])`
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
