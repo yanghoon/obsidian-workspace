@@ -451,8 +451,10 @@ OK
 # redis-cli -p 7003
 redis> set aaa dd
 (error) MODED 10439 loclahost:7001
-redis> set aaa dd
+redis> get aaa
 (error) MODED 10439 loclahost:7001
+redis> readonly
+OK
 redis> get aaa
 dd
 ```
