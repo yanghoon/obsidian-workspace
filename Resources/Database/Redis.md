@@ -465,13 +465,11 @@ dd
 
 ```bash
 redis-cli \
-  --cluster add-node \
-	  localhost:7006 localhost:7001
+  --cluster add-node localhost:7006 localhost:7001
 
 redis-cli \
-  --cluster add-node \
-	  localhost:7007 localhost:7006
-  
+  --cluster add-node localhost:7007 localhost:7006 \
+  --cluster-slave
 ```
 ### Cluster with Spring
 # Use Case
