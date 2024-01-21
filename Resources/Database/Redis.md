@@ -318,9 +318,7 @@ redis> XRANGE user-notifications - + # find all
             4) "hello"  # value
       2) 1) "<timestamp>-version-count>" # entry id
          2) 1) "user-c" # field
-            2) "nice"     # value
-            3) "user-b" # field
-            4) "hello"  # value
+            2) "nice"   # value
 ```
 # Persistence
 ## RDB (Redis Database)
