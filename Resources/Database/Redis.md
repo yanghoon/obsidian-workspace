@@ -488,11 +488,13 @@ spring:
 maxmemory 100mb  # (default: 3GB - 32bit, 0 - 64bit)
 maxmemory-policy noeviction
   # noeviction:   read(success), write(error)
-  # allkeys-lru:  least recently used (oldest, time)
+  # allkeys-lru:  least recently used (oldest used)
   # allkeys-lfu:  least frequently used (infrequently)
-  # volatile-lru: LRU
-  # volatile-lru: 
-  # allkeys-lru: 
+  # volatile-lru: LRU only TTL
+  # volatile-lfu: LFU only TTL
+  # allkeys-random: 
+  # volatile-random: 
+  # volatile-ttl: 
 ```
 # Use Case
 ## Spring Session
