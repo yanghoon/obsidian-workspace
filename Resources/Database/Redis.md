@@ -230,6 +230,8 @@ save "" # disable rdb
 appendonly yes
 ```
 
+## Replication
+* Scailability
 # Use Case
 ## Spring Session
 
