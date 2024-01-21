@@ -404,7 +404,8 @@ spring:
 ## Auto-Failover
 * Quonum master group + Has replica of failure master
 * Another replica is migrated
-## Config
+## Configure
+### Config
 
 ```bash
 cluster-enabled      <yes/no>            # (default: no)
@@ -417,6 +418,7 @@ cluster-require-full-coverage <yes/no>   # (default: yes)
 cluster-all-reads-when-down   <yes/no>   # (default: no)
                                         # allow read when all hash slot is not healthy 
 ```
+### Commands
 
 ```bash
 redis-cli \
