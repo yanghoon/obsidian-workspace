@@ -224,8 +224,10 @@ Background saving started
 		* incremental(changed from base)
 		* manifest(files metadata)
 
-```apache
-save ""
+```bash
+save "" # disable rdb
+
+appendonly yes
 ```
 
 # Use Case
