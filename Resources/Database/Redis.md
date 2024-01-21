@@ -212,6 +212,7 @@ Background saving started
 ```
 ## AOF (Append Only File)
 * Log format
+* Replay log
 
 # Use Case
 ## Spring Session
