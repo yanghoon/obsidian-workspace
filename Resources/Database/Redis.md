@@ -360,7 +360,7 @@ sentinel_tilt_since_seconds:-1
 sentinel_running_scripts:0
 sentinel_scripts_queue_length:0
 sentinel_simulate_failure_flags:0
-master0:name=mymaster,status=ok,adderess=<ip>
+master0:name=mymaster,status=ok,adderess=<ip>:6379,slaves=1,sentinels=3
 ```
 # Use Case
 ## Spring Session
