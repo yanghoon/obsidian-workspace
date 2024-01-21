@@ -388,7 +388,7 @@ spring:
 	* DB0 (vs 16 database)
 	* limited multi key operations
 		* hash tags
-		* `MSET {user:a}:age 20 {user:a}:city seoul`
+		* `MSET {tag:val}:key1 val1 {tag:v}:key2 val2`
 	* request redirect (no proxy)
 		* client should know/connect all servers
 		* `MOVED <hash-slot> <ip>:<port>`
