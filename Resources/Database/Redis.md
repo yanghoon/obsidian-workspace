@@ -362,6 +362,15 @@ sentinel_scripts_queue_length:0
 sentinel_simulate_failure_flags:0
 master0:name=mymaster,status=ok,adderess=<ip>:6379,slaves=1,sentinels=3
 ```
+
+```java
+/* application.yaml */
+spring:
+  redis:
+    sentinel:
+      master: mymaster
+      
+```
 # Use Case
 ## Spring Session
 
