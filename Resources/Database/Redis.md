@@ -212,7 +212,7 @@ Background saving started
 ```
 ## AOF (Append Only File)
 * Log, replay to recovery, human readable
-* Larg
+* Large size(duplication, not only latest), lower 
 
 # Use Case
 ## Spring Session
