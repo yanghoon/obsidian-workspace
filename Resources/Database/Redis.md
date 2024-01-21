@@ -291,6 +291,7 @@ PFMERGE key_result key1 key2
 * Micsoservice
 	* Each application, own release, **each database**
 	* Database (join) -> API (gateway, rpc)
+	* Distribution problems : complexity, testing, monitoring, 
 # Persistence
 ## RDB (Redis Database)
 * Snapshot Backup (eg. dump.rdb)
