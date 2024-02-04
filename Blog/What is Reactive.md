@@ -13,10 +13,12 @@ I/O는 각 device processor에 의해 cpu와 독립적인 실행흐름(register 
 Process가 I/O를 위한 Kernel(시스템 콜) 호출 시, I/O 대기를 위한 Schedule(Context Switching) 발생 여부(wait)
 
 전통인 I/O는 Blocking. process call stack -> kernel call stack 흐름
-select, poll (sync blocking)
-epoll(sync non-blocking)
+- select, poll (sync blocking. multiflexing)
+- epoll(sync non-blocking)
 
 posix aio의 경우 별도의 callback 함수를 별도 thread에서 호출 함 (async non-blocking)
+
+
 ## Observer vs Listener vs Callback
 
 ### Callback
