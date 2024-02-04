@@ -1,4 +1,4 @@
-## I/O
+## Non-Blocking I/O
 ### Sync vs Async
 2개의 인스럭션(코드)가 있을때 실행을 대기(wait)하면 Sync, 안하면 Async. 시점(timing)의 동기화 여부를 판단. thread, process, kernel 등 모든 실행흐름을 포함.
 
