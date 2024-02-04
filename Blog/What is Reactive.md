@@ -10,7 +10,7 @@ Multi thread에서, lock/conditional variable을 사용하면 각 thread는 코�
 
 I/O는 각 device processor에 의해 cpu와 독립적인 실행흐름(register 상태)를 가지므로 기본적으로 Async 성격을 가짐(async)
 ### Blocking vs Non-Blocking (I/O)
-Process가 I/O를 위한 시스템 콜 호출시에 I/O 수행 결과를 기다리는 여부(wait)
+Process가 I/O를 위한 시스템 콜 호출시에 완료 기다리기 위해 Contex여부(wait)
 
 전통인 I/O는 Blocking
 ## Observer vs Listener vs Callback
