@@ -2,11 +2,11 @@
 ### Sync vs Async
 2개의 인스럭션(코드)가 있을때 실행을 대기(wait)하면 Sync, 안하면 Async. 시점(timing)의 동기화 여부를 판단. thread, process, kernel 등 모든 실행흐름을 포함.
 
-Single thread에서, 코드의 실행(함수의 실행과 호출)은 process call stack에 쌓이고 caller는 callee의 종료(리턴)을 기다림. Spring @EventListener @Async 없이는 동기호출 (sync)
+Single thread에서, 코드의 실행(함수의 실행과 호출)은 process call stack에 쌓이고 caller는 callee의 종료(리턴)을 기다림. Spring @EventListener도 동기호출 (sync)
 
 Multi thread에서, 각 thread는 서로의 실행을 간섭하지 않음. 독립적인 실행흐름(excution context, register + call stack)을 가짐(async)
 
-Multi thread에서, lock/conditional variable을 사용하면 각 thread는 코드 실행 순서 기다리게 됨. 인터럽트 처리순서. java의 syncronized (sync)
+Multi thread에서, lock/conditional variable을 사용하면 각 thread는 코드 실행 순서 기다리게 됨. kernel 인터럽트 처리순서. java의 syncronized (sync)
 
 I/O는 각 device processor에 의해 cpu와 독립적인 실행흐름(register 상태)를 가지므로 기본적으로 Async 성격을 가짐(async)
 ### Blocking vs Non-Blocking (I/O)
