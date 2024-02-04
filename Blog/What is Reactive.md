@@ -18,7 +18,7 @@ Process가 I/O를 위한 Kernel(시스템 콜) 호출 시, I/O 대기를 위한 
 
 posix aio의 경우 별도의 callback 함수를 별도 thread에서 호출 함 (async non-blocking)
 
-
+실제 I/O는 non-blocking으로 수행되지만 caller가 I/O를 동기방으로
 ## Observer vs Listener vs Callback
 
 ### Callback
