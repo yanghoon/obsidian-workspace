@@ -1,3 +1,7 @@
+## Sync vs Async
+### Sync vs Async
+fkfkfkfk
+### Blo
 ## Observer vs Listener vs Callback
 
 ### Callback
