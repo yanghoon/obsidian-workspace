@@ -8,7 +8,7 @@ Multi thread에서, 각 thread는 서로의 실행을 간섭하지 않음. 독�
 
 Multi thread에서, lock/conditional variable을 사용하면 각 thread는 코드 실행 순서 기다리게 됨. kernel 인터럽트 처리순서. java의 syncronized (sync)
 
-I/O는 각 device processor에 의해 cpu와 독립적인 실행흐름(register 상태)를 가지므로 기본적으로 Async 성격을 가짐. 인터럽트를 통해 오이벤트(async)
+I/O는 각 device processor에 의해 cpu와 독립적인 실행흐름(register 상태)를 가지므로 기본적으로 Async 성격을 가짐. 인터럽트를 통해 완료 이벤트 전달(async)
 ### Blocking vs Non-Blocking (I/O)
 Process가 I/O를 위한 Kernel(시스템 콜) 호출 시, I/O 대기를 위한 Schedule(Context Switching) 발생 여부(wait)
 
