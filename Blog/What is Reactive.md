@@ -1,7 +1,7 @@
-## Sync vs Async
+## I/O
 ### Sync vs Async
 fkfkfkfk
-### Blo
+### Blocking vs Non-Blocking (I/O)
 ## Observer vs Listener vs Callback
 
 ### Callback
