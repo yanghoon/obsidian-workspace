@@ -8,7 +8,7 @@ Multi thread에서, 각 thread는 서로의 실행을 간섭하지 않음. 독�
 
 Multi thread에서, lock/conditional variable을 사용하면 각 thread는 코드 실행 순서 기다리게 됨. 인터럽트 처리순서. java의 syncronized (sync)
 
-I/O는 다른 
+I/O는 각 device processor에 의해 cpu와 독립적인 실행흐름(register)
 ### Blocking vs Non-Blocking (I/O)
 ## Observer vs Listener vs Callback
 
