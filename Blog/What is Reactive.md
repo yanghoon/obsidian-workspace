@@ -6,7 +6,7 @@ Single thread에서, 코드의 실행(함수의 실행과 호출)은 process cal
 
 Multi thread에서, 각 thread는 서로의 실행을 간섭하지 않음. 독립적인 실행흐름(excution context, register + call stack)을 가짐(async)
 
-Multi thread에서, lock/conditional variable을 사용하면 각 thread의 코드 실행을 기다리게 됨. java의 syncronized (sync)
+Multi thread에서, lock/conditional variable을 사용하면 각 thread는 코드 실행 순서 기다리게 됨. java의 syncronized (sync)
 ### Blocking vs Non-Blocking (I/O)
 ## Observer vs Listener vs Callback
 
