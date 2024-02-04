@@ -2,11 +2,11 @@
 ### Sync vs Async
 2개의 인스럭션(코드)가 있을때 실행을 대기(wait)하면 Sync, 안하면 Async. 시점(timing)의 동기화 여부를 판단
 
-Single thread에서, 코드의 실행(함수의 실행과 호출)은 process call stack에 쌓이고 caller는 callee의 종료(리턴)을 기다림(Sync)
+Single thread에서, 코드의 실행(함수의 실행과 호출)은 process call stack에 쌓이고 caller는 callee의 종료(리턴)을 기다림(sync)
 
-Multi thread에서, 각 thread는 서로의 실행을 간섭하지 않음. 독립적인 실행흐름(excution context, register + call stack)을 가짐(Async)
+Multi thread에서, 각 thread는 서로의 실행을 간섭하지 않음. 독립적인 실행흐름(excution context, register + call stack)을 가짐(async)
 
-Multi thread에서, lock을 사용하면 lock의 획득 여부에 따라 각 thread의 코드 실행을 기다리게 됨
+Multi thread에서, lock을 사용하면 lock의 획득 여부에 따라 각 thread의 코드 실행을 기다리게 됨. java의 syncronized. (sync)
 ### Blocking vs Non-Blocking (I/O)
 ## Observer vs Listener vs Callback
 
