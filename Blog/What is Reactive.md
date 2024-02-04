@@ -1,6 +1,6 @@
 ## I/O
 ### Sync vs Async
-fkfkfkfk
+2개의 인스럭션(코드 Sync는
 ### Blocking vs Non-Blocking (I/O)
 ## Observer vs Listener vs Callback
 
