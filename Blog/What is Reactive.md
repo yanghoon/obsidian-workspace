@@ -12,7 +12,9 @@ I/O는 각 device processor에 의해 cpu와 독립적인 실행흐름(register 
 ### Blocking vs Non-Blocking (I/O)
 Process가 I/O를 위한 Kernel(시스템 콜) 호출 시, I/O 대기를 위한 Schedule(Context Switching) 발생 여부(wait)
 
-전통인 I/O는 Blocking
+전통인 I/O는 Blocking. process call stack -> kernel call stack 흐름
+
+
 ## Observer vs Listener vs Callback
 
 ### Callback
