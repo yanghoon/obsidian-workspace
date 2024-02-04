@@ -4,7 +4,7 @@
 
 Single thread에서, 코드의 실행(함수의 실행과 호출)은 process call stack에 쌓이고 caller는 callee의 종료(리턴)을 기다림(Sync)
 
-Multi thread에서, 코드의 실행은 
+Multi thread에서, 코드의 실행은 서로의 실행을 간섭하지 않음
 ### Blocking vs Non-Blocking (I/O)
 ## Observer vs Listener vs Callback
 
