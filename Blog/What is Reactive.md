@@ -2,7 +2,7 @@
 ### Sync vs Async
 2개의 인스럭션(코드)가 있을때 실행을 대기(wait)하면 Sync, 안하면 Async
 
-Single thread에서, 코드의 실행과
+Single thread에서, 함수의 실행과 호출은 process call stack에 쌓이고 caller는 callee
 ### Blocking vs Non-Blocking (I/O)
 ## Observer vs Listener vs Callback
 
