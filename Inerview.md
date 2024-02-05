@@ -7,7 +7,10 @@
 - https://medium.com/javarevisited/comprehensive-spring-boot-interview-questions-and-answers-for-senior-java-developers-series-25-b5d0cd26f342
 - https://medium.com/javarevisited/50-key-spring-boot-interview-questions-for-programmers-and-software-engineers-in-2023-f56da1d05b16
 ## Microservices
+- Database
+	- 
 - API Gateway
 - API Composition vs Backend for Frontend
 - CQRS
+- https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
 - https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
