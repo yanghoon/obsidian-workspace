@@ -8,9 +8,10 @@
 - https://medium.com/javarevisited/50-key-spring-boot-interview-questions-for-programmers-and-software-engineers-in-2023-f56da1d05b16
 ## Microservices
 - Database
-	- 
+	- Seperated vs Shared
+	- Event Sourcing
+	- CQRS
 - API Gateway
 - API Composition vs Backend for Frontend
-- CQRS
 - https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
 - https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
