@@ -11,7 +11,10 @@
 	- Seperated vs Shared
 	- Event Sourcing
 	- CQRS
-- API Gateway
-- API Composition vs Backend for Frontend
+	- Saga
+	- Materialized View
+	- API Composition
+	- Read Replica
+	- 
 - https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
 - https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
