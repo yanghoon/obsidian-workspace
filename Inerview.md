@@ -15,7 +15,7 @@
 	- Materialized View
 	- API Composition
 	- Read Replica
-- 
+- Circuit Breaker
 - https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
 - https://rathod-ajay.medium.com/microservice-interview-questions-for-java-backend-developers-series-3-7252a882961c
 - https://towardsdev.com/microservice-interview-questions-for-backend-developers-series-1-112d623a7c2a
