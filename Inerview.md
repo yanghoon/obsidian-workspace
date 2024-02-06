@@ -1,6 +1,8 @@
 ## Java
 - Patterns (Type, Record, Sealed, instanceof, switch)
-- SequencedCollection (reversed, xxxFirst, xxxLast)
+- SequencedCollection
+	- 일관성
+	- reversed(), xxxFirst(), xxxLast()
 - Virtual Thread
 	- `Thread.ofVirtual().start()`
 	- `Executors.newVirtualThreadPerTaskExecutor()`
