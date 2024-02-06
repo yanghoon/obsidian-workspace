@@ -6,4 +6,7 @@ Stream.of(1, 2)
 ```
 ## Summary
 ### Java 8
-- Lambda, @FuntionalInterface, Meth
+- Lambda, @FuntionalInterface, Method Reference
+- Stream, Optional
+- DateTime
+- Interface Default Method
