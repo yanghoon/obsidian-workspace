@@ -22,8 +22,9 @@ Stream.of(1, 2)
 ### Java 14
 - Switch Expression
 ### Java 15
+- Multi Line String
 ### Java 16
-- Type Pattern Mattching
+- Type Pattern Matching
 - Record
 ### Java 17
 - Sealed Class (permits)
@@ -32,4 +33,5 @@ Stream.of(1, 2)
 ### Java 19
 ### Java 20
 ### Java 21
-- Virtual T
+- Virtual Thread
+- Record Pattern Matching
