@@ -20,6 +20,9 @@ Stream.of(1, 2)
 ### Java 13
 - ZGC
 ### Java 14
-- Switch 
+- Switch Expression
 ### Java 15
 ### Java 16
+- Type Pattern Mattching
+### Java 17
+- Sealed Class (permits)
