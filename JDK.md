@@ -21,7 +21,7 @@ Stream.of(1, 2)
 ### Java 13
 - ZGC
 ### Java 14
-- Switch Expression, `ye
+- Switch Expression, `yield`
 ### Java 15
 - Multi Line String
 ### Java 16
