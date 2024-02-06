@@ -1,7 +1,7 @@
 ## Java
 - Patterns
-	-instabce Type, Record, instanceof
-	- switch Sealed, `null`
+	- instanceof Type, Record (de-construct)
+	- switch, case/when, Sealed, `null`
 - SequencedCollection
 	- for API Consistency
 	- reversed(), xxxFirst(), xxxLast()
