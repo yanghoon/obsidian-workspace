@@ -24,5 +24,8 @@ Stream.of(1, 2)
 ### Java 15
 ### Java 16
 - Type Pattern Mattching
+- Record
 ### Java 17
 - Sealed Class (permits)
+### Java 18
+- HttpServer : create(), create con
