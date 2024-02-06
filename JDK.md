@@ -7,6 +7,10 @@ Stream.of(1, 2)
 ## Summary
 ### Java 8
 - Lambda, @FuntionalInterface, Method Reference
-- Stream, Optional
+- Stream, Optional, Collectors, parallel()
 - DateTime
 - Interface Default Method
+### Java 9
+- Collection Factory
+- HttpClient
+### 
