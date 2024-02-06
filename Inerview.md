@@ -8,6 +8,8 @@
 - Virtual Thread
 	- `Thread.ofVirtual().start()`
 	- `Executors.newVirtualThreadPerTaskExecutor()`
+- ZGC
+	- https://d2.naver.com/helloworld/0128759
 - https://rathod-ajay.medium.com/a-comprehensive-journey-from-java-8-to-java-21-with-code-examples-of-essential-api-enhancements-6817d2ab3ba8
 - Collection
 	- https://rathod-ajay.medium.com/top-15-collections-framework-interview-questions-for-java-developers-2023-24-e3218fbf252d
