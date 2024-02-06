@@ -13,7 +13,7 @@ Stream.of(1, 2)
 ### Java 9
 - Collection Factory
 - HttpClient
-- Pri
+- Interface Private Method
 ### Java 10
 - Lcal Variable `var`
 ### Java 11
@@ -21,7 +21,7 @@ Stream.of(1, 2)
 ### Java 13
 - ZGC
 ### Java 14
-- Switch Expression
+- Switch Expression, `ye
 ### Java 15
 - Multi Line String
 ### Java 16
