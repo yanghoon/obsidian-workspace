@@ -1,7 +1,9 @@
 ## Java
-- Patterns (Type, Record, Sealed, instanceof, switch)
+- Patterns
+	-instabce Type, Record, instanceof
+	- switch Sealed, `null`
 - SequencedCollection
-	- 일관성
+	- for API Consistency
 	- reversed(), xxxFirst(), xxxLast()
 - Virtual Thread
 	- `Thread.ofVirtual().start()`
