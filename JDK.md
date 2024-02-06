@@ -13,6 +13,7 @@ Stream.of(1, 2)
 ### Java 9
 - Collection Factory
 - HttpClient
+- Pri
 ### Java 10
 - Lcal Variable `var`
 ### Java 11
@@ -35,3 +36,5 @@ Stream.of(1, 2)
 ### Java 21
 - Virtual Thread
 - Record Pattern Matching
+- SequencedCollection
+- String Template
