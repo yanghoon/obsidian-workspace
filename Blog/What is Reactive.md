@@ -1,6 +1,6 @@
 ## Non-Blocking I/O
 ### Sync vs Async
-2개의 인스럭션(코드)가 있을때 실행을 대기(wait)하면 Sync, 안하면 Async. 시점(timing)의 동기화 여부를 판단. thread, process, kernel, IPC 등 모든 실행흐름을 포함.
+2개의 인스럭션(코드)가 있을때 실행을 대기(wait)하면 Sync, 안하면 Async. 시점(timing)의 동기화 여부를 판단. thread, process, kernel, IPC 등 모든 실행흐름을 포함. 직렬성.
 
 Single thread에서, 코드의 실행(함수의 실행과 호출)은 process call stack에 쌓이고 caller는 callee의 종료(리턴)을 기다림. Spring @EventListener도 동기호출 (sync)
 
