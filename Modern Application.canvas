@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"9bbad72c4d53c1ee","type":"text","text":"## Environments\n\nHardware\n* Multi-core Processor, Parallelism\n* False Sharing(L1/L2 vs L3 Cache)\n\nScale of Internet\n* Global, Mobile, IoT\n* Big Data","x":-50,"y":209,"width":330,"height":311},
+		{"id":"90dadace16dcb837","type":"text","text":"## OS\n\n* Time Sharing, Scheduling(Context Switch, Register States)\n* Address Spaces, Paging, Copy On Write\n* I/O, Interrupt, Non-Blocking(Sync/Async, Multiplexing)\n* Thread, Concurrency, Lock(Atomic Instruction, CAS)","x":414,"y":209,"width":506,"height":211},
+		{"id":"038ef83a7e66614f","type":"text","text":"## Functional Programing\n\n* Function Composition : Functor, Monad, Encapsulate Data Type\n* Immutable : Transparency (Easy to Schedule)\n* Lazy : Handle Async (Future, Promise)\n* Closure : Function with All Environment at Creation Time, Scope Chain","x":180,"y":1200,"width":601,"height":200},
+		{"id":"c4b87fb395abc5c2","type":"text","text":"## Concurrency\n\nConcept\n* vs Parallelism, Physically\n* Sync : Wait (eg. lock, sleep, system call)\n* Blocking : Context Switching, System Call(kernel), Wait I/O\n* I/O : Async, Deferred, Independent Chip(Register States)\n\nMultithreading\n* Thread Pool\n* Race Condition, Context Switch Overhead, OS Limit\n\nEvent Loop\n* Main Thread(Single), I/O Thread(Multi)\n* Non-Blocking I/O (select, poll, epoll, JAVA NIO Selector/Channel)\n* Async, Control Flow, Callback, Promise/Future, Function Composition","x":480,"y":520,"width":601,"height":500},
+		{"id":"8a93ead0dfcc3ee6","type":"text","text":"## Corutine\n\n* Continuation(후속문), Language Support\n* Suspend/Resume, State Machine\n* Readable","x":809,"y":1200,"width":371,"height":180},
+		{"id":"2e174b230ce9a249","type":"text","text":"## Reactive\n\nConcept\n* Responsive (Reliability)\n* Resilient (Fault-Tolerance)\n* Elastic (Scalable)\n* Message Driven\n\nReactive Programing\n* Handle Event Stream using Functional Programing Style\n* Event Driven (Short Term)\n* Publisher, Subscriber, Subscription(Backpressure)\n* Mono/Flux(Spring Reactor), Observable(RxJava)\n\nReactive System\n* Message Driven (Long Term)","x":180,"y":1474,"width":601,"height":486},
+		{"id":"aaf1f4491fb3cb45","x":1100,"y":1600,"width":460,"height":330,"type":"text","text":"## Microservice\n\nMonolithic Harm\n* Coupling\n* Slow Development, Hard to Test\n* Legacy Versions of Dependencies\n\nIPC (Inter Process Communication)\n* Mashup\n* Async, Distributed, Network Latency, I/O Bound"}
+	],
+	"edges":[
+		{"id":"f5261747bfc3b6af","fromNode":"9bbad72c4d53c1ee","fromSide":"right","toNode":"90dadace16dcb837","toSide":"left"},
+		{"id":"a93e68e9b466529e","fromNode":"90dadace16dcb837","fromSide":"bottom","toNode":"c4b87fb395abc5c2","toSide":"top"},
+		{"id":"4ea4cf29e3201213","fromNode":"c4b87fb395abc5c2","fromSide":"bottom","toNode":"8a93ead0dfcc3ee6","toSide":"top"},
+		{"id":"6125f8743963e280","fromNode":"c4b87fb395abc5c2","fromSide":"bottom","toNode":"038ef83a7e66614f","toSide":"top"},
+		{"id":"790e28e81cc77f2b","fromNode":"038ef83a7e66614f","fromSide":"bottom","toNode":"2e174b230ce9a249","toSide":"top"},
+		{"id":"6ef7d542253c3e6e","fromNode":"8a93ead0dfcc3ee6","fromSide":"bottom","toNode":"aaf1f4491fb3cb45","toSide":"left"},
+		{"id":"5990a1ca6db1ee86","fromNode":"2e174b230ce9a249","fromSide":"right","toNode":"aaf1f4491fb3cb45","toSide":"left"}
+	]
+}
