@@ -9,7 +9,7 @@
 ...
 1. https://meganesulli.com/blog/sync-obsidian-vault-iphone-ipad/
 2. https://gist.github.com/DannyQuah/f686c0e43b741468e12515cd79017489
-	3. https://forum.obsidian.md/t/mobile-sync-with-git-on-ios-for-free-using-ish/20861
+3. https://forum.obsidian.md/t/mobile-sync-with-git-on-ios-for-free-using-ish/20861
 
 ```bash
 # Create Empty Vault
