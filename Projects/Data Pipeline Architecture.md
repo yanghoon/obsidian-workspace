@@ -3,7 +3,7 @@
 @startuml
 
 !include <C4/C4_Container>
-!include <C4/C4_Container>
+!include <C4/C4_Deployment>
 
 System_Boundary(flink, "Flink Cluster") {
 	Container(flink_job, "Job Manager", "Flink v1.20.1")
