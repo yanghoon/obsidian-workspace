@@ -13,3 +13,9 @@
 # Add below lines to exclude OS settings and caches
 .trash/
 .DS_Store
+
+# Smart Compose Plugin
+.smtcmp_json_db
+
+# Copilot Plugin
+copilot-custom-prompts
