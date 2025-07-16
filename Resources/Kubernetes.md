@@ -2,7 +2,8 @@
 
 # kubectl
 
-## kubeconfi
+## kubeconfig 관리
+
 
 # Helm
 
