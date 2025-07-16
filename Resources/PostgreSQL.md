@@ -1,10 +1,6 @@
 #docker #container 
 
-# PostgreSQL Container Readiness 설정
-
-```
-Q.postgresql:17 이미지를 사용하는 docker-compose에서 database 연결 가능 상태를 체크하는 설정
-```
+# PostgreSQL Container Healthcheck 설정
 
 이 설정은 PostgreSQL 컨테이너가 준비(ready)되었는지 확인하고, 다른 서비스가 정상 연결할 수 있게 돕습니다.
 

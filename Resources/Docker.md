@@ -33,14 +33,20 @@ services:
 - **healthy**: 검사 명령이 정상적으로 완료된 상태
 - **unhealthy**: 지정한 재시도 횟수만큼 검사에 실패한 상태
 
-이 기능으로 서비스의 정상 여부를 자동으로 체크하고, 예를 들어 `depends_on` 설정과 결합하여 의존 서비스가 건강할 때만 다음 서비스가 시작되도록 할 수 있습니다.
+필수 설정 여부:  
+* healthcheck는 반드시 지정해야 하는 설정이 아니며, 생략 시 기본값으로 자동 점검하지 않습니다.
+* healthcheck를 활성화하려면 최소한 test 항목을 명시해야 하며, 나머지 옵션들은 기본값으로 설정됩니다.
+* test를 제외한 기본 값은 아래와 같습니다. [3]
+	- interval (간격): 30초
+	- timeout (타임아웃): 30초
+	- retries (재시도 횟수): 3회
+	- start_period (시작 유예 기간): 0초 (버전 3.4 이상에서만 지원하며, 설정하지 않으면 기본 0초)
 
 ### `depends_on` 과의 관계
 
 Docker Compose에서 **healthcheck**와 **depends_on**은 서비스 간 의존 관계를 관리하는 데 상호 보완적으로 작용하는 기능입니다.
 
 - **healthcheck**는 컨테이너의 서비스가 실제로 정상 동작하는지 주기적으로 검사하는 기능입니다. 테스트 명령이 성공적으로 실행되면 컨테이너는 `healthy` 상태가 됩니다.
-
 - **depends_on**는 한 서비스가 다른 서비스보다 먼저 시작되어야 한다는 의존성을 Docker Compose에 알려줍니다. 기본적으로는 컨테이너가 "시작(started)" 상태인지 여부만 판단합니다.
 
 두 기능의 관계 요약:
@@ -54,6 +60,7 @@ Docker Compose에서 **healthcheck**와 **depends_on**은 서비스 간 의존 �
 
 - `service_started`: 단순히 컨테이너가 시작된 상태
 - `service_healthy`: 컨테이너가 healthcheck를 통과해 `healthy` 상태일 때만 의존 서비스 시작
+- 별도의 조건(`condition`)을 지정하지 않으면 기본값은 **`service_started`** 상태와 동일하며, 이는 컨테이너가 시작된 상태만 확인합니다. [1][2][3]
 
 예:
 
