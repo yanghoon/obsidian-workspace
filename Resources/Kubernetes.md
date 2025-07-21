@@ -52,4 +52,64 @@ kubectl config use-context <context-name>
 
 # Helm
 
-## 1st Subject
+# k3d
+
+## k3d 로컬 클러스터 만들기
+
+k3d는 Docker 기반으로 작동하는 경량 Kubernetes 클러스터 생성 도구로, k3s를 실행하여 로컬 개발 및 테스트 환경을 쉽게 구성할 수 있습니다.
+
+k3d를 사용해서 로컬에 Kubernetes 클러스터를 만들 때, yaml 설정 파일로 노드 수, 역할, 자원 제한을 지정할 수 있습니다.
+
+아래는 이러한 설정을 위한 k3d 클러스터 생성용 yaml 예시입니다.
+
+- Node 구성
+	- Master Node 1개
+	- Worker Node 2개
+- 각 노드는 1 core, 2GB 메모리 제한
+
+```yaml
+apiVersion: k3d.io/v1alpha4
+kind: Simple
+metadata:
+  name: mycluster
+servers: 1   # Master 노드 1개
+agents: 2    # worker 노드 2개
+options:
+  server:
+    k3s:
+      extraArgs:
+	    # 필요한 경우 불필요한 기본 컴포넌트 비활성화 optional
+        - --no-deploy=servicelb,traefik
+nodes:
+  - role: server
+    image: rancher/k3s:v1.27.4-k3s1
+    name: k3d-mycluster-server-0
+    # Master 노드 스케줄링 차단: taint 설정으로 직접 적용 필요 (아래 참고)
+  - role: agent
+    image: rancher/k3s:v1.27.4-k3s1
+    name: k3d-mycluster-agent-0
+    cpu: 1          # 1 core 제한
+    memory: 2gb     # 2GB 메모리 제한
+  - role: agent
+    image: rancher/k3s:v1.27.4-k3s1
+    name: k3d-mycluster-agent-1
+    cpu: 1
+    memory: 2gb
+```
+
+Master 노드 스케줄링 차단:
+
+- k3d에서 직접 마스터 노드에 taint를 yaml에서 지정하는 기능은 지원하지 않아서, 클러스터 생성 후 kubectl로 taint를 설정해야 합니다.
+
+```bash
+kubectl taint nodes k3d-mycluster-server-0 \
+	node-role.kubernetes.io/master=:NoSchedule
+```
+
+클러스터 생성:
+
+```bash
+k3d cluster create --config cluster.yaml
+```
+
+이렇게 하면 요청하신 조건에 맞춘 k3d 로컬 클러스터가 만들어집니다.
