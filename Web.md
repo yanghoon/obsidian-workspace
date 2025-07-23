@@ -1,4 +1,13 @@
-#jwt
+#jwt #oidc
+
+
+## OIDC
+
+### Online OIDC Test
+
+* [OpenID Connect Playground](https://openidconnect.net/)
+	* Server Template : Custom
+	* Discovery Document URL : https://your-keycloak.io/auth/realms/your-realm/.well-known/openid-configuration
 
 ## JWT Test 방법
 

@@ -50,6 +50,45 @@ export KUBECONFIG=~/.kube/merged_config
 kubectl config use-context <context-name>
 ```
 
+## k9s
+
+### 설치 및 사용 방법
+
+k9s는 터미널에서 Kubernetes 리소스 관리를 GUI처럼 쉽게 할 수 있게 도와주는 툴입니다.
+
+#### k9s 설치
+
+- Linux (바이너리 직접 다운로드 및 설치):
+
+```bash
+curl -sS https://github.com/derailed/k9s/releases/latest/download/k9s_Linux_x86_64.tar.gz | tar xzv
+sudo mv k9s /usr/local/bin/
+```
+
+```bash
+curl -s https://webi.ms/k9s | bash
+```
+
+자세한 설치 방법은 [k9s 공식 GitHub](https://github.com/derailed/k9s) 참고.
+
+#### k9s 사용법
+
+- 클러스터 접속: 터미널에서 `k9s` 명령어 실행하면 기본 kubeconfig의 현재 컨텍스트에 연결된 클러스터에 접속.
+
+- 주요 기능:
+  - 네임스페이스, 파드, 서비스 등 다양한 리소스를 실시간으로 모니터링 및 관리
+  - 화살표, 방향키, 단축키를 이용해 이동 및 조작 가능
+  - `:pods`, `:services` 등 명령어 모드로 특정 리소스만 집중 탐색 가능
+  - 로그 보기, 쉘 접속, 리소스 상세 정보 등 다양한 인터랙티브 기능 제공
+
+- 기본 단축키 예시:
+  - `:` 입력 후 명령어 입력 모드 진입
+  - `q` 또는 `Ctrl+C`로 프로그램 종료
+  - `/` 로 필터링 시작
+  - `d` 로 디테일 보기 전환
+
+- k9s는 kubectl 설정(kubeconfig)를 활용하므로, kubectl로 설정된 클러스터를 그대로 사용할 수 있습니다.
+
 # Helm
 
 # k3d
