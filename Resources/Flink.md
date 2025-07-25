@@ -62,6 +62,46 @@ mkdir -p ./lib/hadoop && \
     curl https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.4/hadoop-hdfs-client-3.3.4.jar -o ./lib/hadoop/hadoop-hdfs-client-3.3.4.jar && \
     curl https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-mapreduce-client-core/3.3.4/hadoop-mapreduce-client-core-3.3.4.jar -o ./lib/hadoop/hadoop-mapreduce-client-core-3.3.4.jar
 ```
+
+---
+
+### Flink ClassLoader 분리
+
+#### ClassLoader 개념 정리
+
+- `Class.forName()`에 명시적으로 ClassLoader를 지정하면, 해당 클래스를 참조하는 다른 클래스도 **지정된 ClassLoader에서 연쇄적으로 로딩**됩니다.  
+- `.class` 파일 내의 `import` 구문은 컴파일 시점의 편의를 위한 문법이며, 런타임 클래스 로딩에는 직접 관여하지 않습니다.  
+- Java ClassLoader는 부모 위임 모델(Delegation Model)로 동작하여, 클래스 로딩 요청 시 부모 ClassLoader부터 탐색한 후 없으면 자신이 로드합니다.
+
+#### Flink ClassLoader 분리 전략 및 핵심 ClassLoader 설명
+
+- Flink는 사용자 Job 실행 시점에 `FlinkUserCodeClassLoader`라는 별도의 ClassLoader를 생성해, 사용자 제출 JAR과 의존성을 격리 로딩합니다.
+- `FlinkUserCodeClassLoader`는 각 TaskManager가 사용자 코드를 실행할 때 쓰이고,  
+- `PluginClassLoader`는 플러그인 디렉토리 내의 JAR들을 분리해 안정적인 플러그인 운용이 가능하도록 합니다.
+- 이렇게 함으로써 사용자 코드와 Flink 시스템 라이브러리 간 의존성 충돌을 방지합니다.
+
+| ClassLoader                | 역할 및 특징                                                              |
+| -------------------------- | -------------------------------------------------------------------- |
+| `FlinkUserCodeClassLoader` | 사용자 Job 코드와 라이브러리 전용 ClassLoader, Job 실행 시 로딩                        |
+| `PluginClassLoader`        | Flink 플러그인(JAR) 전용 ClassLoader, Hadoop, S3, Iceberg 등 외부 라이브러리 격리 로드 |
+
+## Flink 플러그인 ClassLoader 동작
+
+- 플러그인은 통상 `FLINK_PLUGINS_DIR` 환경변수로 지정된 경로에 위치하며,  
+- Flink는 플러그인 폴더 내 JAR들을 `PluginClassLoader`를 통해 독립된 네임스페이스에서 로드합니다.  
+- 이 구조는 플러그인 간 및 Flink 시스템과의 클래스 충돌 방지를 위한 분리 방식을 제공합니다.  
+- Hadoop, AWS S3, Iceberg 플러그인 등이 이 ClassLoader 메커니즘을 통해 격리 로딩됩니다.
+
+---
+
+## flink-s3-aws-hadoop 플러그인과 Iceberg `S3FileIO` 관계 및 호출 구조
+
+- Flink의 `flink-s3-aws-hadoop` 플러그인은 Flink 환경에서 Hadoop 기반 S3 파일시스템을 구현 및 제공합니다.
+- Iceberg는 자체 `S3FileIO` 구현체(`org.apache.iceberg.aws.s3.S3FileIO`)를 사용해 독립적으로 S3에 데이터를 읽고 씁니다.
+- 두 컴포넌트는 직접 호출 관계가 없으며, 역할이 분리되어 있습니다.
+- Flink 플러그인은 S3 접속 환경과 라이브러리를 제공하며, Iceberg는 데이터 입출력 구현체로서 자체 API를 통해 S3 I/O를 처리합니다.
+- 따라서, 플러그인 활성화가 Iceberg 내부 S3 파일 입출력 구현을 대체하지 않으며, 상호 보완적으로 작동합니다.
+
 ## Deploy
 
 ### Flink Docker Compose
