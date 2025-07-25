@@ -85,16 +85,14 @@ mkdir -p ./lib/hadoop && \
 | `FlinkUserCodeClassLoader` | 사용자 Job 코드와 라이브러리 전용 ClassLoader, Job 실행 시 로딩                        |
 | `PluginClassLoader`        | Flink 플러그인(JAR) 전용 ClassLoader, Hadoop, S3, Iceberg 등 외부 라이브러리 격리 로드 |
 
-## Flink 플러그인 ClassLoader 동작
+#### Flink 플러그인 ClassLoader 동작
 
 - 플러그인은 통상 `FLINK_PLUGINS_DIR` 환경변수로 지정된 경로에 위치하며,  
 - Flink는 플러그인 폴더 내 JAR들을 `PluginClassLoader`를 통해 독립된 네임스페이스에서 로드합니다.  
 - 이 구조는 플러그인 간 및 Flink 시스템과의 클래스 충돌 방지를 위한 분리 방식을 제공합니다.  
-- Hadoop, AWS S3, Iceberg 플러그인 등이 이 ClassLoader 메커니즘을 통해 격리 로딩됩니다.
+- Hadoop, AWS S3, Iceberg 플러그인 등이 이 ClassLoader 메커니즘을 통해 격리
 
----
-
-## flink-s3-aws-hadoop 플러그인과 Iceberg `S3FileIO` 관계 및 호출 구조
+#### flink-s3-aws-hadoop 플러그인과 Iceberg `S3FileIO` 관계 및 호출 구조
 
 - Flink의 `flink-s3-aws-hadoop` 플러그인은 Flink 환경에서 Hadoop 기반 S3 파일시스템을 구현 및 제공합니다.
 - Iceberg는 자체 `S3FileIO` 구현체(`org.apache.iceberg.aws.s3.S3FileIO`)를 사용해 독립적으로 S3에 데이터를 읽고 씁니다.
@@ -174,3 +172,75 @@ s3.path-style-access: true
 - [Apache Flink SQL Client on Docker (DEV Community)](https://dev.to/ftisiot/apache-flink-on-docker-4kij)  
 - [Setup Local Development Environment for Apache Flink and Spark Using EMR Container Images (Jaehyeon Kim)](https://jaehyeon.me/blog/2023-12-07-flink-spark-local-dev/)  
 
+## SQL Gateway
+
+### Flink SQL Gateway 주요 호출 흐름 (select * from test 기준)
+
+1. **SqlGatewayServiceImpl.executeStatement(String sessionId, String statement, ...)**  
+   - 클라이언트가 SQL 요청을 보낼 때 호출되는 진입점 메서드  
+   - `statement`에 `"select * from test"`가 전달됨  
+   - 새로운 `Operation` (대부분 `QueryOperation`) 객체를 생성하여 쿼리 실행 준비  
+   - 생성된 Operation ID를 반환하거나 Operation 상태를 관리하는 Future를 생성  
+
+2. **QueryOperation.execute()**  
+   - 실제 쿼리 실행 시작 메서드  
+   - SQL 파싱(Parsing) → 분석(Analysis) → 실행 계획 생성  
+   - Flink 테이블 API 또는 SQL 엔진을 호출하여 물리 실행 플랜 구축  
+   - 결과 DataStream 또는 Table 결과 확보  
+   - 비동기 처리로 실행 상태 `RUNNING`으로 변경  
+
+3. **SqlGatewayServiceImpl.getOperationStatus(operationId)**  
+   - 클라이언트가 쿼리 상태를 요청할 때 호출  
+   - Operation 상태 조회 (예: RUNNING, FINISHED, ERROR) 반환  
+   - 실행 중인 쿼리 진행 상황을 확인하는 용도  
+
+4. **SqlGatewayServiceImpl.fetchResults(operationId, fetchOrientation, maxRows)**  
+   - 쿼리 결과를 페이징 방식으로 가져올 때 호출됨  
+   - 내부적으로 `ResultFetcher.fetchNext()` 메서드를 사용해 다음 결과 배치를 리턴  
+   - `fetchOrientation`은 NEXT, FIRST 등 페이징 동작 지정  
+   - `maxRows`만큼 결과를 잘라서 클라이언트에 반환  
+
+5. **ResultFetcher.fetchNext()**  
+   - 실행된 쿼리 결과셋을 스냅샷하거나 Stream으로부터 페이징 단위 데이터 추출  
+   - 내부 버퍼 또는 상태 저장소에서 데이터를 읽어옴  
+   - 클라이언트가 다음 페이지를 요청할 때마다 호출되어 데이터 반환을 계속 진행  
+
+6. **Operation.close()**  
+   - 클라이언트가 쿼리 종료를 요구하거나 시간이 만료될 때 호출  
+   - 실행 리소스 해제, 세션 종료 처리  
+   - 내부에서 TableEnvironment, Job 등 관련 리소스를 정리  
+
+요약:
+
+| 호출 위치                      | 주요 메서드                 | 설명                       |
+| -------------------------- | ---------------------- | ------------------------ |
+| SQL Gateway Service        | `executeStatement()`   | Operation 생성 및 SQL 실행 시작 |
+| Operation (QueryOperation) | `execute()`            | 실제 SQL 파싱 및 실행 실행        |
+| SQL Gateway Service        | `getOperationStatus()` | 실행 상태 조회                 |
+| SQL Gateway Service        | `fetchResults()`       | ResultFetcher로 결과 페이징 조회 |
+| ResultFetcher              | `fetchNext()`          | 다음 페이지 결과 데이터 반환         |
+| Operation                  | `close()`              | 리소스 해제 및 종료 처리           |
+
+### Iceberg Flink Runtime Config
+
+```yaml
+jobmanager:
+  # Cannot instantiate the coordinator for operator Source: test_table[] -> Sink: Collect table sink
+  - iceberg-flink-runtime-1.20-1.9.2.jar
+  - flink-s3-fs-hadoop-1.20.1.jar # org.apache.hadoop.conf.Configurable
+
+taskmanager:
+  # Source: test_table[] -> Sink: Collect table sink : Cannot instantiate user function
+  - iceberg-flink-runtime-1.20-1.9.2.jar
+  - flink-s3-fs-hadoop-1.20.1.jar # org.apache.hadoop.conf.Configurable
+  - iceberg-aws-bundle-1.9.2.jar  # No FileSystem for scheme "s3"
+  - hadoop-mapreduce-client-core-3.3.1.jar. # org.apache.hadoop.mapreduce.lib.input.FileInputFormat
+
+sql-gateway:
+  # Could not find any factory for identifier 'iceberg' that implements 'org.apache.flink.table.factories.CatalogFactory' in the classpath.
+  - iceberg-flink-runtime-1.20-1.9.2.jar
+  - flink-s3-fs-hadoop-1.20.1.jar # org.apache.hadoop.conf.Configuration, com.ctx.wstx.io.InputBootstrapper
+  - hadoop-hdfs-client-3.3.1.jar  # org.apache.hadoop.hdfs.HdfsConfiguration
+  - iceberg-aws-bundle-1.9.2.jar  # software.amazon.awssdk.core.exception.SdkException
+  # - hadoop-mapreduce-client-core-3.3.1.jar. # org.apache.hadoop.mapreduce.lib.input.FileInputFormat
+```
