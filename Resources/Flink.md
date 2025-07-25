@@ -244,3 +244,15 @@ sql-gateway:
   - iceberg-aws-bundle-1.9.2.jar  # software.amazon.awssdk.core.exception.SdkException
   # - hadoop-mapreduce-client-core-3.3.1.jar. # org.apache.hadoop.mapreduce.lib.input.FileInputFormat
 ```
+
+```bash
+# https://github.com/apache/flink-docker/master/1.20/scala_2.12-jara11-ubuntu/Dockerfile
+FROM flink:1.20.2
+
+COPY lib/iceberg-*.jar /opt/flink/lib
+COPY lib/hadoop/*.jar  /opt/flink/lib
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+EXPOSE 6123 8081
+CMD ["help"]
+```
