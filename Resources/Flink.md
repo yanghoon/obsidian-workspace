@@ -172,6 +172,10 @@ s3.path-style-access: true
 - [Apache Flink SQL Client on Docker (DEV Community)](https://dev.to/ftisiot/apache-flink-on-docker-4kij)  
 - [Setup Local Development Environment for Apache Flink and Spark Using EMR Container Images (Jaehyeon Kim)](https://jaehyeon.me/blog/2023-12-07-flink-spark-local-dev/)  
 
+### Iceberg Config
+
+
+
 ## SQL Gateway
 
 ### Flink SQL Gateway 주요 호출 흐름 (select * from test 기준)
@@ -227,6 +231,7 @@ s3.path-style-access: true
 jobmanager:
   # Cannot instantiate the coordinator for operator Source: test_table[] -> Sink: Collect table sink
   - iceberg-flink-runtime-1.20-1.9.2.jar
+  - iceberg-aws-bundle-1.9.2.jar  # software.amazon.awssdk.core.exception.SdkException
   - flink-s3-fs-hadoop-1.20.1.jar # org.apache.hadoop.conf.Configurable
 
 taskmanager:
