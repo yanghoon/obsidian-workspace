@@ -2,6 +2,25 @@
 
 # Docker Compose
 
+## Build with Podman
+
+Podman 환경에서 `docker compose build` 명령어를 사용할 때, 인터넷 프록시(proxy)가 설정된 환경에서 Podman의 `buildx` 기능이 오류를 일으킬 수 있습니다. 
+
+Podman은 Docker와 호환되는 CLI를 제공하지만, 내부적으로 `buildx`라는 빌드 확장 기능을 기본 사용합니다. `buildx`는 빌드 캐시 관리, 멀티플랫폼 빌드 등을 지원하는 고도화된 도구이나, 프록시 환경에서는 네트워크 관련 설정 문제로 오류가 발생할 수 있습니다. 이러한 오류는 빌드 실패나 네트워크 연결 문제로 이어집니다. 따라서, `buildx` 기능을 비활성화하여 기본 빌드 방식으로 전환하면 이러한 문제를 회피할 수 있습니다.
+
+1. 터미널에서 `DOCKER_BUILDKIT=0` 환경 변수를 설정하여 빌드킷(BuildKit) 기능을 끕니다. `buildx`도 빌드킷 기반이므로 함께 비활성화됩니다.  
+2. 이후 `docker compose build` 명령어를 실행합니다.
+
+예시 명령어:
+
+```bash
+DOCKER_BUILDKIT=0 docker compose build
+```
+
+- 추가 사항 (확인중):  
+  - 프록시 환경의 경우 `~/.docker/config.json`에 HTTP/HTTPS 프록시 설정을 정확히 지정하는 것도 중요합니다.
+  - `buildx`를 완전히 비활성화하는 옵션은 직접 제공되지 않지만, BuildKit 끄기로 우회합니다.
+
 ## Healthcheck
 
 ### Docker Compose의 healthcheck 기능 설명
