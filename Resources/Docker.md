@@ -1,5 +1,40 @@
 #docker-compose #composen #healthchek #depends_on
 
+# Container Image
+
+## Build Stage
+
+Dockerfile에서 **Build Stage**는 멀티 스테이지 빌드를 사용할 때 각 독립적인 빌드 단계를 의미합니다. 멀티 스테이지 빌드는 이미지 크기를 줄이고, 빌드 프로세스를 효율적이며 깔끔하게 관리할 수 있도록 돕습니다. 각 빌드 스테이지는 `FROM` 지시어로 시작하며, 필요한 빌드 의존성이나 컴파일 작업을 수행할 수 있습니다. 최종 이미지에는 필요한 아티팩트만 복사하여 포함시킵니다.
+
+### Build Stage 주요 특징
+
+- 여러 개의 빌드 단계를 정의하여 중간 이미지 생성 가능
+- 최종 이미지에는 불필요한 빌드 도구나 파일 제외 가능
+- 예: 빌드-컴파일 스테이지와 런타임 스테이지 분리
+
+### 샘플 Dockerfile
+
+```dockerfile
+# 1단계: 빌드 스테이지
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# 2단계: 최종 런타임 스테이지
+FROM nginx:stable-alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+설명:
+- `builder` 스테이지에서 애플리케이션을 빌드하고 필요한 의존성 설치, 소스 복사 및 빌드 수행
+- 최종 스테이지에서는 Nginx를 기반 이미지로 설정하고, 빌드 결과물인 `/app/build` 디렉토리를 웹서버가 사용하는 경로로 복사
+- 불필요한 빌드 도구와 개발 소스는 최종 이미지에 포함되지 않아 용량과 보안 측면에서 유리
+
 # Docker Compose
 
 ## Build with Podman
