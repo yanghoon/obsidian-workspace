@@ -84,3 +84,93 @@ try {
   process.exitCode = 1;
 }
 ```
+
+### Git Actions with GraphQL
+
+```js
+const https = require('https');
+
+const token = process.env['GITHUB_TOKEN'];
+const owner = 'your-github-username-or-org';  // repo 소유자 이름
+const repoName = 'your-repo-name';             // 생성하려는 repo 이름
+
+if (!token) {
+  console.error('GITHUB_TOKEN 환경변수가 필요합니다.');
+  process.exitCode = 1;
+  process.exit();
+}
+
+// GraphQL 쿼리: repo 존재 여부 확인
+const queryCheckRepo = `
+  query {
+    repository(owner: "${owner}", name: "${repoName}") {
+      id
+    }
+  }
+`;
+
+// GraphQL 뮤테이션: repo 생성
+const mutationCreateRepo = `
+  mutation {
+    createRepository(input: {name: "${repoName}", visibility: PRIVATE}) {
+      repository {
+        id
+        name
+        url
+      }
+    }
+  }
+`;
+
+// GraphQL 요청 함수
+function graphqlRequest(query) {
+  const options = {
+    hostname: 'api.github.com',
+    path: '/graphql',
+    method: 'POST',
+    headers: {
+      'User-Agent': 'node.js',
+      'Authorization': `bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+  };
+
+  const body = JSON.stringify({ query });
+
+  return new Promise((resolve, reject) => {
+    const req = https.request(options, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          resolve(JSON.parse(data));
+        } else {
+          reject(new Error(`Status Code: ${res.statusCode}, Body: ${data}`));
+        }
+      });
+    });
+    req.on('error', reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+(async () => {
+  try {
+    // repo 존재 체크
+    const checkResult = await graphqlRequest(queryCheckRepo);
+    if (checkResult.data.repository) {
+      console.log(`Repository "${repoName}" already exists.`);
+    } else {
+      // repo 없으면 생성
+      const createResult = await graphqlRequest(mutationCreateRepo);
+      const repo = createResult.data.createRepository.repository;
+      console.log(`Repository created: ${repo.name} (${repo.url})`);
+    }
+  } catch (error) {
+    console.error('GitHub GraphQL 요청 실패:', error.message);
+    process.exitCode = 1;
+  }
+})();
+```
+
