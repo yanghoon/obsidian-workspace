@@ -102,7 +102,19 @@ mkdir -p ./lib/hadoop && \
 
 ### Class Diagram
 
-#### Tramsform
+#### Transformation
+
+* flink-core.jar/..api.dag/Transformation
+	* flink-streaming-java.jar/..api.transformations/PhysicalTransformation
+	* flink-streaming-java.jar/..api.transformations/SourceTransformation
+	* flink-streaming-java.jar/..api.transformations/SinkTransformation
+	* flink-streaming-java.jar/..api.transformations/OneInputTransformation
+		* flink-streaming-java.jar/..api.datastream/DataStream
+		* flink-streaming-java.jar/..api.datastream/DataStreamSource
+		* flink-streaming-java.jar/..api.datastream/SingleOutputStreamOperator
+			* flink-core.jar/..api.connector.source/Source
+				* flink-streaming-java.jar/..api.environment/StreamExecutionEnvironment
+					* ::fromSource(..), ::fromData(..)
 
 ```plantuml
 @startuml
