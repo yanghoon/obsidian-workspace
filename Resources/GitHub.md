@@ -174,3 +174,85 @@ function graphqlRequest(query) {
 })();
 ```
 
+### Act를 이용한 GitHub Actions 로컬 테스트
+
+#### Act 소개 - [Guide](https://nektosact.com/introduction.html)
+
+* Act는 GitHub Actions 워크플로우를 로컬에서 실행하고 테스트할 수 있는 CLI 도구로, Docker를 이용해 GitHub 환경을 시뮬레이션합니다.
+* 이를 통해 변경사항을 GitHub에 푸시하지 않고도 빠르게 디버깅과 반복 작업이 가능합니다.
+* 개발 시간 단축과 정확한 워크플로우 검증에 효과적입니다.
+
+주요 기능
+
+- **로컬 워크플로우 실행**: `.github/workflows` 내 워크플로우를 인식하여 로컬에서 바로 실행합니다.
+- **이벤트 시뮬레이션**: 기본 `push` 외에도 `pull_request`, `workflow_dispatch` 등 다양한 이벤트를 지정해 실행할 수 있습니다.
+- **Docker 이미지 관리**: 러너 환경(`runs-on`)에 맞는 Docker 이미지를 자동으로 다운로드하고 컨테이너에서 실행합니다.
+- **사용자 설정 지원**: `.actrc` 파일로 기본 옵션(이벤트, 플랫폼 등)을 미리 설정할 수 있습니다.
+- **환경 변수 및 시크릿 전달**: GitHub Actions 환경과 동일하게 시크릿과 환경 변수를 전달해 테스트할 수 있습니다.
+
+#### 1. Act 설치 (install.sh 스크립트 사용)
+
+* [Installation](https://nektosact.com/installation/index.html#installation)*
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
+```
+
+#### 2. workflow_dispatch inputs 설정: payload.json 활용 및 예제
+
+- `-e, --eventpath` 옵션을 통해 워크플로우 실행에 필요한 값을 JSON 파일로 제공할 수 있습니다.
+- 수동 트리거(`workflow_dispatch`) 워크플로우에 정의된 입력값들도 로컬에서 테스트할 수 있습니다.
+- 예를 들어, `payload.json`에 다음과 같이 입력합니다.
+
+```json
+{
+  "inputs": {
+    "input-name": "Hello, Act!"
+  }
+}
+```
+
+- Act 실행 시 `-e` 옵션에 `payload.json` 파일 경로를 지정합니다.
+
+```bash
+act workflow_dispatch -e payload.json
+```
+
+#### 3. .actrc 기반 설정
+
+- 워크플로우 실행 시 사용할 기본 옵션을 `.actrc`에 작성하여 환경을 미리 설정 할 수 있습니다.
+- 명령어 입력 시 매번 이벤트 정보, 플랫폼 등을 직접 명시하지 않아도 됩니다.
+- 작업 디렉터리 루트에 `.actrc` 파일을 만들고 다음과 내용을 추가합니다.
+
+```bash
+-P ubuntu-latest=nektos/act-environments-ubuntu:18.04
+-e payload.json
+```
+
+### 4. Workflow 목록 조회 및 Workflow 실행 방법
+
+- 기본적으로 Act는 `.github/workflows/` 내 모든 워크플로우를 인식합니다.
+- 다음 명령어로 실행 가능한 이벤트 목록을 확인할 수 있습니다.
+
+```bash
+act -l
+```
+
+- 특정 워크플로우 파일을 지정해 실행하려면,
+
+```bash
+act -W .github/workflows/main.yml
+```
+
+- 워크플로우 내 특정 Job만 실행하려면,
+
+```bash
+act -j test
+```
+
+- 이벤트 지정(ex: push, pull_request, workflow_dispatch)을 함께 사용 가능합니다.
+
+```bash
+act push
+	act workflow_dispatch -e payload.json -W .github/workflows/main.yml
+```
