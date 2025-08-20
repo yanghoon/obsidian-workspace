@@ -100,6 +100,250 @@ mkdir -p ./lib/hadoop && \
 - Flink 플러그인은 S3 접속 환경과 라이브러리를 제공하며, Iceberg는 데이터 입출력 구현체로서 자체 API를 통해 S3 I/O를 처리합니다.
 - 따라서, 플러그인 활성화가 Iceberg 내부 S3 파일 입출력 구현을 대체하지 않으며, 상호 보완적으로 작동합니다.
 
+### Class Diagram
+
+#### Tramsform
+
+```plantuml
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName "Malgun Gothic"
+title Flink DataStream API 호출 흐름 다이어그램
+
+package "1. Source Creation" {
+  class StreamExecutionEnvironment {
+    + fromSource() : DataStream
+  }
+  class SourceFunction
+  class SourceTransformation
+  class DataStream
+  
+  User -> StreamExecutionEnvironment : 1. fromSource(new SourceFunction())
+  StreamExecutionEnvironment -> SourceTransformation : 2. creates
+  SourceTransformation ..> SourceFunction : "wraps"
+  StreamExecutionEnvironment -> DataStream : 3. creates & returns
+  DataStream ..> SourceTransformation : "refers to"
+}
+
+package "2. Transformation (flatMap)" {
+  class FlatMapFunction
+  class OneInputTransformation
+  class SingleOutputStreamOperator
+  
+  User -> DataStream : 4. flatMap(new FlatMapFunction())
+  DataStream -> OneInputTransformation : 5. creates
+  OneInputTransformation ..> FlatMapFunction : "wraps"
+  OneInputTransformation ..> Transformation : "takes input from"
+  DataStream -> SingleOutputStreamOperator : 6. creates & returns
+  SingleOutputStreamOperator ..> OneInputTransformation : "refers to"
+}
+
+package "3. Sink Creation" {
+  class SinkFunction
+  class SinkTransformation
+  class DataStreamSink
+  
+  User -> SingleOutputStreamOperator : 7. sinkTo(new SinkFunction())
+  SingleOutputStreamOperator -> SinkTransformation : 8. creates
+  SinkTransformation ..> SinkFunction : "wraps"
+  SinkTransformation ..> Transformation : "takes input from"
+  SingleOutputStreamOperator -> DataStreamSink : 9. creates & returns
+  DataStreamSink ..> SinkTransformation : "refers to"
+}
+
+note "The entire process builds a Transformation tree.\n`env.execute()` traverses this tree to create the JobGraph." as N1
+
+@enduml
+```
+
+#### StreamGraph
+
+```plantuml
+@startuml
+title Flink StreamGraph 주요 클래스 다이어그램
+
+skinparam classAttributeIconSize 0
+
+class StreamGraph {
+  - String jobName
+  - Map<Integer, StreamNode> streamNodes
+  - Set<Integer> sources
+  - Set<Integer> sinks
+  --
+  + addOperator(Integer vertexID, StreamOperatorFactory, ...)
+  + addEdge(Integer upStreamVertexID, Integer downStreamVertexID, ...)
+  + getJobGraph() : JobGraph
+}
+
+class StreamNode {
+  - final Integer id
+  - int parallelism
+  - StreamOperatorFactory<?> operatorFactory
+  - List<StreamEdge> inEdges
+  - List<StreamEdge> outEdges
+  --
+  + addInEdge(StreamEdge edge)
+  + addOutEdge(StreamEdge edge)
+  + getOutEdges() : List<StreamEdge>
+}
+
+class StreamEdge {
+  - final int sourceId
+  - final int targetId
+  - final StreamPartitioner<?> partitioner
+  - final OutputTag outputTag
+  --
+  + getSourceId() : int
+  + getTargetId() : int
+}
+
+StreamGraph "1" o-- "0..*" StreamNode : contains
+StreamNode "1" -- "0..*" StreamEdge : has out-edges
+StreamNode "1" -- "0..*" StreamEdge : has in-edges
+StreamEdge ..> StreamNode : connects from/to
+
+@enduml
+```
+#### JobGraph
+
+```plantuml
+@startuml
+title Flink JobGraph 주요 클래스 다이어그램
+
+skinparam classAttributeIconSize 0
+
+class JobGraph {
+  - final JobID jobID
+  - final String name
+  - Map<JobVertexID, JobVertex> vertices
+  --
+  + addVertex(JobVertex vertex)
+  + getVertices() : Iterable<JobVertex>
+  + findVertexByID(JobVertexID id) : JobVertex
+  + getVerticesSortedTopologicallyFromSources() : List<JobVertex>
+}
+
+class JobVertex {
+  - final JobVertexID id
+  - List<IntermediateDataSet> producedDataSets
+  - List<JobEdge> inputs
+  - String invokableClassName
+  - int parallelism
+  --
+  + connectNewDataSetAsInput(IntermediateDataSet, DistributionPattern) : JobEdge
+  + getID() : JobVertexID
+  + getProducedDataSets() : List<IntermediateDataSet>
+  + getInputs() : List<JobEdge>
+}
+
+class IntermediateDataSet {
+  - final IntermediateDataSetID id
+  - final JobVertex producer
+  --
+  + getProducer() : JobVertex
+  + getId() : IntermediateDataSetID
+}
+
+class JobEdge {
+  - final IntermediateDataSet source
+  - final JobVertex target
+  --
+  + getSource() : IntermediateDataSet
+  + getTarget() : JobVertex
+}
+
+JobGraph "1" o-- "0..*" JobVertex
+JobVertex "1" --> "0..*" IntermediateDataSet : produces
+JobVertex "1" o-- "0..*" JobEdge : consumes
+JobEdge ..> IntermediateDataSet : connects from
+JobEdge ..> JobVertex : connects to
+
+@enduml
+```
+
+#### ExecutionGraph
+
+```plantuml
+@startuml
+title Flink ExecutionGraph 주요 클래스 다이어그램
+
+skinparam classAttributeIconSize 0
+
+class ExecutionGraph {
+  - final JobID jobId
+  - final String jobName
+  - Map<JobVertexID, ExecutionJobVertex> vertices
+  - JobStatus state
+  --
+  + schedule()
+  + cancel()
+}
+
+class ExecutionJobVertex {
+  - final JobVertexID jobVertexId
+  - ExecutionVertex[] taskVertices
+  - IntermediateResult[] producedDataSets
+  - List<ExecutionEdge> inputEdges
+  --
+  + getTaskVertices() : ExecutionVertex[]
+  + getParallelism() : int
+}
+
+class ExecutionVertex {
+  - final ExecutionJobVertex jobVertex
+  - final int subTaskIndex
+  - Execution currentExecution
+  --
+  + deploy()
+  + getCurrentExecutionAttempt() : Execution
+}
+
+class Execution {
+  - final ExecutionAttemptID attemptId
+  - ExecutionState state
+  - final LogicalSlot assignedResource
+  --
+  + execute()
+  + cancel()
+  + markFailed(Throwable cause)
+}
+
+class IntermediateResult {
+  - final IntermediateDataSetID id
+  - final ExecutionJobVertex producer
+  - IntermediateResultPartition[] partitions
+  --
+  + getPartitions() : IntermediateResultPartition[]
+}
+
+class IntermediateResultPartition {
+  - final IntermediateResult totalResult
+  - final ExecutionVertex producer
+  - ResultPartitionType partitionType
+  --
+  + getProducer() : ExecutionVertex
+}
+
+class ExecutionEdge {
+  - final IntermediateResultPartition source
+  - final ExecutionVertex target
+  --
+  + getSource() : IntermediateResultPartition
+}
+
+ExecutionGraph "1" o-- "0..*" ExecutionJobVertex
+ExecutionJobVertex "1" o-- "0..*" ExecutionVertex
+ExecutionJobVertex "1" o-- "0..*" IntermediateResult : produces
+ExecutionVertex "1" o-- "1" Execution : current
+ExecutionVertex "1" --> "1" IntermediateResultPartition : produces
+IntermediateResult "1" o-- "0..*" IntermediateResultPartition
+
+ExecutionEdge ..> IntermediateResultPartition : connects from
+ExecutionEdge ..> ExecutionVertex : connects to
+
+@enduml
+```
+
 ## Deploy
 
 ### Flink Docker Compose
